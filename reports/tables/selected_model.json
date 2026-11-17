@@ -1,0 +1,11 @@
+{
+  "cell_id": "F1full__none__lgbm",
+  "cal_pr_auc": 0.4918370696026864,
+  "cal_brier_calibrated": 0.16017744466279804,
+  "tied_cells": [
+    "F1__none__lgbm",
+    "F1__none__xgb",
+    "F1__weight__lgbm",
+    "F1full__none__lgbm"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "params": {
+    "max_depth": 20,
+    "min_samples_leaf": 165,
+    "criterion": "entropy",
+    "ccp_alpha": 6.0315016641204615e-06
+  },
+  "best_iteration": null
+}

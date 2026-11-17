@@ -1,0 +1,28 @@
+{
+  "model": "xgb",
+  "feature_set": "F1",
+  "cs": "none",
+  "n_trials": 30,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "device": "cuda",
+  "n_jobs": 4,
+  "hpo_seed": 42,
+  "drop_features": [
+    "ped_involved",
+    "ped_age",
+    "ped_location",
+    "ped_movement",
+    "ped_child",
+    "ped_elderly",
+    "ped_crossing_group",
+    "dark_x_ped",
+    "has_vru",
+    "vru_vs_heavy"
+  ],
+  "tag": "S5",
+  "feature_columns": null
+}

@@ -1,0 +1,11 @@
+# Ablation matrix (see docs/IMPLEMENTATION_PLAN.md §4). CAL levels are post-hoc and need no training.
+name: ablation
+models: [lr, dt, rf, xgb, lgbm, cat]
+feature_sets: [F0, F1]
+cs_strategies: [none, weight, rus]
+smotenc_models: [lr, rf, lgbm]          # SMOTE-NC only for these (x F0, F1)
+f1full_models: [lr, lgbm]               # extra arm: engineered features without selection
+n_trials: {lr: 15, dt: 30, rf: 15, xgb: 30, lgbm: 30, cat: 20}
+n_trials_smotenc: 15
+seeds: [0, 1, 2]
+gpu_models: [xgb, cat]                  # run on the GPU server (device=cuda)

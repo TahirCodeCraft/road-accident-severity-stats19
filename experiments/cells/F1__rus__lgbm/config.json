@@ -1,0 +1,17 @@
+{
+  "model": "lgbm",
+  "feature_set": "F1",
+  "cs": "rus",
+  "n_trials": 30,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "device": "cpu",
+  "n_jobs": 6,
+  "hpo_seed": 42,
+  "drop_features": [],
+  "tag": "",
+  "feature_columns": null
+}

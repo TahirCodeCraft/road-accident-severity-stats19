@@ -1,0 +1,66 @@
+# UK bank holidays 2023-2025 (static list; source: gov.uk/bank-holidays).
+# Collisions reported by Scottish police forces (`scotland_police_forces`) use the `scotland` list;
+# all other collisions use `england_and_wales`. STATS19 covers Great Britain only,
+# so Northern Ireland dates are not needed.
+england_and_wales:
+  # 2023 (incl. 8 May coronation of King Charles III; 2 Jan substitute New Year's Day)
+  - 2023-01-02
+  - 2023-04-07
+  - 2023-04-10
+  - 2023-05-01
+  - 2023-05-08
+  - 2023-05-29
+  - 2023-08-28
+  - 2023-12-25
+  - 2023-12-26
+  # 2024
+  - 2024-01-01
+  - 2024-03-29
+  - 2024-04-01
+  - 2024-05-06
+  - 2024-05-27
+  - 2024-08-26
+  - 2024-12-25
+  - 2024-12-26
+  # 2025
+  - 2025-01-01
+  - 2025-04-18
+  - 2025-04-21
+  - 2025-05-05
+  - 2025-05-26
+  - 2025-08-25
+  - 2025-12-25
+  - 2025-12-26
+scotland:
+  # 2023 (3 Jan substitute for 2 Jan; St Andrew's Day 30 Nov)
+  - 2023-01-02
+  - 2023-01-03
+  - 2023-04-07
+  - 2023-05-01
+  - 2023-05-08
+  - 2023-05-29
+  - 2023-08-07
+  - 2023-11-30
+  - 2023-12-25
+  - 2023-12-26
+  # 2024 (St Andrew's Day substitute 2 Dec)
+  - 2024-01-01
+  - 2024-01-02
+  - 2024-03-29
+  - 2024-05-06
+  - 2024-05-27
+  - 2024-08-05
+  - 2024-12-02
+  - 2024-12-25
+  - 2024-12-26
+  # 2025 (St Andrew's Day substitute 1 Dec)
+  - 2025-01-01
+  - 2025-01-02
+  - 2025-04-18
+  - 2025-05-05
+  - 2025-05-26
+  - 2025-08-04
+  - 2025-12-01
+  - 2025-12-25
+  - 2025-12-26
+scotland_police_forces: [91, 92, 93, 94, 95, 96, 97, 98, 99]

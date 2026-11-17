@@ -1,0 +1,371 @@
+2026-11-12 02:04:10 | INFO     | __main__ | Running 8 cells: ['F0__none__rf', 'F0__weight__rf', 'F0__rus__rf', 'F0__smotenc__rf', 'F1__none__rf', 'F1__weight__rf', 'F1__rus__rf', 'F1__smotenc__rf']
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_020411-v118iwqs
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 02:04:11 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F0__none__rf mode=offline
+[I 2026-11-12 02:04:11,934] A new study created in memory with name: no-name-b192cfa5-7695-4c38-9662-918146bf8a9f
+[I 2026-11-12 02:04:22,059] Trial 0 finished with value: 0.4602299970885756 and parameters: {'n_estimators': 200, 'max_depth': 24, 'min_samples_leaf': 33, 'max_features': 0.19966462104925914, 'max_samples': 0.37800932022121825}. Best is trial 0 with value: 0.4602299970885756.
+[I 2026-11-12 02:04:28,079] Trial 1 finished with value: 0.43995261164808747 and parameters: {'n_estimators': 100, 'max_depth': 8, 'min_samples_leaf': 57, 'max_features': 0.20027875293580222, 'max_samples': 0.6540362888980227}. Best is trial 0 with value: 0.4602299970885756.
+[I 2026-11-12 02:04:30,960] Trial 2 finished with value: 0.45546462390569376 and parameters: {'n_estimators': 100, 'max_depth': 24, 'min_samples_leaf': 50, 'max_features': 0.10308477766956904, 'max_samples': 0.3909124836035503}. Best is trial 0 with value: 0.4602299970885756.
+[I 2026-11-12 02:04:36,005] Trial 3 finished with value: 0.460028539899895 and parameters: {'n_estimators': 100, 'max_depth': 13, 'min_samples_leaf': 14, 'max_features': 0.15798625466052896, 'max_samples': 0.44561457009902095}. Best is trial 0 with value: 0.4602299970885756.
+[I 2026-11-12 02:04:42,500] Trial 4 finished with value: 0.4521532748972143 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 5, 'max_features': 0.14159046082342291, 'max_samples': 0.5280349921085179}. Best is trial 0 with value: 0.4602299970885756.
+[I 2026-11-12 02:04:54,744] Trial 5 finished with value: 0.4555164818984246 and parameters: {'n_estimators': 300, 'max_depth': 11, 'min_samples_leaf': 13, 'max_features': 0.19810364221551063, 'max_samples': 0.32322520635999885}. Best is trial 0 with value: 0.4602299970885756.
+[I 2026-11-12 02:05:09,978] Trial 6 finished with value: 0.4527886467352218 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 2, 'max_features': 0.2872213843133333, 'max_samples': 0.7828160165372797}. Best is trial 0 with value: 0.4602299970885756.
+[I 2026-11-12 02:05:30,295] Trial 7 finished with value: 0.461011931195513 and parameters: {'n_estimators': 300, 'max_depth': 13, 'min_samples_leaf': 2, 'max_features': 0.22105825662803924, 'max_samples': 0.5200762468698006}. Best is trial 7 with value: 0.461011931195513.
+[I 2026-11-12 02:05:39,654] Trial 8 finished with value: 0.4608261405807381 and parameters: {'n_estimators': 100, 'max_depth': 16, 'min_samples_leaf': 2, 'max_features': 0.27733010051969553, 'max_samples': 0.42938999080000845}. Best is trial 7 with value: 0.461011931195513.
+[I 2026-11-12 02:05:50,304] Trial 9 finished with value: 0.460539427136145 and parameters: {'n_estimators': 200, 'max_depth': 13, 'min_samples_leaf': 13, 'max_features': 0.1866775698358199, 'max_samples': 0.3924272277627635}. Best is trial 7 with value: 0.461011931195513.
+[I 2026-11-12 02:06:19,409] Trial 10 finished with value: 0.46627045613702917 and parameters: {'n_estimators': 300, 'max_depth': 18, 'min_samples_leaf': 4, 'max_features': 0.2594848953663551, 'max_samples': 0.6449378996872154}. Best is trial 10 with value: 0.46627045613702917.
+[I 2026-11-12 02:06:42,875] Trial 11 finished with value: 0.4634194427821332 and parameters: {'n_estimators': 300, 'max_depth': 14, 'min_samples_leaf': 2, 'max_features': 0.24544936026385167, 'max_samples': 0.5725754760523332}. Best is trial 10 with value: 0.46627045613702917.
+[I 2026-11-12 02:07:04,420] Trial 12 finished with value: 0.4646408255755055 and parameters: {'n_estimators': 300, 'max_depth': 17, 'min_samples_leaf': 3, 'max_features': 0.24645377141830158, 'max_samples': 0.6255435794838986}. Best is trial 10 with value: 0.46627045613702917.
+[I 2026-11-12 02:07:23,072] Trial 13 finished with value: 0.4657998357734881 and parameters: {'n_estimators': 300, 'max_depth': 17, 'min_samples_leaf': 11, 'max_features': 0.27131676000056326, 'max_samples': 0.5429914727571642}. Best is trial 10 with value: 0.46627045613702917.
+[I 2026-11-12 02:07:35,457] Trial 14 finished with value: 0.4643873197411039 and parameters: {'n_estimators': 200, 'max_depth': 16, 'min_samples_leaf': 14, 'max_features': 0.2859330644577376, 'max_samples': 0.49579324364732513}. Best is trial 10 with value: 0.46627045613702917.
+2026-11-12 02:07:35 | INFO     | src.training.runner | [F0__none__rf] best TUNE PR-AUC 0.4663 params={'n_estimators': 300, 'max_depth': 18, 'min_samples_leaf': 4, 'max_features': 0.2594848953663551, 'max_samples': 0.6449378996872154}
+2026-11-12 02:08:14 | INFO     | src.training.runner | [F0__none__rf] seed 0 refit 39s CAL PR-AUC 0.4707
+2026-11-12 02:08:50 | INFO     | src.training.runner | [F0__none__rf] seed 1 refit 36s CAL PR-AUC 0.4701
+2026-11-12 02:09:28 | INFO     | src.training.runner | [F0__none__rf] seed 2 refit 38s CAL PR-AUC 0.4707
+wandb: 
+wandb: Run history:
+wandb: cal_pr_auc_mean ▁
+wandb: 
+wandb: Run summary:
+wandb: cal_pr_auc_mean 0.47048
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_020411-v118iwqs
+wandb: Find logs at: ./wandb/offline-run-20261112_020411-v118iwqs/logs
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_020928-ctnt7d27
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 02:09:28 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F0__weight__rf mode=offline
+[I 2026-11-12 02:09:28,646] A new study created in memory with name: no-name-da22413c-4531-46e3-8755-af132419d400
+[I 2026-11-12 02:09:37,544] Trial 0 finished with value: 0.46089815681236396 and parameters: {'n_estimators': 200, 'max_depth': 24, 'min_samples_leaf': 33, 'max_features': 0.19966462104925914, 'max_samples': 0.37800932022121825}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:09:41,632] Trial 1 finished with value: 0.43958099384112315 and parameters: {'n_estimators': 100, 'max_depth': 8, 'min_samples_leaf': 57, 'max_features': 0.20027875293580222, 'max_samples': 0.6540362888980227}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:09:44,656] Trial 2 finished with value: 0.4576322757297578 and parameters: {'n_estimators': 100, 'max_depth': 24, 'min_samples_leaf': 50, 'max_features': 0.10308477766956904, 'max_samples': 0.3909124836035503}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:09:49,140] Trial 3 finished with value: 0.45958328682433325 and parameters: {'n_estimators': 100, 'max_depth': 13, 'min_samples_leaf': 14, 'max_features': 0.15798625466052896, 'max_samples': 0.44561457009902095}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:09:55,530] Trial 4 finished with value: 0.4517309995344449 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 5, 'max_features': 0.14159046082342291, 'max_samples': 0.5280349921085179}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:10:05,847] Trial 5 finished with value: 0.45606049842022395 and parameters: {'n_estimators': 300, 'max_depth': 11, 'min_samples_leaf': 13, 'max_features': 0.19810364221551063, 'max_samples': 0.32322520635999885}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:10:19,916] Trial 6 finished with value: 0.45148206210380415 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 2, 'max_features': 0.2872213843133333, 'max_samples': 0.7828160165372797}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:10:37,834] Trial 7 finished with value: 0.4605123893026898 and parameters: {'n_estimators': 300, 'max_depth': 13, 'min_samples_leaf': 2, 'max_features': 0.22105825662803924, 'max_samples': 0.5200762468698006}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:10:45,757] Trial 8 finished with value: 0.45861298514246185 and parameters: {'n_estimators': 100, 'max_depth': 16, 'min_samples_leaf': 2, 'max_features': 0.27733010051969553, 'max_samples': 0.42938999080000845}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:10:54,192] Trial 9 finished with value: 0.4610674353479868 and parameters: {'n_estimators': 200, 'max_depth': 13, 'min_samples_leaf': 13, 'max_features': 0.1866775698358199, 'max_samples': 0.3924272277627635}. Best is trial 9 with value: 0.4610674353479868.
+2026-11-12 02:11:18 | INFO     | __main__ | Running 8 cells: ['F0__none__rf', 'F0__weight__rf', 'F0__rus__rf', 'F0__smotenc__rf', 'F1__none__rf', 'F1__weight__rf', 'F1__rus__rf', 'F1__smotenc__rf']
+2026-11-12 02:11:18 | INFO     | src.training.runner | [F0__none__rf] already complete, skipping
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_021119-f9bze3ci
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 02:11:19 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F0__weight__rf mode=offline
+[I 2026-11-12 02:11:19,905] A new study created in memory with name: no-name-88ff7c95-9ffb-4a5b-bff3-62180ad9ce95
+[I 2026-11-12 02:11:27,117] Trial 0 finished with value: 0.46089815681236396 and parameters: {'n_estimators': 200, 'max_depth': 24, 'min_samples_leaf': 33, 'max_features': 0.19966462104925914, 'max_samples': 0.37800932022121825}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:11:31,154] Trial 1 finished with value: 0.43958099384112315 and parameters: {'n_estimators': 100, 'max_depth': 8, 'min_samples_leaf': 57, 'max_features': 0.20027875293580222, 'max_samples': 0.6540362888980227}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:11:33,971] Trial 2 finished with value: 0.4576322757297578 and parameters: {'n_estimators': 100, 'max_depth': 24, 'min_samples_leaf': 50, 'max_features': 0.10308477766956904, 'max_samples': 0.3909124836035503}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:11:37,922] Trial 3 finished with value: 0.45958328682433325 and parameters: {'n_estimators': 100, 'max_depth': 13, 'min_samples_leaf': 14, 'max_features': 0.15798625466052896, 'max_samples': 0.44561457009902095}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:11:44,567] Trial 4 finished with value: 0.4517309995344449 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 5, 'max_features': 0.14159046082342291, 'max_samples': 0.5280349921085179}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:11:54,815] Trial 5 finished with value: 0.45606049842022395 and parameters: {'n_estimators': 300, 'max_depth': 11, 'min_samples_leaf': 13, 'max_features': 0.19810364221551063, 'max_samples': 0.32322520635999885}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:12:10,372] Trial 6 finished with value: 0.45148206210380415 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 2, 'max_features': 0.2872213843133333, 'max_samples': 0.7828160165372797}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:12:28,772] Trial 7 finished with value: 0.4605123893026898 and parameters: {'n_estimators': 300, 'max_depth': 13, 'min_samples_leaf': 2, 'max_features': 0.22105825662803924, 'max_samples': 0.5200762468698006}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:12:37,685] Trial 8 finished with value: 0.45861298514246185 and parameters: {'n_estimators': 100, 'max_depth': 16, 'min_samples_leaf': 2, 'max_features': 0.27733010051969553, 'max_samples': 0.42938999080000845}. Best is trial 0 with value: 0.46089815681236396.
+[I 2026-11-12 02:12:47,031] Trial 9 finished with value: 0.4610674353479868 and parameters: {'n_estimators': 200, 'max_depth': 13, 'min_samples_leaf': 13, 'max_features': 0.1866775698358199, 'max_samples': 0.3924272277627635}. Best is trial 9 with value: 0.4610674353479868.
+[I 2026-11-12 02:13:02,990] Trial 10 finished with value: 0.46117871270437993 and parameters: {'n_estimators': 300, 'max_depth': 16, 'min_samples_leaf': 43, 'max_features': 0.1852483331134009, 'max_samples': 0.5366636607273343}. Best is trial 10 with value: 0.46117871270437993.
+[I 2026-11-12 02:13:18,138] Trial 11 finished with value: 0.4570183650058772 and parameters: {'n_estimators': 300, 'max_depth': 14, 'min_samples_leaf': 67, 'max_features': 0.20516019810338634, 'max_samples': 0.5195053886390926}. Best is trial 10 with value: 0.46117871270437993.
+[I 2026-11-12 02:13:38,700] Trial 12 finished with value: 0.4646670613552241 and parameters: {'n_estimators': 300, 'max_depth': 19, 'min_samples_leaf': 25, 'max_features': 0.20283534583781043, 'max_samples': 0.6024351247034112}. Best is trial 12 with value: 0.4646670613552241.
+[I 2026-11-12 02:13:49,533] Trial 13 finished with value: 0.46133244298029896 and parameters: {'n_estimators': 200, 'max_depth': 17, 'min_samples_leaf': 37, 'max_features': 0.18366351195466082, 'max_samples': 0.5349727959020811}. Best is trial 12 with value: 0.4646670613552241.
+[I 2026-11-12 02:14:10,761] Trial 14 finished with value: 0.46597799712123056 and parameters: {'n_estimators': 300, 'max_depth': 20, 'min_samples_leaf': 12, 'max_features': 0.20339357021226007, 'max_samples': 0.5533706176776195}. Best is trial 14 with value: 0.46597799712123056.
+2026-11-12 02:14:10 | INFO     | src.training.runner | [F0__weight__rf] best TUNE PR-AUC 0.4660 params={'n_estimators': 300, 'max_depth': 20, 'min_samples_leaf': 12, 'max_features': 0.20339357021226007, 'max_samples': 0.5533706176776195}
+2026-11-12 02:14:48 | INFO     | src.training.runner | [F0__weight__rf] seed 0 refit 38s CAL PR-AUC 0.4695
+2026-11-12 02:15:26 | INFO     | src.training.runner | [F0__weight__rf] seed 1 refit 37s CAL PR-AUC 0.4713
+2026-11-12 02:16:04 | INFO     | src.training.runner | [F0__weight__rf] seed 2 refit 38s CAL PR-AUC 0.4705
+wandb: 
+wandb: Run history:
+wandb: cal_pr_auc_mean ▁
+wandb: 
+wandb: Run summary:
+wandb: cal_pr_auc_mean 0.47043
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_021119-f9bze3ci
+wandb: Find logs at: ./wandb/offline-run-20261112_021119-f9bze3ci/logs
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_021604-wmjv076u
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 02:16:04 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F0__rus__rf mode=offline
+[I 2026-11-12 02:16:04,954] A new study created in memory with name: no-name-0c385809-24f7-4d3b-a273-d9eb6888cc56
+2026-11-12 02:16:04 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:16:07,752] Trial 0 finished with value: 0.4515336583807726 and parameters: {'n_estimators': 200, 'max_depth': 24, 'min_samples_leaf': 33, 'max_features': 0.19966462104925914, 'max_samples': 0.37800932022121825}. Best is trial 0 with value: 0.4515336583807726.
+2026-11-12 02:16:07 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:16:09,794] Trial 1 finished with value: 0.4364323024884479 and parameters: {'n_estimators': 100, 'max_depth': 8, 'min_samples_leaf': 57, 'max_features': 0.20027875293580222, 'max_samples': 0.6540362888980227}. Best is trial 0 with value: 0.4515336583807726.
+2026-11-12 02:16:10 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:16:11,176] Trial 2 finished with value: 0.44353512962171127 and parameters: {'n_estimators': 100, 'max_depth': 24, 'min_samples_leaf': 50, 'max_features': 0.10308477766956904, 'max_samples': 0.3909124836035503}. Best is trial 0 with value: 0.4515336583807726.
+2026-11-12 02:16:11 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:16:12,982] Trial 3 finished with value: 0.4507646091589518 and parameters: {'n_estimators': 100, 'max_depth': 13, 'min_samples_leaf': 14, 'max_features': 0.15798625466052896, 'max_samples': 0.44561457009902095}. Best is trial 0 with value: 0.4515336583807726.
+2026-11-12 02:16:13 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:16:15,773] Trial 4 finished with value: 0.44628282812724873 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 5, 'max_features': 0.14159046082342291, 'max_samples': 0.5280349921085179}. Best is trial 0 with value: 0.4515336583807726.
+2026-11-12 02:16:15 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:16:19,246] Trial 5 finished with value: 0.4500307138580667 and parameters: {'n_estimators': 300, 'max_depth': 11, 'min_samples_leaf': 13, 'max_features': 0.19810364221551063, 'max_samples': 0.32322520635999885}. Best is trial 0 with value: 0.4515336583807726.
+2026-11-12 02:16:19 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:16:25,170] Trial 6 finished with value: 0.44690336867774383 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 2, 'max_features': 0.2872213843133333, 'max_samples': 0.7828160165372797}. Best is trial 0 with value: 0.4515336583807726.
+2026-11-12 02:16:25 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:16:31,423] Trial 7 finished with value: 0.455016158316044 and parameters: {'n_estimators': 300, 'max_depth': 13, 'min_samples_leaf': 2, 'max_features': 0.22105825662803924, 'max_samples': 0.5200762468698006}. Best is trial 7 with value: 0.455016158316044.
+2026-11-12 02:16:31 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:16:34,225] Trial 8 finished with value: 0.45181416802157165 and parameters: {'n_estimators': 100, 'max_depth': 16, 'min_samples_leaf': 2, 'max_features': 0.27733010051969553, 'max_samples': 0.42938999080000845}. Best is trial 7 with value: 0.455016158316044.
+2026-11-12 02:16:34 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:16:37,145] Trial 9 finished with value: 0.4523944430744596 and parameters: {'n_estimators': 200, 'max_depth': 13, 'min_samples_leaf': 13, 'max_features': 0.1866775698358199, 'max_samples': 0.3924272277627635}. Best is trial 7 with value: 0.455016158316044.
+2026-11-12 02:16:37 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:16:47,151] Trial 10 finished with value: 0.45573606064618477 and parameters: {'n_estimators': 300, 'max_depth': 18, 'min_samples_leaf': 4, 'max_features': 0.2594848953663551, 'max_samples': 0.6449378996872154}. Best is trial 10 with value: 0.45573606064618477.
+2026-11-12 02:16:47 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:16:54,739] Trial 11 finished with value: 0.4551282325165946 and parameters: {'n_estimators': 300, 'max_depth': 14, 'min_samples_leaf': 2, 'max_features': 0.24544936026385167, 'max_samples': 0.5725754760523332}. Best is trial 10 with value: 0.45573606064618477.
+2026-11-12 02:16:54 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:17:03,906] Trial 12 finished with value: 0.4576931391562755 and parameters: {'n_estimators': 300, 'max_depth': 17, 'min_samples_leaf': 3, 'max_features': 0.24645377141830158, 'max_samples': 0.6255435794838986}. Best is trial 12 with value: 0.4576931391562755.
+2026-11-12 02:17:04 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:17:12,415] Trial 13 finished with value: 0.4569226277290904 and parameters: {'n_estimators': 300, 'max_depth': 17, 'min_samples_leaf': 11, 'max_features': 0.27131676000056326, 'max_samples': 0.5429914727571642}. Best is trial 12 with value: 0.4576931391562755.
+2026-11-12 02:17:12 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 02:17:20,695] Trial 14 finished with value: 0.4577445922321388 and parameters: {'n_estimators': 300, 'max_depth': 21, 'min_samples_leaf': 6, 'max_features': 0.19758517198981487, 'max_samples': 0.6438676675306829}. Best is trial 14 with value: 0.4577445922321388.
+2026-11-12 02:17:20 | INFO     | src.training.runner | [F0__rus__rf] best TUNE PR-AUC 0.4577 params={'n_estimators': 300, 'max_depth': 21, 'min_samples_leaf': 6, 'max_features': 0.19758517198981487, 'max_samples': 0.6438676675306829}
+2026-11-12 02:17:21 | INFO     | src.models.imbalance | rus: 155499 -> 75284 training rows (pos rate 0.500)
+2026-11-12 02:17:35 | INFO     | src.training.runner | [F0__rus__rf] seed 0 refit 15s CAL PR-AUC 0.4637
+2026-11-12 02:17:35 | INFO     | src.models.imbalance | rus: 155499 -> 75284 training rows (pos rate 0.500)
+2026-11-12 02:17:50 | INFO     | src.training.runner | [F0__rus__rf] seed 1 refit 14s CAL PR-AUC 0.4654
+2026-11-12 02:17:50 | INFO     | src.models.imbalance | rus: 155499 -> 75284 training rows (pos rate 0.500)
+2026-11-12 02:18:06 | INFO     | src.training.runner | [F0__rus__rf] seed 2 refit 16s CAL PR-AUC 0.4653
+wandb: 
+wandb: Run history:
+wandb: cal_pr_auc_mean ▁
+wandb: 
+wandb: Run summary:
+wandb: cal_pr_auc_mean 0.46479
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_021604-wmjv076u
+wandb: Find logs at: ./wandb/offline-run-20261112_021604-wmjv076u/logs
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_021806-oce6w4sj
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 02:18:06 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F0__smotenc__rf mode=offline
+[I 2026-11-12 02:18:06,458] A new study created in memory with name: no-name-4c6e0ec5-2730-49ab-8ac2-0a4068977fe6
+2026-11-12 02:20:07 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:20:17,173] Trial 0 finished with value: 0.40518628916236443 and parameters: {'n_estimators': 200, 'max_depth': 24, 'min_samples_leaf': 33, 'max_features': 0.19966462104925914, 'max_samples': 0.37800932022121825}. Best is trial 0 with value: 0.40518628916236443.
+2026-11-12 02:22:11 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:22:15,678] Trial 1 finished with value: 0.38205988110427147 and parameters: {'n_estimators': 100, 'max_depth': 8, 'min_samples_leaf': 57, 'max_features': 0.20027875293580222, 'max_samples': 0.6540362888980227}. Best is trial 0 with value: 0.40518628916236443.
+2026-11-12 02:24:18 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:24:22,754] Trial 2 finished with value: 0.4023571911731713 and parameters: {'n_estimators': 100, 'max_depth': 24, 'min_samples_leaf': 50, 'max_features': 0.10308477766956904, 'max_samples': 0.3909124836035503}. Best is trial 0 with value: 0.40518628916236443.
+2026-11-12 02:26:32 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:26:38,517] Trial 3 finished with value: 0.39756617659743415 and parameters: {'n_estimators': 100, 'max_depth': 13, 'min_samples_leaf': 14, 'max_features': 0.15798625466052896, 'max_samples': 0.44561457009902095}. Best is trial 0 with value: 0.40518628916236443.
+2026-11-12 02:28:51 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:28:58,366] Trial 4 finished with value: 0.3899085004253604 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 5, 'max_features': 0.14159046082342291, 'max_samples': 0.5280349921085179}. Best is trial 0 with value: 0.40518628916236443.
+2026-11-12 02:30:48 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:30:59,946] Trial 5 finished with value: 0.3952293087571463 and parameters: {'n_estimators': 300, 'max_depth': 11, 'min_samples_leaf': 13, 'max_features': 0.19810364221551063, 'max_samples': 0.32322520635999885}. Best is trial 0 with value: 0.40518628916236443.
+2026-11-12 02:33:23 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:33:50,790] Trial 6 finished with value: 0.3859151403822667 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 2, 'max_features': 0.2872213843133333, 'max_samples': 0.7828160165372797}. Best is trial 0 with value: 0.40518628916236443.
+2026-11-12 02:35:57 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:36:28,309] Trial 7 finished with value: 0.39885204674775765 and parameters: {'n_estimators': 300, 'max_depth': 13, 'min_samples_leaf': 2, 'max_features': 0.22105825662803924, 'max_samples': 0.5200762468698006}. Best is trial 0 with value: 0.40518628916236443.
+2026-11-12 02:38:47 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:38:55,823] Trial 8 finished with value: 0.40431544154592164 and parameters: {'n_estimators': 100, 'max_depth': 16, 'min_samples_leaf': 2, 'max_features': 0.27733010051969553, 'max_samples': 0.42938999080000845}. Best is trial 0 with value: 0.40518628916236443.
+2026-11-12 02:41:10 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:41:18,868] Trial 9 finished with value: 0.3990033537203153 and parameters: {'n_estimators': 200, 'max_depth': 13, 'min_samples_leaf': 13, 'max_features': 0.1866775698358199, 'max_samples': 0.3924272277627635}. Best is trial 0 with value: 0.40518628916236443.
+2026-11-12 02:43:15 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:43:50,718] Trial 10 finished with value: 0.4083365307328363 and parameters: {'n_estimators': 300, 'max_depth': 23, 'min_samples_leaf': 61, 'max_features': 0.25011948741066287, 'max_samples': 0.627021245324312}. Best is trial 10 with value: 0.4083365307328363.
+2026-11-12 02:45:47 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:46:16,493] Trial 11 finished with value: 0.4058590646065779 and parameters: {'n_estimators': 300, 'max_depth': 22, 'min_samples_leaf': 85, 'max_features': 0.21579588129358407, 'max_samples': 0.5951779177882414}. Best is trial 10 with value: 0.4083365307328363.
+2026-11-12 02:48:20 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:48:50,444] Trial 12 finished with value: 0.40545312437130426 and parameters: {'n_estimators': 300, 'max_depth': 23, 'min_samples_leaf': 72, 'max_features': 0.25109198940217337, 'max_samples': 0.5472171223935114}. Best is trial 10 with value: 0.4083365307328363.
+2026-11-12 02:50:45 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:51:08,816] Trial 13 finished with value: 0.410300128191886 and parameters: {'n_estimators': 300, 'max_depth': 24, 'min_samples_leaf': 29, 'max_features': 0.15390660078567522, 'max_samples': 0.5795140579946271}. Best is trial 13 with value: 0.410300128191886.
+2026-11-12 02:53:02 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 02:53:38,103] Trial 14 finished with value: 0.41125008039232075 and parameters: {'n_estimators': 300, 'max_depth': 22, 'min_samples_leaf': 23, 'max_features': 0.22076730026393182, 'max_samples': 0.5739941098317298}. Best is trial 14 with value: 0.41125008039232075.
+2026-11-12 02:53:38 | INFO     | src.training.runner | [F0__smotenc__rf] best TUNE PR-AUC 0.4113 params={'n_estimators': 300, 'max_depth': 22, 'min_samples_leaf': 23, 'max_features': 0.22076730026393182, 'max_samples': 0.5739941098317298}
+2026-11-12 02:57:58 | INFO     | src.models.imbalance | smotenc: 155499 -> 235714 training rows (pos rate 0.500)
+2026-11-12 02:58:59 | INFO     | src.training.runner | [F0__smotenc__rf] seed 0 refit 321s CAL PR-AUC 0.4135
+2026-11-12 03:03:43 | INFO     | src.models.imbalance | smotenc: 155499 -> 235714 training rows (pos rate 0.500)
+2026-11-12 03:04:47 | INFO     | src.training.runner | [F0__smotenc__rf] seed 1 refit 348s CAL PR-AUC 0.4140
+2026-11-12 03:09:08 | INFO     | src.models.imbalance | smotenc: 155499 -> 235714 training rows (pos rate 0.500)
+2026-11-12 03:10:08 | INFO     | src.training.runner | [F0__smotenc__rf] seed 2 refit 321s CAL PR-AUC 0.4131
+wandb: 
+wandb: Run history:
+wandb: cal_pr_auc_mean ▁
+wandb: 
+wandb: Run summary:
+wandb: cal_pr_auc_mean 0.41352
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_021806-oce6w4sj
+wandb: Find logs at: ./wandb/offline-run-20261112_021806-oce6w4sj/logs
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_031008-l1fobz75
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 03:10:08 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F1__none__rf mode=offline
+[I 2026-11-12 03:10:08,789] A new study created in memory with name: no-name-fbdded3a-06bf-4c3e-9ed3-16cf9f53a7ca
+[I 2026-11-12 03:10:15,988] Trial 0 finished with value: 0.4722413959695883 and parameters: {'n_estimators': 200, 'max_depth': 24, 'min_samples_leaf': 33, 'max_features': 0.19966462104925914, 'max_samples': 0.37800932022121825}. Best is trial 0 with value: 0.4722413959695883.
+[I 2026-11-12 03:10:20,578] Trial 1 finished with value: 0.4586198053636017 and parameters: {'n_estimators': 100, 'max_depth': 8, 'min_samples_leaf': 57, 'max_features': 0.20027875293580222, 'max_samples': 0.6540362888980227}. Best is trial 0 with value: 0.4722413959695883.
+[I 2026-11-12 03:10:23,114] Trial 2 finished with value: 0.46692240192490664 and parameters: {'n_estimators': 100, 'max_depth': 24, 'min_samples_leaf': 50, 'max_features': 0.10308477766956904, 'max_samples': 0.3909124836035503}. Best is trial 0 with value: 0.4722413959695883.
+[I 2026-11-12 03:10:27,040] Trial 3 finished with value: 0.47281540702330616 and parameters: {'n_estimators': 100, 'max_depth': 13, 'min_samples_leaf': 14, 'max_features': 0.15798625466052896, 'max_samples': 0.44561457009902095}. Best is trial 3 with value: 0.47281540702330616.
+[I 2026-11-12 03:10:33,362] Trial 4 finished with value: 0.46720928585787724 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 5, 'max_features': 0.14159046082342291, 'max_samples': 0.5280349921085179}. Best is trial 3 with value: 0.47281540702330616.
+[I 2026-11-12 03:10:44,016] Trial 5 finished with value: 0.4702945582108996 and parameters: {'n_estimators': 300, 'max_depth': 11, 'min_samples_leaf': 13, 'max_features': 0.19810364221551063, 'max_samples': 0.32322520635999885}. Best is trial 3 with value: 0.47281540702330616.
+[I 2026-11-12 03:10:58,535] Trial 6 finished with value: 0.4687784397045304 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 2, 'max_features': 0.2872213843133333, 'max_samples': 0.7828160165372797}. Best is trial 3 with value: 0.47281540702330616.
+[I 2026-11-12 03:11:14,755] Trial 7 finished with value: 0.47281079741137344 and parameters: {'n_estimators': 300, 'max_depth': 13, 'min_samples_leaf': 2, 'max_features': 0.22105825662803924, 'max_samples': 0.5200762468698006}. Best is trial 3 with value: 0.47281540702330616.
+[I 2026-11-12 03:11:21,930] Trial 8 finished with value: 0.47139544865891275 and parameters: {'n_estimators': 100, 'max_depth': 16, 'min_samples_leaf': 2, 'max_features': 0.27733010051969553, 'max_samples': 0.42938999080000845}. Best is trial 3 with value: 0.47281540702330616.
+[I 2026-11-12 03:11:29,545] Trial 9 finished with value: 0.4726471318792586 and parameters: {'n_estimators': 200, 'max_depth': 13, 'min_samples_leaf': 13, 'max_features': 0.1866775698358199, 'max_samples': 0.3924272277627635}. Best is trial 3 with value: 0.47281540702330616.
+[I 2026-11-12 03:11:32,970] Trial 10 finished with value: 0.472335136231145 and parameters: {'n_estimators': 100, 'max_depth': 16, 'min_samples_leaf': 15, 'max_features': 0.10183767100605956, 'max_samples': 0.5242972843365341}. Best is trial 3 with value: 0.47281540702330616.
+[I 2026-11-12 03:11:48,039] Trial 11 finished with value: 0.47235415357406396 and parameters: {'n_estimators': 300, 'max_depth': 15, 'min_samples_leaf': 37, 'max_features': 0.18898061780148367, 'max_samples': 0.5699968285568906}. Best is trial 3 with value: 0.47281540702330616.
+[I 2026-11-12 03:12:08,224] Trial 12 finished with value: 0.47637388354209587 and parameters: {'n_estimators': 300, 'max_depth': 16, 'min_samples_leaf': 5, 'max_features': 0.23076777989145464, 'max_samples': 0.5809388150984899}. Best is trial 12 with value: 0.47637388354209587.
+[I 2026-11-12 03:12:27,593] Trial 13 finished with value: 0.4759930617180259 and parameters: {'n_estimators': 300, 'max_depth': 16, 'min_samples_leaf': 16, 'max_features': 0.2640069324538392, 'max_samples': 0.49913347545023307}. Best is trial 12 with value: 0.47637388354209587.
+[I 2026-11-12 03:12:47,414] Trial 14 finished with value: 0.4766515850371468 and parameters: {'n_estimators': 300, 'max_depth': 19, 'min_samples_leaf': 10, 'max_features': 0.2130689963204135, 'max_samples': 0.5976945189999839}. Best is trial 14 with value: 0.4766515850371468.
+2026-11-12 03:12:47 | INFO     | src.training.runner | [F1__none__rf] best TUNE PR-AUC 0.4767 params={'n_estimators': 300, 'max_depth': 19, 'min_samples_leaf': 10, 'max_features': 0.2130689963204135, 'max_samples': 0.5976945189999839}
+2026-11-12 03:13:25 | INFO     | src.training.runner | [F1__none__rf] seed 0 refit 38s CAL PR-AUC 0.4791
+2026-11-12 03:14:02 | INFO     | src.training.runner | [F1__none__rf] seed 1 refit 37s CAL PR-AUC 0.4787
+2026-11-12 03:14:39 | INFO     | src.training.runner | [F1__none__rf] seed 2 refit 37s CAL PR-AUC 0.4791
+wandb: 
+wandb: Run history:
+wandb: cal_pr_auc_mean ▁
+wandb: 
+wandb: Run summary:
+wandb: cal_pr_auc_mean 0.47899
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_031008-l1fobz75
+wandb: Find logs at: ./wandb/offline-run-20261112_031008-l1fobz75/logs
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_031439-zlpd53w0
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 03:14:39 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F1__weight__rf mode=offline
+[I 2026-11-12 03:14:39,651] A new study created in memory with name: no-name-5c025221-1817-4aef-845e-9c2c180d6fe6
+[I 2026-11-12 03:14:50,274] Trial 0 finished with value: 0.4733327234743579 and parameters: {'n_estimators': 200, 'max_depth': 24, 'min_samples_leaf': 33, 'max_features': 0.19966462104925914, 'max_samples': 0.37800932022121825}. Best is trial 0 with value: 0.4733327234743579.
+[I 2026-11-12 03:14:55,147] Trial 1 finished with value: 0.4564297483180815 and parameters: {'n_estimators': 100, 'max_depth': 8, 'min_samples_leaf': 57, 'max_features': 0.20027875293580222, 'max_samples': 0.6540362888980227}. Best is trial 0 with value: 0.4733327234743579.
+[I 2026-11-12 03:14:58,482] Trial 2 finished with value: 0.46740490949705704 and parameters: {'n_estimators': 100, 'max_depth': 24, 'min_samples_leaf': 50, 'max_features': 0.10308477766956904, 'max_samples': 0.3909124836035503}. Best is trial 0 with value: 0.4733327234743579.
+[I 2026-11-12 03:15:03,576] Trial 3 finished with value: 0.4710669895010711 and parameters: {'n_estimators': 100, 'max_depth': 13, 'min_samples_leaf': 14, 'max_features': 0.15798625466052896, 'max_samples': 0.44561457009902095}. Best is trial 0 with value: 0.4733327234743579.
+[I 2026-11-12 03:15:11,529] Trial 4 finished with value: 0.4658820883098216 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 5, 'max_features': 0.14159046082342291, 'max_samples': 0.5280349921085179}. Best is trial 0 with value: 0.4733327234743579.
+[I 2026-11-12 03:15:23,691] Trial 5 finished with value: 0.46879349577942536 and parameters: {'n_estimators': 300, 'max_depth': 11, 'min_samples_leaf': 13, 'max_features': 0.19810364221551063, 'max_samples': 0.32322520635999885}. Best is trial 0 with value: 0.4733327234743579.
+[I 2026-11-12 03:15:40,478] Trial 6 finished with value: 0.4663159887448543 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 2, 'max_features': 0.2872213843133333, 'max_samples': 0.7828160165372797}. Best is trial 0 with value: 0.4733327234743579.
+[I 2026-11-12 03:16:02,993] Trial 7 finished with value: 0.472805094466401 and parameters: {'n_estimators': 300, 'max_depth': 13, 'min_samples_leaf': 2, 'max_features': 0.22105825662803924, 'max_samples': 0.5200762468698006}. Best is trial 0 with value: 0.4733327234743579.
+[I 2026-11-12 03:16:12,181] Trial 8 finished with value: 0.4722415762345164 and parameters: {'n_estimators': 100, 'max_depth': 16, 'min_samples_leaf': 2, 'max_features': 0.27733010051969553, 'max_samples': 0.42938999080000845}. Best is trial 0 with value: 0.4733327234743579.
+[I 2026-11-12 03:16:22,050] Trial 9 finished with value: 0.4732070009895495 and parameters: {'n_estimators': 200, 'max_depth': 13, 'min_samples_leaf': 13, 'max_features': 0.1866775698358199, 'max_samples': 0.3924272277627635}. Best is trial 0 with value: 0.4733327234743579.
+[I 2026-11-12 03:16:47,679] Trial 10 finished with value: 0.4712580186382558 and parameters: {'n_estimators': 300, 'max_depth': 23, 'min_samples_leaf': 61, 'max_features': 0.25011948741066287, 'max_samples': 0.627021245324312}. Best is trial 0 with value: 0.4733327234743579.
+[I 2026-11-12 03:16:58,767] Trial 11 finished with value: 0.47577101024286256 and parameters: {'n_estimators': 200, 'max_depth': 21, 'min_samples_leaf': 15, 'max_features': 0.19233599088182457, 'max_samples': 0.354271368161057}. Best is trial 11 with value: 0.47577101024286256.
+[I 2026-11-12 03:17:08,355] Trial 12 finished with value: 0.4701101769929159 and parameters: {'n_estimators': 200, 'max_depth': 23, 'min_samples_leaf': 52, 'max_features': 0.21318969556427947, 'max_samples': 0.3185506317067194}. Best is trial 11 with value: 0.47577101024286256.
+[I 2026-11-12 03:17:23,333] Trial 13 finished with value: 0.4741726895045997 and parameters: {'n_estimators': 300, 'max_depth': 24, 'min_samples_leaf': 29, 'max_features': 0.16661835957042365, 'max_samples': 0.40021339089649777}. Best is trial 11 with value: 0.47577101024286256.
+[I 2026-11-12 03:17:35,754] Trial 14 finished with value: 0.47429298493952854 and parameters: {'n_estimators': 300, 'max_depth': 23, 'min_samples_leaf': 21, 'max_features': 0.1413481205874182, 'max_samples': 0.3479620701567675}. Best is trial 11 with value: 0.47577101024286256.
+2026-11-12 03:17:35 | INFO     | src.training.runner | [F1__weight__rf] best TUNE PR-AUC 0.4758 params={'n_estimators': 200, 'max_depth': 21, 'min_samples_leaf': 15, 'max_features': 0.19233599088182457, 'max_samples': 0.354271368161057}
+2026-11-12 03:17:57 | INFO     | src.training.runner | [F1__weight__rf] seed 0 refit 21s CAL PR-AUC 0.4782
+2026-11-12 03:18:17 | INFO     | src.training.runner | [F1__weight__rf] seed 1 refit 20s CAL PR-AUC 0.4782
+2026-11-12 03:18:37 | INFO     | src.training.runner | [F1__weight__rf] seed 2 refit 20s CAL PR-AUC 0.4785
+wandb: 
+wandb: Run history:
+wandb: cal_pr_auc_mean ▁
+wandb: 
+wandb: Run summary:
+wandb: cal_pr_auc_mean 0.47827
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_031439-zlpd53w0
+wandb: Find logs at: ./wandb/offline-run-20261112_031439-zlpd53w0/logs
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_031837-j14h3gu2
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 03:18:37 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F1__rus__rf mode=offline
+[I 2026-11-12 03:18:38,168] A new study created in memory with name: no-name-b390a729-7110-46a0-abad-422dd8099e94
+2026-11-12 03:18:38 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:18:40,925] Trial 0 finished with value: 0.4645062320430021 and parameters: {'n_estimators': 200, 'max_depth': 24, 'min_samples_leaf': 33, 'max_features': 0.19966462104925914, 'max_samples': 0.37800932022121825}. Best is trial 0 with value: 0.4645062320430021.
+2026-11-12 03:18:41 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:18:42,769] Trial 1 finished with value: 0.4542263636053996 and parameters: {'n_estimators': 100, 'max_depth': 8, 'min_samples_leaf': 57, 'max_features': 0.20027875293580222, 'max_samples': 0.6540362888980227}. Best is trial 0 with value: 0.4645062320430021.
+2026-11-12 03:18:42 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:18:44,069] Trial 2 finished with value: 0.4599299712754287 and parameters: {'n_estimators': 100, 'max_depth': 24, 'min_samples_leaf': 50, 'max_features': 0.10308477766956904, 'max_samples': 0.3909124836035503}. Best is trial 0 with value: 0.4645062320430021.
+2026-11-12 03:18:44 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:18:45,836] Trial 3 finished with value: 0.4657357399036237 and parameters: {'n_estimators': 100, 'max_depth': 13, 'min_samples_leaf': 14, 'max_features': 0.15798625466052896, 'max_samples': 0.44561457009902095}. Best is trial 3 with value: 0.4657357399036237.
+2026-11-12 03:18:46 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:18:50,591] Trial 4 finished with value: 0.4625560444343121 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 5, 'max_features': 0.14159046082342291, 'max_samples': 0.5280349921085179}. Best is trial 3 with value: 0.4657357399036237.
+2026-11-12 03:18:50 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:18:54,397] Trial 5 finished with value: 0.46476890799303777 and parameters: {'n_estimators': 300, 'max_depth': 11, 'min_samples_leaf': 13, 'max_features': 0.19810364221551063, 'max_samples': 0.32322520635999885}. Best is trial 3 with value: 0.4657357399036237.
+2026-11-12 03:18:54 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:19:00,707] Trial 6 finished with value: 0.46417892347936485 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 2, 'max_features': 0.2872213843133333, 'max_samples': 0.7828160165372797}. Best is trial 3 with value: 0.4657357399036237.
+2026-11-12 03:19:00 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:19:07,747] Trial 7 finished with value: 0.4692996456912147 and parameters: {'n_estimators': 300, 'max_depth': 13, 'min_samples_leaf': 2, 'max_features': 0.22105825662803924, 'max_samples': 0.5200762468698006}. Best is trial 7 with value: 0.4692996456912147.
+2026-11-12 03:19:07 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:19:10,871] Trial 8 finished with value: 0.4657021490188481 and parameters: {'n_estimators': 100, 'max_depth': 16, 'min_samples_leaf': 2, 'max_features': 0.27733010051969553, 'max_samples': 0.42938999080000845}. Best is trial 7 with value: 0.4692996456912147.
+2026-11-12 03:19:11 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:19:14,030] Trial 9 finished with value: 0.46749297030827625 and parameters: {'n_estimators': 200, 'max_depth': 13, 'min_samples_leaf': 13, 'max_features': 0.1866775698358199, 'max_samples': 0.3924272277627635}. Best is trial 7 with value: 0.4692996456912147.
+2026-11-12 03:19:14 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:19:25,142] Trial 10 finished with value: 0.46971220242435807 and parameters: {'n_estimators': 300, 'max_depth': 18, 'min_samples_leaf': 4, 'max_features': 0.2594848953663551, 'max_samples': 0.6449378996872154}. Best is trial 10 with value: 0.46971220242435807.
+2026-11-12 03:19:25 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:19:33,640] Trial 11 finished with value: 0.46859034183853676 and parameters: {'n_estimators': 300, 'max_depth': 14, 'min_samples_leaf': 2, 'max_features': 0.24544936026385167, 'max_samples': 0.5725754760523332}. Best is trial 10 with value: 0.46971220242435807.
+2026-11-12 03:19:33 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:19:45,328] Trial 12 finished with value: 0.4691361325928316 and parameters: {'n_estimators': 300, 'max_depth': 20, 'min_samples_leaf': 4, 'max_features': 0.25388118678527594, 'max_samples': 0.6800392391514402}. Best is trial 10 with value: 0.46971220242435807.
+2026-11-12 03:19:45 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:19:52,525] Trial 13 finished with value: 0.4690257696351152 and parameters: {'n_estimators': 300, 'max_depth': 22, 'min_samples_leaf': 4, 'max_features': 0.18457491975282792, 'max_samples': 0.49883045197737597}. Best is trial 10 with value: 0.46971220242435807.
+2026-11-12 03:19:52 | INFO     | src.models.imbalance | rus: 104258 -> 49920 training rows (pos rate 0.500)
+[I 2026-11-12 03:19:58,308] Trial 14 finished with value: 0.4708735339379154 and parameters: {'n_estimators': 200, 'max_depth': 18, 'min_samples_leaf': 12, 'max_features': 0.2403346767277749, 'max_samples': 0.5627281913473504}. Best is trial 14 with value: 0.4708735339379154.
+2026-11-12 03:19:58 | INFO     | src.training.runner | [F1__rus__rf] best TUNE PR-AUC 0.4709 params={'n_estimators': 200, 'max_depth': 18, 'min_samples_leaf': 12, 'max_features': 0.2403346767277749, 'max_samples': 0.5627281913473504}
+2026-11-12 03:19:58 | INFO     | src.models.imbalance | rus: 155499 -> 75284 training rows (pos rate 0.500)
+2026-11-12 03:20:08 | INFO     | src.training.runner | [F1__rus__rf] seed 0 refit 10s CAL PR-AUC 0.4726
+2026-11-12 03:20:08 | INFO     | src.models.imbalance | rus: 155499 -> 75284 training rows (pos rate 0.500)
+2026-11-12 03:20:18 | INFO     | src.training.runner | [F1__rus__rf] seed 1 refit 10s CAL PR-AUC 0.4740
+2026-11-12 03:20:18 | INFO     | src.models.imbalance | rus: 155499 -> 75284 training rows (pos rate 0.500)
+2026-11-12 03:20:28 | INFO     | src.training.runner | [F1__rus__rf] seed 2 refit 10s CAL PR-AUC 0.4740
+wandb: 
+wandb: Run history:
+wandb: cal_pr_auc_mean ▁
+wandb: 
+wandb: Run summary:
+wandb: cal_pr_auc_mean 0.47352
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_031837-j14h3gu2
+wandb: Find logs at: ./wandb/offline-run-20261112_031837-j14h3gu2/logs
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_032028-w1xc1lq2
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 03:20:29 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F1__smotenc__rf mode=offline
+[I 2026-11-12 03:20:29,171] A new study created in memory with name: no-name-cf0ad475-b6ac-4b0d-a0d0-aa088b839c16
+2026-11-12 03:21:57 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:22:10,819] Trial 0 finished with value: 0.45718942221835457 and parameters: {'n_estimators': 200, 'max_depth': 24, 'min_samples_leaf': 33, 'max_features': 0.19966462104925914, 'max_samples': 0.37800932022121825}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:23:35 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:23:40,721] Trial 1 finished with value: 0.43710126640161406 and parameters: {'n_estimators': 100, 'max_depth': 8, 'min_samples_leaf': 57, 'max_features': 0.20027875293580222, 'max_samples': 0.6540362888980227}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:25:13 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:25:16,834] Trial 2 finished with value: 0.454495610166414 and parameters: {'n_estimators': 100, 'max_depth': 24, 'min_samples_leaf': 50, 'max_features': 0.10308477766956904, 'max_samples': 0.3909124836035503}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:26:52 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:26:56,775] Trial 3 finished with value: 0.45165155352288816 and parameters: {'n_estimators': 100, 'max_depth': 13, 'min_samples_leaf': 14, 'max_features': 0.15798625466052896, 'max_samples': 0.44561457009902095}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:28:30 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:28:39,307] Trial 4 finished with value: 0.4459441673683681 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 5, 'max_features': 0.14159046082342291, 'max_samples': 0.5280349921085179}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:30:09 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:30:22,009] Trial 5 finished with value: 0.4478013534165669 and parameters: {'n_estimators': 300, 'max_depth': 11, 'min_samples_leaf': 13, 'max_features': 0.19810364221551063, 'max_samples': 0.32322520635999885}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:32:37 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:33:05,655] Trial 6 finished with value: 0.4404274487480772 and parameters: {'n_estimators': 200, 'max_depth': 10, 'min_samples_leaf': 2, 'max_features': 0.2872213843133333, 'max_samples': 0.7828160165372797}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:34:56 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:35:19,177] Trial 7 finished with value: 0.4485135944564146 and parameters: {'n_estimators': 300, 'max_depth': 13, 'min_samples_leaf': 2, 'max_features': 0.22105825662803924, 'max_samples': 0.5200762468698006}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:37:56 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:38:05,623] Trial 8 finished with value: 0.4495302420012612 and parameters: {'n_estimators': 100, 'max_depth': 16, 'min_samples_leaf': 2, 'max_features': 0.27733010051969553, 'max_samples': 0.42938999080000845}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:40:04 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:40:22,567] Trial 9 finished with value: 0.45076016881162 and parameters: {'n_estimators': 200, 'max_depth': 13, 'min_samples_leaf': 13, 'max_features': 0.1866775698358199, 'max_samples': 0.3924272277627635}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:42:06 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:42:36,745] Trial 10 finished with value: 0.4544980593492444 and parameters: {'n_estimators': 300, 'max_depth': 23, 'min_samples_leaf': 61, 'max_features': 0.25011948741066287, 'max_samples': 0.627021245324312}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:44:28 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:44:53,799] Trial 11 finished with value: 0.4539795142521218 and parameters: {'n_estimators': 300, 'max_depth': 22, 'min_samples_leaf': 85, 'max_features': 0.21579588129358407, 'max_samples': 0.5951779177882414}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:46:42 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:46:53,241] Trial 12 finished with value: 0.4541028186173235 and parameters: {'n_estimators': 200, 'max_depth': 23, 'min_samples_leaf': 52, 'max_features': 0.21318969556427947, 'max_samples': 0.3258988976920799}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:48:51 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:49:34,081] Trial 13 finished with value: 0.45517312045126523 and parameters: {'n_estimators': 300, 'max_depth': 24, 'min_samples_leaf': 55, 'max_features': 0.2976962211838775, 'max_samples': 0.7242337248627847}. Best is trial 0 with value: 0.45718942221835457.
+2026-11-12 03:51:24 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+[I 2026-11-12 03:51:46,486] Trial 14 finished with value: 0.45750029837736067 and parameters: {'n_estimators': 300, 'max_depth': 24, 'min_samples_leaf': 23, 'max_features': 0.21369784560885635, 'max_samples': 0.4606532820376054}. Best is trial 14 with value: 0.45750029837736067.
+2026-11-12 03:51:46 | INFO     | src.training.runner | [F1__smotenc__rf] best TUNE PR-AUC 0.4575 params={'n_estimators': 300, 'max_depth': 24, 'min_samples_leaf': 23, 'max_features': 0.21369784560885635, 'max_samples': 0.4606532820376054}
+2026-11-12 03:55:56 | INFO     | src.models.imbalance | smotenc: 155499 -> 235714 training rows (pos rate 0.500)
+2026-11-12 03:56:35 | INFO     | src.training.runner | [F1__smotenc__rf] seed 0 refit 289s CAL PR-AUC 0.4548
+2026-11-12 04:00:35 | INFO     | src.models.imbalance | smotenc: 155499 -> 235714 training rows (pos rate 0.500)
+2026-11-12 04:01:15 | INFO     | src.training.runner | [F1__smotenc__rf] seed 1 refit 280s CAL PR-AUC 0.4550
+2026-11-12 04:05:31 | INFO     | src.models.imbalance | smotenc: 155499 -> 235714 training rows (pos rate 0.500)
+2026-11-12 04:06:09 | INFO     | src.training.runner | [F1__smotenc__rf] seed 2 refit 294s CAL PR-AUC 0.4541
+wandb: 
+wandb: Run history:
+wandb: cal_pr_auc_mean ▁
+wandb: 
+wandb: Run summary:
+wandb: cal_pr_auc_mean 0.45462
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_032028-w1xc1lq2
+wandb: Find logs at: ./wandb/offline-run-20261112_032028-w1xc1lq2/logs

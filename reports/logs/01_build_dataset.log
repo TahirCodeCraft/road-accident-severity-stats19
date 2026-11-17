@@ -1,0 +1,260 @@
+2026-11-12 01:12:18 | INFO     | __main__ | Build config: BuildConfig(years=(2023, 2024, 2025), fit_year=2023, raw_dir=PosixPath('/home/ubuntu/Dsst/road_accident_severity/data/raw'), data_guide_path=PosixPath('/home/ubuntu/Dsst/road_accident_severity/data/raw/data-guide-2025.xlsx'), processed_dir=PosixPath('/home/ubuntu/Dsst/road_accident_severity/data/processed'), tables_dir=PosixPath('/home/ubuntu/Dsst/road_accident_severity/reports/tables'))
+2026-11-12 01:12:18 | INFO     | src.data.codebook | Parsed data guide: 1774 codes across 73 fields
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code collision.road_type=9 ('Unknown') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code collision.speed_limit=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code collision.junction_detail=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code collision.junction_control=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code collision.second_road_class=9 ('Unknown (self rep only)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code collision.pedestrian_crossing=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code collision.weather_conditions=9 ('Unknown') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code collision.road_surface_conditions=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code collision.carriageway_hazards=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.vehicle_type=99 ('Unknown vehicle type (self rep only)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.towing_and_articulation=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.vehicle_manoeuvre=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.vehicle_direction_from=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.vehicle_direction_to=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.vehicle_location_restricted_lane=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.junction_location=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.vehicle_left_hand_drive=9 ('Unknown') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.journey_purpose_of_driver=6 ('Not known or not requested') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.sex_of_driver=3 ('Not known') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.skidding_and_overturning=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.hit_object_in_carriageway=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.vehicle_leaving_carriageway=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.hit_object_off_carriageway=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code vehicle.first_point_of_impact=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code casualty.pedestrian_location=10 ('Unknown or other') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | missing code casualty.pedestrian_movement=9 ('Unknown or other') -> NaN
+2026-11-12 01:12:18 | INFO     | src.data.codebook | kept as real category despite 'unknown' label: collision.light_conditions {7: 'Darkness - lighting unknown'}
+2026-11-12 01:12:18 | INFO     | src.data.codebook | kept as real category despite 'unknown' label: vehicle.vehicle_type {97: 'Motorcycle - unknown cc', 98: 'Goods vehicle - unknown weight'}
+2026-11-12 01:12:18 | INFO     | src.data.codebook | kept as real category despite 'unknown' label: casualty.casualty_type {97: 'Motorcycle - unknown cc rider or passenger', 98: 'Goods vehicle (unknown weight) occupant'}
+2026-11-12 01:12:19 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-collision-2023.csv: 104,258 rows x 44 cols
+2026-11-12 01:12:19 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-collision-2024.csv: 100,927 rows x 44 cols
+2026-11-12 01:12:19 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-collision-2025.csv: 101,525 rows x 44 cols
+2026-11-12 01:12:19 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-vehicle-2023.csv: 189,815 rows x 32 cols
+2026-11-12 01:12:19 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-vehicle-2024.csv: 183,514 rows x 32 cols
+2026-11-12 01:12:19 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-vehicle-2025.csv: 183,948 rows x 32 cols
+2026-11-12 01:12:20 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-casualty-2023.csv: 132,977 rows x 24 cols
+2026-11-12 01:12:20 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-casualty-2024.csv: 128,272 rows x 24 cols
+2026-11-12 01:12:20 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-casualty-2025.csv: 127,883 rows x 24 cols
+2026-11-12 01:12:20 | INFO     | src.data.clean | Collision validity: rows=306,710 dup_index=0 invalid_date=0 year_mismatch=0 invalid_time=0 speed_out_of_range=0
+2026-11-12 01:12:20 | INFO     | src.data.clean | Structural 'not at junction' fills: {'junction_control': 127907, 'second_road_class': 11078}
+2026-11-12 01:12:20 | INFO     | src.data.clean | Collision missing codes -> NaN (rows per column): {'first_road_class': 6, 'road_type': 7698, 'speed_limit': 3, 'junction_detail': 17533, 'junction_control': 10614, 'second_road_class': 392, 'pedestrian_crossing': 18152, 'light_conditions': 22, 'weather_conditions': 8865, 'road_surface_conditions': 7031, 'carriageway_hazards': 15541, 'urban_or_rural_area': 8, 'trunk_road_flag': 21675}
+2026-11-12 01:12:20 | INFO     | src.data.clean | Vehicle missing codes -> NaN (rows per column): {'vehicle_type': 926, 'towing_and_articulation': 20523, 'vehicle_manoeuvre': 57683, 'vehicle_direction_from': 63341, 'vehicle_direction_to': 63454, 'vehicle_location_restricted_lane': 56445, 'junction_location': 39860, 'vehicle_left_hand_drive': 54537, 'journey_purpose_of_driver': 343819, 'sex_of_driver': 75313, 'age_of_driver': 86851, 'engine_capacity_cc': 143435, 'propulsion_code': 130171, 'driver_imd_decile': 123633, 'escooter_flag': 0, 'skidding_and_overturning': 57486, 'hit_object_in_carriageway': 55064, 'vehicle_leaving_carriageway': 56406, 'hit_object_off_carriageway': 48984, 'first_point_of_impact': 33678}
+2026-11-12 01:12:20 | INFO     | src.data.clean | Casualty missing codes -> NaN (rows per column): {'casualty_class': 0, 'age_of_casualty': 8219, 'pedestrian_location': 5537, 'pedestrian_movement': 16745}
+2026-11-12 01:12:23 | INFO     | src.data.aggregate | Vehicle aggregates: 306,710 collisions x 195 columns (13 count fields, 5 Tier-B fields)
+2026-11-12 01:12:24 | INFO     | src.data.build | Collisions without vehicle rows: 0
+2026-11-12 01:12:24 | INFO     | src.data.build | collisions: (306710, 229); default feature columns: 168
+2026-11-12 01:12:24 | INFO     | src.data.build | DQ rows: {'2023': 104258.0, '2024': 100927.0, '2025': 101525.0, 'all': 306710.0}
+2026-11-12 01:12:24 | INFO     | src.data.build | DQ severe_rate: {'2023': 0.2394, '2024': 0.2484, '2025': 0.2624, 'all': 0.25}
+2026-11-12 01:12:24 | INFO     | src.data.build | DQ injury_based_share: {'2023': 0.5373, '2024': 0.5875, '2025': 0.8653, 'all': 0.6624}
+2026-11-12 01:12:24 | INFO     | src.data.build | DQ ped_involved_share: {'2023': 0.1777, '2024': 0.1829, '2025': 0.1883, 'all': 0.1829}
+2026-11-12 01:12:24 | INFO     | src.data.build | DQ fields with >5% missing in some year: {'missing_pct_vehrow_journey_purpose_of_driver': 74.6, 'missing_pct_vehrow_engine_capacity_cc': 29.6, 'missing_pct_vehrow_propulsion_code': 27.5, 'missing_pct_vehrow_driver_imd_decile': 22.6, 'missing_pct_veh_engine_capacity_cc_mean': 17.5, 'missing_pct_vehrow_age_of_driver': 15.8, 'missing_pct_vehrow_sex_of_driver': 13.8, 'missing_pct_vehrow_vehicle_left_hand_drive': 13.5, 'missing_pct_vehrow_vehicle_direction_to': 11.7, 'missing_pct_vehrow_vehicle_direction_from': 11.7, 'missing_pct_vehrow_vehicle_manoeuvre': 10.8, 'missing_pct_vehrow_skidding_and_overturning': 10.6, 'missing_pct_vehrow_vehicle_location_restricted_lane': 10.4, 'missing_pct_vehrow_hit_object_in_carriageway': 10.4, 'missing_pct_vehrow_vehicle_leaving_carriageway': 10.3, 'missing_pct_vehrow_hit_object_off_carriageway': 9.1, 'missing_pct_vehrow_junction_location': 8.2, 'missing_pct_junction_detail': 8.0, 'missing_pct_trunk_road_flag': 7.2, 'missing_pct_pedestrian_crossing': 7.0, 'missing_pct_vehrow_first_point_of_impact': 6.4, 'missing_pct_carriageway_hazards': 6.2, 'missing_pct_veh_age_of_driver_mean': 5.9}
+2026-11-12 01:12:25 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/data/processed/collisions.parquet and /home/ubuntu/Dsst/road_accident_severity/data/processed/vehicles_clean.parquet
+2026-11-12 01:12:25 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/data_quality.csv
+2026-11-12 01:12:25 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/leakage_audit.csv
+2026-11-12 01:12:25 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/split_summary.csv
+2026-11-12 01:12:25 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/missing_code_map.csv
+2026-11-12 01:12:25 | INFO     | __main__ | Split summary:
+split   rows  n_severe  severe_rate
+  fit 104258     24960       0.2394
+ tune  51241     12682       0.2475
+  cal  49686     12387       0.2493
+ test 101525     26644       0.2624
+2026-11-12 01:14:26 | INFO     | __main__ | Build config: BuildConfig(years=(2023, 2024, 2025), fit_year=2023, raw_dir=PosixPath('/home/ubuntu/Dsst/road_accident_severity/data/raw'), data_guide_path=PosixPath('/home/ubuntu/Dsst/road_accident_severity/data/raw/data-guide-2025.xlsx'), processed_dir=PosixPath('/home/ubuntu/Dsst/road_accident_severity/data/processed'), tables_dir=PosixPath('/home/ubuntu/Dsst/road_accident_severity/reports/tables'))
+2026-11-12 01:14:26 | INFO     | src.data.codebook | Parsed data guide: 1774 codes across 73 fields
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code collision.road_type=9 ('Unknown') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code collision.speed_limit=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code collision.junction_detail=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code collision.junction_control=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code collision.second_road_class=9 ('Unknown (self rep only)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code collision.pedestrian_crossing=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code collision.weather_conditions=9 ('Unknown') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code collision.road_surface_conditions=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code collision.carriageway_hazards=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.vehicle_type=99 ('Unknown vehicle type (self rep only)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.towing_and_articulation=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.vehicle_manoeuvre=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.vehicle_direction_from=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.vehicle_direction_to=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.vehicle_location_restricted_lane=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.junction_location=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.vehicle_left_hand_drive=9 ('Unknown') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.journey_purpose_of_driver=6 ('Not known or not requested') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.sex_of_driver=3 ('Not known') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.skidding_and_overturning=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.hit_object_in_carriageway=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.vehicle_leaving_carriageway=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.hit_object_off_carriageway=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code vehicle.first_point_of_impact=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code casualty.pedestrian_location=10 ('Unknown or other') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | missing code casualty.pedestrian_movement=9 ('Unknown or other') -> NaN
+2026-11-12 01:14:26 | INFO     | src.data.codebook | kept as real category despite 'unknown' label: collision.light_conditions {7: 'Darkness - lighting unknown'}
+2026-11-12 01:14:26 | INFO     | src.data.codebook | kept as real category despite 'unknown' label: vehicle.vehicle_type {97: 'Motorcycle - unknown cc', 98: 'Goods vehicle - unknown weight'}
+2026-11-12 01:14:26 | INFO     | src.data.codebook | kept as real category despite 'unknown' label: casualty.casualty_type {97: 'Motorcycle - unknown cc rider or passenger', 98: 'Goods vehicle (unknown weight) occupant'}
+2026-11-12 01:14:27 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-collision-2023.csv: 104,258 rows x 44 cols
+2026-11-12 01:14:27 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-collision-2024.csv: 100,927 rows x 44 cols
+2026-11-12 01:14:27 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-collision-2025.csv: 101,525 rows x 44 cols
+2026-11-12 01:14:27 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-vehicle-2023.csv: 189,815 rows x 32 cols
+2026-11-12 01:14:27 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-vehicle-2024.csv: 183,514 rows x 32 cols
+2026-11-12 01:14:27 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-vehicle-2025.csv: 183,948 rows x 32 cols
+2026-11-12 01:14:27 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-casualty-2023.csv: 132,977 rows x 24 cols
+2026-11-12 01:14:28 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-casualty-2024.csv: 128,272 rows x 24 cols
+2026-11-12 01:14:28 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-casualty-2025.csv: 127,883 rows x 24 cols
+2026-11-12 01:14:28 | INFO     | src.data.clean | Collision validity: rows=306,710 dup_index=0 invalid_date=0 year_mismatch=0 invalid_time=0 speed_out_of_range=0
+2026-11-12 01:14:28 | INFO     | src.data.clean | Structural 'not at junction' fills: {'junction_control': 127907, 'second_road_class': 11078}
+2026-11-12 01:14:28 | INFO     | src.data.clean | Collision missing codes -> NaN (rows per column): {'first_road_class': 6, 'road_type': 7698, 'speed_limit': 3, 'junction_detail': 17533, 'junction_control': 10614, 'second_road_class': 392, 'pedestrian_crossing': 18152, 'light_conditions': 22, 'weather_conditions': 8865, 'road_surface_conditions': 7031, 'carriageway_hazards': 15541, 'urban_or_rural_area': 8, 'trunk_road_flag': 21675}
+2026-11-12 01:14:28 | INFO     | src.data.clean | Vehicle missing codes -> NaN (rows per column): {'vehicle_type': 926, 'towing_and_articulation': 20523, 'vehicle_manoeuvre': 57683, 'vehicle_direction_from': 63341, 'vehicle_direction_to': 63454, 'vehicle_location_restricted_lane': 56445, 'junction_location': 39860, 'vehicle_left_hand_drive': 54537, 'journey_purpose_of_driver': 343819, 'sex_of_driver': 75313, 'age_of_driver': 86851, 'engine_capacity_cc': 143435, 'propulsion_code': 130171, 'driver_imd_decile': 123633, 'escooter_flag': 0, 'skidding_and_overturning': 57486, 'hit_object_in_carriageway': 55064, 'vehicle_leaving_carriageway': 56406, 'hit_object_off_carriageway': 48984, 'first_point_of_impact': 33678}
+2026-11-12 01:14:28 | INFO     | src.data.clean | Casualty missing codes -> NaN (rows per column): {'casualty_class': 0, 'age_of_casualty': 8219, 'pedestrian_location': 5537, 'pedestrian_movement': 16745}
+2026-11-12 01:14:32 | INFO     | src.data.aggregate | Vehicle aggregates: 306,710 collisions x 195 columns (13 count fields, 5 Tier-B fields)
+2026-11-12 01:14:32 | INFO     | src.data.build | Collisions without vehicle rows: 0
+2026-11-12 01:14:32 | INFO     | src.data.build | collisions: (306710, 229); default feature columns: 168
+2026-11-12 01:14:32 | INFO     | src.data.build | DQ rows: {'2023': 104258.0, '2024': 100927.0, '2025': 101525.0, 'all': 306710.0}
+2026-11-12 01:14:32 | INFO     | src.data.build | DQ severe_rate: {'2023': 0.2394, '2024': 0.2484, '2025': 0.2624, 'all': 0.25}
+2026-11-12 01:14:32 | INFO     | src.data.build | DQ injury_based_share: {'2023': 0.5373, '2024': 0.5875, '2025': 0.8653, 'all': 0.6624}
+2026-11-12 01:14:32 | INFO     | src.data.build | DQ ped_involved_share: {'2023': 0.1777, '2024': 0.1829, '2025': 0.1883, 'all': 0.1829}
+2026-11-12 01:14:32 | INFO     | src.data.build | DQ fields with >5% missing in some year: {'missing_pct_vehrow_journey_purpose_of_driver': 74.6, 'missing_pct_vehrow_engine_capacity_cc': 29.6, 'missing_pct_vehrow_propulsion_code': 27.5, 'missing_pct_vehrow_driver_imd_decile': 22.6, 'missing_pct_veh_engine_capacity_cc_mean': 17.5, 'missing_pct_vehrow_age_of_driver': 15.8, 'missing_pct_vehrow_sex_of_driver': 13.8, 'missing_pct_vehrow_vehicle_left_hand_drive': 13.5, 'missing_pct_vehrow_vehicle_direction_to': 11.7, 'missing_pct_vehrow_vehicle_direction_from': 11.7, 'missing_pct_vehrow_vehicle_manoeuvre': 10.8, 'missing_pct_vehrow_skidding_and_overturning': 10.6, 'missing_pct_vehrow_vehicle_location_restricted_lane': 10.4, 'missing_pct_vehrow_hit_object_in_carriageway': 10.4, 'missing_pct_vehrow_vehicle_leaving_carriageway': 10.3, 'missing_pct_vehrow_hit_object_off_carriageway': 9.1, 'missing_pct_vehrow_junction_location': 8.2, 'missing_pct_junction_detail': 8.0, 'missing_pct_trunk_road_flag': 7.2, 'missing_pct_pedestrian_crossing': 7.0, 'missing_pct_vehrow_first_point_of_impact': 6.4, 'missing_pct_carriageway_hazards': 6.2, 'missing_pct_veh_age_of_driver_mean': 5.9}
+2026-11-12 01:14:33 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/data/processed/collisions.parquet and /home/ubuntu/Dsst/road_accident_severity/data/processed/vehicles_clean.parquet
+2026-11-12 01:14:33 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/data_quality.csv
+2026-11-12 01:14:33 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/leakage_audit.csv
+2026-11-12 01:14:33 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/split_summary.csv
+2026-11-12 01:14:33 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/missing_code_map.csv
+2026-11-12 01:14:33 | INFO     | __main__ | Split summary:
+split   rows  n_severe  severe_rate
+  fit 104258     24960       0.2394
+ tune  51241     12682       0.2475
+  cal  49686     12387       0.2493
+ test 101525     26644       0.2624
+2026-11-12 01:15:36 | INFO     | __main__ | Build config: BuildConfig(years=(2023, 2024, 2025), fit_year=2023, raw_dir=PosixPath('/home/ubuntu/Dsst/road_accident_severity/data/raw'), data_guide_path=PosixPath('/home/ubuntu/Dsst/road_accident_severity/data/raw/data-guide-2025.xlsx'), processed_dir=PosixPath('/home/ubuntu/Dsst/road_accident_severity/data/processed'), tables_dir=PosixPath('/home/ubuntu/Dsst/road_accident_severity/reports/tables'))
+2026-11-12 01:15:36 | INFO     | src.data.codebook | Parsed data guide: 1774 codes across 73 fields
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code collision.road_type=9 ('Unknown') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code collision.speed_limit=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code collision.junction_detail=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code collision.junction_control=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code collision.second_road_class=9 ('Unknown (self rep only)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code collision.pedestrian_crossing=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code collision.weather_conditions=9 ('Unknown') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code collision.road_surface_conditions=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code collision.carriageway_hazards=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.vehicle_type=99 ('Unknown vehicle type (self rep only)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.towing_and_articulation=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.vehicle_manoeuvre=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.vehicle_direction_from=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.vehicle_direction_to=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.vehicle_location_restricted_lane=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.junction_location=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.vehicle_left_hand_drive=9 ('Unknown') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.journey_purpose_of_driver=6 ('Not known or not requested') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.sex_of_driver=3 ('Not known') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.skidding_and_overturning=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.hit_object_in_carriageway=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.vehicle_leaving_carriageway=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.hit_object_off_carriageway=99 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code vehicle.first_point_of_impact=9 ('unknown (self reported)') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code casualty.pedestrian_location=10 ('Unknown or other') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | missing code casualty.pedestrian_movement=9 ('Unknown or other') -> NaN
+2026-11-12 01:15:36 | INFO     | src.data.codebook | kept as real category despite 'unknown' label: collision.light_conditions {7: 'Darkness - lighting unknown'}
+2026-11-12 01:15:36 | INFO     | src.data.codebook | kept as real category despite 'unknown' label: vehicle.vehicle_type {97: 'Motorcycle - unknown cc', 98: 'Goods vehicle - unknown weight'}
+2026-11-12 01:15:36 | INFO     | src.data.codebook | kept as real category despite 'unknown' label: casualty.casualty_type {97: 'Motorcycle - unknown cc rider or passenger', 98: 'Goods vehicle (unknown weight) occupant'}
+2026-11-12 01:15:36 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-collision-2023.csv: 104,258 rows x 44 cols
+2026-11-12 01:15:36 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-collision-2024.csv: 100,927 rows x 44 cols
+2026-11-12 01:15:36 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-collision-2025.csv: 101,525 rows x 44 cols
+2026-11-12 01:15:37 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-vehicle-2023.csv: 189,815 rows x 32 cols
+2026-11-12 01:15:37 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-vehicle-2024.csv: 183,514 rows x 32 cols
+2026-11-12 01:15:37 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-vehicle-2025.csv: 183,948 rows x 32 cols
+2026-11-12 01:15:37 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-casualty-2023.csv: 132,977 rows x 24 cols
+2026-11-12 01:15:37 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-casualty-2024.csv: 128,272 rows x 24 cols
+2026-11-12 01:15:37 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-casualty-2025.csv: 127,883 rows x 24 cols
+2026-11-12 01:15:38 | INFO     | src.data.clean | Collision validity: rows=306,710 dup_index=0 invalid_date=0 year_mismatch=0 invalid_time=0 speed_out_of_range=0
+2026-11-12 01:15:38 | INFO     | src.data.clean | Structural 'not at junction' fills: {'junction_control': 127907, 'second_road_class': 11078}
+2026-11-12 01:15:38 | INFO     | src.data.clean | Collision missing codes -> NaN (rows per column): {'first_road_class': 6, 'road_type': 7698, 'speed_limit': 3, 'junction_detail': 17533, 'junction_control': 10614, 'second_road_class': 392, 'pedestrian_crossing': 18152, 'light_conditions': 22, 'weather_conditions': 8865, 'road_surface_conditions': 7031, 'carriageway_hazards': 15541, 'urban_or_rural_area': 8, 'trunk_road_flag': 21675}
+2026-11-12 01:15:38 | INFO     | src.data.clean | Vehicle missing codes -> NaN (rows per column): {'vehicle_type': 926, 'towing_and_articulation': 20523, 'vehicle_manoeuvre': 57683, 'vehicle_direction_from': 63341, 'vehicle_direction_to': 63454, 'vehicle_location_restricted_lane': 56445, 'junction_location': 39860, 'vehicle_left_hand_drive': 54537, 'journey_purpose_of_driver': 343819, 'sex_of_driver': 75313, 'age_of_driver': 86851, 'engine_capacity_cc': 143435, 'propulsion_code': 130171, 'driver_imd_decile': 123633, 'escooter_flag': 0, 'skidding_and_overturning': 57486, 'hit_object_in_carriageway': 55064, 'vehicle_leaving_carriageway': 56406, 'hit_object_off_carriageway': 48984, 'first_point_of_impact': 33678}
+2026-11-12 01:15:38 | INFO     | src.data.clean | Harmonised 75422 rows of journey_purpose_of_driver codes (8, 9) -> NA
+2026-11-12 01:15:38 | INFO     | src.data.clean | Harmonised 582 rows of vehicle_manoeuvre codes (20,) -> NA
+2026-11-12 01:15:38 | INFO     | src.data.clean | Casualty missing codes -> NaN (rows per column): {'casualty_class': 0, 'age_of_casualty': 8219, 'pedestrian_location': 5537, 'pedestrian_movement': 16745}
+2026-11-12 01:15:41 | INFO     | src.data.aggregate | Vehicle aggregates: 306,710 collisions x 195 columns (13 count fields, 5 Tier-B fields)
+2026-11-12 01:15:41 | INFO     | src.data.build | Collisions without vehicle rows: 0
+2026-11-12 01:15:41 | INFO     | src.data.build | collisions: (306710, 229); default feature columns: 168
+2026-11-12 01:15:42 | INFO     | src.data.build | DQ rows: {'2023': 104258.0, '2024': 100927.0, '2025': 101525.0, 'all': 306710.0}
+2026-11-12 01:15:42 | INFO     | src.data.build | DQ severe_rate: {'2023': 0.2394, '2024': 0.2484, '2025': 0.2624, 'all': 0.25}
+2026-11-12 01:15:42 | INFO     | src.data.build | DQ injury_based_share: {'2023': 0.5373, '2024': 0.5875, '2025': 0.8653, 'all': 0.6624}
+2026-11-12 01:15:42 | INFO     | src.data.build | DQ ped_involved_share: {'2023': 0.1777, '2024': 0.1829, '2025': 0.1883, 'all': 0.1829}
+2026-11-12 01:15:42 | INFO     | src.data.build | DQ fields with >5% missing in some year: {'missing_pct_vehrow_journey_purpose_of_driver': 76.1, 'missing_pct_vehrow_engine_capacity_cc': 29.6, 'missing_pct_vehrow_propulsion_code': 27.5, 'missing_pct_vehrow_driver_imd_decile': 22.6, 'missing_pct_veh_engine_capacity_cc_mean': 17.5, 'missing_pct_vehrow_age_of_driver': 15.8, 'missing_pct_vehrow_sex_of_driver': 13.8, 'missing_pct_vehrow_vehicle_left_hand_drive': 13.5, 'missing_pct_vehrow_vehicle_direction_to': 11.7, 'missing_pct_vehrow_vehicle_direction_from': 11.7, 'missing_pct_vehrow_vehicle_manoeuvre': 10.9, 'missing_pct_vehrow_skidding_and_overturning': 10.6, 'missing_pct_vehrow_vehicle_location_restricted_lane': 10.4, 'missing_pct_vehrow_hit_object_in_carriageway': 10.4, 'missing_pct_vehrow_vehicle_leaving_carriageway': 10.3, 'missing_pct_vehrow_hit_object_off_carriageway': 9.1, 'missing_pct_vehrow_junction_location': 8.2, 'missing_pct_junction_detail': 8.0, 'missing_pct_trunk_road_flag': 7.2, 'missing_pct_pedestrian_crossing': 7.0, 'missing_pct_vehrow_first_point_of_impact': 6.4, 'missing_pct_carriageway_hazards': 6.2, 'missing_pct_veh_age_of_driver_mean': 5.9}
+2026-11-12 01:15:42 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/data/processed/collisions.parquet and /home/ubuntu/Dsst/road_accident_severity/data/processed/vehicles_clean.parquet
+2026-11-12 01:15:42 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/data_quality.csv
+2026-11-12 01:15:42 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/leakage_audit.csv
+2026-11-12 01:15:42 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/split_summary.csv
+2026-11-12 01:15:42 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/missing_code_map.csv
+2026-11-12 01:15:42 | INFO     | __main__ | Split summary:
+split   rows  n_severe  severe_rate
+  fit 104258     24960       0.2394
+ tune  51241     12682       0.2475
+  cal  49686     12387       0.2493
+ test 101525     26644       0.2624
+2026-11-12 02:17:53 | INFO     | __main__ | Build config: BuildConfig(years=(2023, 2024, 2025), fit_year=2023, raw_dir=PosixPath('/home/ubuntu/Dsst/road_accident_severity/data/raw'), data_guide_path=PosixPath('/home/ubuntu/Dsst/road_accident_severity/data/raw/data-guide-2025.xlsx'), processed_dir=PosixPath('/home/ubuntu/Dsst/road_accident_severity/data/processed'), tables_dir=PosixPath('/home/ubuntu/Dsst/road_accident_severity/reports/tables'))
+2026-11-12 02:17:54 | INFO     | src.data.codebook | Parsed data guide: 1774 codes across 73 fields
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code collision.road_type=9 ('Unknown') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code collision.speed_limit=99 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code collision.junction_detail=99 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code collision.junction_control=9 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code collision.second_road_class=9 ('Unknown (self rep only)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code collision.pedestrian_crossing=99 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code collision.weather_conditions=9 ('Unknown') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code collision.road_surface_conditions=9 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code collision.carriageway_hazards=99 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.vehicle_type=99 ('Unknown vehicle type (self rep only)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.towing_and_articulation=9 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.vehicle_manoeuvre=99 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.vehicle_direction_from=9 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.vehicle_direction_to=9 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.vehicle_location_restricted_lane=99 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.junction_location=9 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.vehicle_left_hand_drive=9 ('Unknown') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.journey_purpose_of_driver=6 ('Not known or not requested') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.sex_of_driver=3 ('Not known') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.skidding_and_overturning=9 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.hit_object_in_carriageway=99 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.vehicle_leaving_carriageway=9 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.hit_object_off_carriageway=99 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code vehicle.first_point_of_impact=9 ('unknown (self reported)') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code casualty.pedestrian_location=10 ('Unknown or other') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | missing code casualty.pedestrian_movement=9 ('Unknown or other') -> NaN
+2026-11-12 02:17:54 | INFO     | src.data.codebook | kept as real category despite 'unknown' label: collision.light_conditions {7: 'Darkness - lighting unknown'}
+2026-11-12 02:17:54 | INFO     | src.data.codebook | kept as real category despite 'unknown' label: vehicle.vehicle_type {97: 'Motorcycle - unknown cc', 98: 'Goods vehicle - unknown weight'}
+2026-11-12 02:17:54 | INFO     | src.data.codebook | kept as real category despite 'unknown' label: casualty.casualty_type {97: 'Motorcycle - unknown cc rider or passenger', 98: 'Goods vehicle (unknown weight) occupant'}
+2026-11-12 02:17:54 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-collision-2023.csv: 104,258 rows x 44 cols
+2026-11-12 02:17:54 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-collision-2024.csv: 100,927 rows x 44 cols
+2026-11-12 02:17:55 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-collision-2025.csv: 101,525 rows x 44 cols
+2026-11-12 02:17:55 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-vehicle-2023.csv: 189,815 rows x 32 cols
+2026-11-12 02:17:56 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-vehicle-2024.csv: 183,514 rows x 32 cols
+2026-11-12 02:17:56 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-vehicle-2025.csv: 183,948 rows x 32 cols
+2026-11-12 02:17:57 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-casualty-2023.csv: 132,977 rows x 24 cols
+2026-11-12 02:17:57 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-casualty-2024.csv: 128,272 rows x 24 cols
+2026-11-12 02:17:57 | INFO     | src.data.load | Loaded dft-road-casualty-statistics-casualty-2025.csv: 127,883 rows x 24 cols
+2026-11-12 02:17:59 | INFO     | src.data.clean | Collision validity: rows=306,710 dup_index=0 invalid_date=0 year_mismatch=0 invalid_time=0 speed_out_of_range=0
+2026-11-12 02:17:59 | INFO     | src.data.clean | Structural 'not at junction' fills: {'junction_control': 127907, 'second_road_class': 11078}
+2026-11-12 02:17:59 | INFO     | src.data.clean | Collision missing codes -> NaN (rows per column): {'first_road_class': 6, 'road_type': 7698, 'speed_limit': 3, 'junction_detail': 17533, 'junction_control': 10614, 'second_road_class': 392, 'pedestrian_crossing': 18152, 'light_conditions': 22, 'weather_conditions': 8865, 'road_surface_conditions': 7031, 'carriageway_hazards': 15541, 'urban_or_rural_area': 8, 'trunk_road_flag': 21675}
+2026-11-12 02:17:59 | INFO     | src.data.clean | Vehicle missing codes -> NaN (rows per column): {'vehicle_type': 926, 'towing_and_articulation': 20523, 'vehicle_manoeuvre': 57683, 'vehicle_direction_from': 63341, 'vehicle_direction_to': 63454, 'vehicle_location_restricted_lane': 56445, 'junction_location': 39860, 'vehicle_left_hand_drive': 54537, 'journey_purpose_of_driver': 343819, 'sex_of_driver': 75313, 'age_of_driver': 86851, 'engine_capacity_cc': 143435, 'propulsion_code': 130171, 'driver_imd_decile': 123633, 'escooter_flag': 0, 'skidding_and_overturning': 57486, 'hit_object_in_carriageway': 55064, 'vehicle_leaving_carriageway': 56406, 'hit_object_off_carriageway': 48984, 'first_point_of_impact': 33678}
+2026-11-12 02:17:59 | INFO     | src.data.clean | Harmonised 75422 rows of journey_purpose_of_driver codes (8, 9) -> NA
+2026-11-12 02:17:59 | INFO     | src.data.clean | Harmonised 582 rows of vehicle_manoeuvre codes (20,) -> NA
+2026-11-12 02:17:59 | INFO     | src.data.clean | Casualty missing codes -> NaN (rows per column): {'casualty_class': 0, 'age_of_casualty': 8219, 'pedestrian_location': 5537, 'pedestrian_movement': 16745}
+2026-11-12 02:18:06 | INFO     | src.data.aggregate | Vehicle aggregates: 306,710 collisions x 195 columns (13 count fields, 5 Tier-B fields)
+2026-11-12 02:18:07 | INFO     | src.data.build | Collisions without vehicle rows: 0
+2026-11-12 02:18:07 | INFO     | src.data.build | collisions: (306710, 229); default feature columns: 168
+2026-11-12 02:18:08 | INFO     | src.data.build | DQ rows: {'2023': 104258.0, '2024': 100927.0, '2025': 101525.0, 'all': 306710.0}
+2026-11-12 02:18:08 | INFO     | src.data.build | DQ severe_rate: {'2023': 0.2394, '2024': 0.2484, '2025': nan, 'all': nan}
+2026-11-12 02:18:08 | INFO     | src.data.build | DQ injury_based_share: {'2023': 0.5373, '2024': 0.5875, '2025': 0.8653, 'all': 0.6624}
+2026-11-12 02:18:08 | INFO     | src.data.build | DQ ped_involved_share: {'2023': 0.1777, '2024': 0.1829, '2025': 0.1883, 'all': 0.1829}
+2026-11-12 02:18:08 | INFO     | src.data.build | DQ fields with >5% missing in some year: {'missing_pct_vehrow_journey_purpose_of_driver': 76.1, 'missing_pct_vehrow_engine_capacity_cc': 29.6, 'missing_pct_vehrow_propulsion_code': 27.5, 'missing_pct_vehrow_driver_imd_decile': 22.6, 'missing_pct_veh_engine_capacity_cc_mean': 17.5, 'missing_pct_vehrow_age_of_driver': 15.8, 'missing_pct_vehrow_sex_of_driver': 13.8, 'missing_pct_vehrow_vehicle_left_hand_drive': 13.5, 'missing_pct_vehrow_vehicle_direction_to': 11.7, 'missing_pct_vehrow_vehicle_direction_from': 11.7, 'missing_pct_vehrow_vehicle_manoeuvre': 10.9, 'missing_pct_vehrow_skidding_and_overturning': 10.6, 'missing_pct_vehrow_vehicle_location_restricted_lane': 10.4, 'missing_pct_vehrow_hit_object_in_carriageway': 10.4, 'missing_pct_vehrow_vehicle_leaving_carriageway': 10.3, 'missing_pct_vehrow_hit_object_off_carriageway': 9.1, 'missing_pct_vehrow_junction_location': 8.2, 'missing_pct_junction_detail': 8.0, 'missing_pct_trunk_road_flag': 7.2, 'missing_pct_pedestrian_crossing': 7.0, 'missing_pct_vehrow_first_point_of_impact': 6.4, 'missing_pct_carriageway_hazards': 6.2, 'missing_pct_veh_age_of_driver_mean': 5.9}
+2026-11-12 02:18:09 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/data/processed/collisions.parquet and /home/ubuntu/Dsst/road_accident_severity/data/processed/vehicles_clean.parquet
+2026-11-12 02:18:09 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/data_quality.csv
+2026-11-12 02:18:09 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/leakage_audit.csv
+2026-11-12 02:18:09 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/split_summary.csv
+2026-11-12 02:18:09 | INFO     | src.data.build | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/missing_code_map.csv
+2026-11-12 02:18:09 | INFO     | __main__ | Split summary:
+split   rows  n_severe  severe_rate
+  fit 104258   24960.0       0.2394
+ tune  51241   12682.0       0.2475
+  cal  49686   12387.0       0.2493
+ test 101525       NaN          NaN

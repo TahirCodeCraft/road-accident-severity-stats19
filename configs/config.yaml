@@ -1,0 +1,20 @@
+defaults:
+  - experiment: ablation
+  - _self_
+
+run:
+  device: cpu             # cuda on the GPU server
+  n_jobs: -1
+  models: null            # optional filter, e.g. [lgbm,rf]
+  feature_sets: null      # optional filter
+  cs: null                # optional filter
+  overwrite: false
+  dry_run: false
+wandb:
+  project: dstt-road-severity
+  mode: offline
+hydra:
+  run:
+    dir: experiments/hydra/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: false

@@ -1,0 +1,234 @@
+2026-11-12 05:44:42 | INFO     | __main__ | Manifest verified: 921 artefacts unchanged since freeze
+2026-11-12 05:44:48 | INFO     | __main__ | TEST predicted: F0__none__cat
+2026-11-12 05:44:51 | INFO     | __main__ | TEST predicted: F0__none__dt
+2026-11-12 05:45:05 | INFO     | __main__ | TEST predicted: F0__none__lgbm
+2026-11-12 05:45:11 | INFO     | __main__ | TEST predicted: F0__none__lr
+2026-11-12 05:45:21 | INFO     | __main__ | TEST predicted: F0__none__rf
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:45:21] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:45:21] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:45:21] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:45:26] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:45:26] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:45:26] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:45:31] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:45:31] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:45:31] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+2026-11-12 05:45:36 | INFO     | __main__ | TEST predicted: F0__none__xgb
+2026-11-12 05:45:41 | INFO     | __main__ | TEST predicted: F0__rus__cat
+2026-11-12 05:45:45 | INFO     | __main__ | TEST predicted: F0__rus__dt
+2026-11-12 05:46:12 | INFO     | __main__ | TEST predicted: F0__rus__lgbm
+2026-11-12 05:46:18 | INFO     | __main__ | TEST predicted: F0__rus__lr
+2026-11-12 05:46:27 | INFO     | __main__ | TEST predicted: F0__rus__rf
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:46:27] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:46:27] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:46:27] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:46:31] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:46:31] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:46:31] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:46:35] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:46:35] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:46:35] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+2026-11-12 05:46:38 | INFO     | __main__ | TEST predicted: F0__rus__xgb
+2026-11-12 05:46:59 | INFO     | __main__ | TEST predicted: F0__smotenc__lgbm
+2026-11-12 05:47:05 | INFO     | __main__ | TEST predicted: F0__smotenc__lr
+2026-11-12 05:47:13 | INFO     | __main__ | TEST predicted: F0__smotenc__rf
+2026-11-12 05:47:19 | INFO     | __main__ | TEST predicted: F0__weight__cat
+2026-11-12 05:47:22 | INFO     | __main__ | TEST predicted: F0__weight__dt
+2026-11-12 05:47:51 | INFO     | __main__ | TEST predicted: F0__weight__lgbm
+2026-11-12 05:47:57 | INFO     | __main__ | TEST predicted: F0__weight__lr
+2026-11-12 05:48:06 | INFO     | __main__ | TEST predicted: F0__weight__rf
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:06] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:06] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:06] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:12] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:12] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:12] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:17] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:17] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:17] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+2026-11-12 05:48:23 | INFO     | __main__ | TEST predicted: F0__weight__xgb
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:23] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:23] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:23] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:27] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:27] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:27] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:31] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:31] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:31] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+2026-11-12 05:48:35 | INFO     | __main__ | TEST predicted: F1S1__none__xgb__S1
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:35] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:35] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:35] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:37] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:37] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:37] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:40] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:40] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:48:40] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+2026-11-12 05:48:42 | INFO     | __main__ | TEST predicted: F1S2__none__xgb__S2
+2026-11-12 05:48:47 | INFO     | __main__ | TEST predicted: F1__none__cat
+2026-11-12 05:48:51 | INFO     | __main__ | TEST predicted: F1__none__dt
+2026-11-12 05:49:05 | INFO     | __main__ | TEST predicted: F1__none__lgbm
+2026-11-12 05:49:10 | INFO     | __main__ | TEST predicted: F1__none__lr
+2026-11-12 05:49:20 | INFO     | __main__ | TEST predicted: F1__none__rf
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:20] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:20] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:20] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:23] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:23] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:23] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:26] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:26] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:26] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+2026-11-12 05:49:29 | INFO     | __main__ | TEST predicted: F1__none__xgb
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:29] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:29] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:29] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:33] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:33] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:33] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:37] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:37] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:37] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+2026-11-12 05:49:41 | INFO     | __main__ | TEST predicted: F1__none__xgb__S3
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:41] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:41] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:41] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:44] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:44] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:44] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:47] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:47] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:49:47] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+2026-11-12 05:49:50 | INFO     | __main__ | TEST predicted: F1__none__xgb__S5
+2026-11-12 05:49:55 | INFO     | __main__ | TEST predicted: F1__rus__cat
+2026-11-12 05:49:59 | INFO     | __main__ | TEST predicted: F1__rus__dt
+2026-11-12 05:50:13 | INFO     | __main__ | TEST predicted: F1__rus__lgbm
+2026-11-12 05:50:18 | INFO     | __main__ | TEST predicted: F1__rus__lr
+2026-11-12 05:50:25 | INFO     | __main__ | TEST predicted: F1__rus__rf
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:50:25] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:50:25] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:50:25] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:50:28] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:50:28] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:50:28] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:50:32] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:50:32] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:50:32] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+2026-11-12 05:50:35 | INFO     | __main__ | TEST predicted: F1__rus__xgb
+2026-11-12 05:50:41 | INFO     | __main__ | TEST predicted: F1__smotenc__lgbm
+2026-11-12 05:50:47 | INFO     | __main__ | TEST predicted: F1__smotenc__lr
+2026-11-12 05:50:55 | INFO     | __main__ | TEST predicted: F1__smotenc__rf
+2026-11-12 05:51:01 | INFO     | __main__ | TEST predicted: F1__weight__cat
+2026-11-12 05:51:04 | INFO     | __main__ | TEST predicted: F1__weight__dt
+2026-11-12 05:51:38 | INFO     | __main__ | TEST predicted: F1__weight__lgbm
+2026-11-12 05:51:43 | INFO     | __main__ | TEST predicted: F1__weight__lr
+2026-11-12 05:51:50 | INFO     | __main__ | TEST predicted: F1__weight__rf
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:51:50] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:51:50] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:51:50] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:51:55] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:51:55] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:51:55] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:52:00] WARNING: /workspace/src/gbm/gbtree.cc:384: Changing updater from `grow_gpu_hist` to `grow_quantile_histmaker`.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:52:00] WARNING: /workspace/src/context.cc:49: No visible GPU is found, setting device to CPU.
+  setstate(state)
+/usr/lib/python3.12/pickle.py:1710: UserWarning: [05:52:00] WARNING: /workspace/src/context.cc:203: XGBoost is not compiled with CUDA support.
+  setstate(state)
+2026-11-12 05:52:05 | INFO     | __main__ | TEST predicted: F1__weight__xgb
+2026-11-12 05:52:19 | INFO     | __main__ | TEST predicted: F1full__none__lgbm
+2026-11-12 05:52:25 | INFO     | __main__ | TEST predicted: F1full__none__lr
+/home/ubuntu/Dsst/road_accident_severity/scripts/08_evaluate_test.py:333: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  gap = v.join(t, lsuffix="_cal", rsuffix="_test")
+2026-11-12 05:52:26 | INFO     | __main__ | Running 110 contrasts (B=2000)
+2026-11-12 06:08:29 | INFO     | src.data.split | Loaded split test: 101,525 rows
+2026-11-12 06:08:29 | INFO     | __main__ | TEST evaluation complete

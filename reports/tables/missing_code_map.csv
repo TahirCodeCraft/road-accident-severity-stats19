@@ -1,0 +1,27 @@
+table,field,code,label
+collision,road_type,9,Unknown
+collision,speed_limit,99,unknown (self reported)
+collision,junction_detail,99,unknown (self reported)
+collision,junction_control,9,unknown (self reported)
+collision,second_road_class,9,Unknown (self rep only)
+collision,pedestrian_crossing,99,unknown (self reported)
+collision,weather_conditions,9,Unknown
+collision,road_surface_conditions,9,unknown (self reported)
+collision,carriageway_hazards,99,unknown (self reported)
+vehicle,vehicle_type,99,Unknown vehicle type (self rep only)
+vehicle,towing_and_articulation,9,unknown (self reported)
+vehicle,vehicle_manoeuvre,99,unknown (self reported)
+vehicle,vehicle_direction_from,9,unknown (self reported)
+vehicle,vehicle_direction_to,9,unknown (self reported)
+vehicle,vehicle_location_restricted_lane,99,unknown (self reported)
+vehicle,junction_location,9,unknown (self reported)
+vehicle,vehicle_left_hand_drive,9,Unknown
+vehicle,journey_purpose_of_driver,6,Not known or not requested
+vehicle,sex_of_driver,3,Not known
+vehicle,skidding_and_overturning,9,unknown (self reported)
+vehicle,hit_object_in_carriageway,99,unknown (self reported)
+vehicle,vehicle_leaving_carriageway,9,unknown (self reported)
+vehicle,hit_object_off_carriageway,99,unknown (self reported)
+vehicle,first_point_of_impact,9,unknown (self reported)
+casualty,pedestrian_location,10,Unknown or other
+casualty,pedestrian_movement,9,Unknown or other

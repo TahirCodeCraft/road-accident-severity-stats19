@@ -1,0 +1,149 @@
+section,variable,level,years,n,n_pos,rate,ci_low,ci_high,figure
+class_balance,collision_year,2023,2023-2024,104258,24960,0.23941,0.23683,0.24201,eda_01_class_balance.png
+class_balance,collision_year,2024,2023-2024,100927,25069,0.24839,0.24573,0.25106,eda_01_class_balance.png
+class_balance,severity3_share,Fatal,2023,104258,1522,0.0146,0.01389,0.01534,eda_01_class_balance.png
+class_balance,severity3_share,Serious,2023,104258,23438,0.22481,0.22228,0.22735,eda_01_class_balance.png
+class_balance,severity3_share,Fatal,2024,100927,1502,0.01488,0.01415,0.01565,eda_01_class_balance.png
+class_balance,severity3_share,Serious,2024,100927,23567,0.23351,0.23091,0.23613,eda_01_class_balance.png
+reporting_drift,injury_based_share,2023,2023-2025,104258,56017,0.53729,0.53426,0.54032,eda_02_monthly_trend_reporting.png
+reporting_drift,injury_based_share,2024,2023-2025,100927,59297,0.58752,0.58448,0.59056,eda_02_monthly_trend_reporting.png
+reporting_drift,injury_based_share,2025,2023-2025,101525,87848,0.86528,0.86317,0.86737,eda_02_monthly_trend_reporting.png
+temporal,hour,0,2023-2024,3352,1028,0.30668,0.2913,0.32251,eda_03_hour_dow_heatmap.png
+temporal,hour,1,2023-2024,2285,656,0.28709,0.26891,0.30598,eda_03_hour_dow_heatmap.png
+temporal,hour,2,2023-2024,1648,537,0.32585,0.30365,0.34886,eda_03_hour_dow_heatmap.png
+temporal,hour,3,2023-2024,1346,406,0.30163,0.27771,0.32669,eda_03_hour_dow_heatmap.png
+temporal,hour,4,2023-2024,1222,371,0.3036,0.27847,0.32996,eda_03_hour_dow_heatmap.png
+temporal,hour,5,2023-2024,1973,608,0.30816,0.28818,0.32889,eda_03_hour_dow_heatmap.png
+temporal,hour,6,2023-2024,3869,1044,0.26984,0.25608,0.28405,eda_03_hour_dow_heatmap.png
+temporal,hour,7,2023-2024,8267,1940,0.23467,0.22566,0.24393,eda_03_hour_dow_heatmap.png
+temporal,hour,8,2023-2024,13201,2541,0.19249,0.18585,0.1993,eda_03_hour_dow_heatmap.png
+temporal,hour,9,2023-2024,9050,2016,0.22276,0.21431,0.23145,eda_03_hour_dow_heatmap.png
+temporal,hour,10,2023-2024,8996,2205,0.24511,0.23633,0.25411,eda_03_hour_dow_heatmap.png
+temporal,hour,11,2023-2024,10326,2447,0.23697,0.22887,0.24527,eda_03_hour_dow_heatmap.png
+temporal,hour,12,2023-2024,11538,2809,0.24346,0.23571,0.25137,eda_03_hour_dow_heatmap.png
+temporal,hour,13,2023-2024,12067,2934,0.24314,0.23557,0.25088,eda_03_hour_dow_heatmap.png
+temporal,hour,14,2023-2024,12996,3147,0.24215,0.23486,0.24959,eda_03_hour_dow_heatmap.png
+temporal,hour,15,2023-2024,16917,3976,0.23503,0.2287,0.24148,eda_03_hour_dow_heatmap.png
+temporal,hour,16,2023-2024,17166,4005,0.23331,0.22704,0.2397,eda_03_hour_dow_heatmap.png
+temporal,hour,17,2023-2024,18000,4160,0.23111,0.22501,0.23733,eda_03_hour_dow_heatmap.png
+temporal,hour,18,2023-2024,14547,3375,0.23201,0.22522,0.23894,eda_03_hour_dow_heatmap.png
+temporal,hour,19,2023-2024,11029,2728,0.24735,0.23938,0.25549,eda_03_hour_dow_heatmap.png
+temporal,hour,20,2023-2024,8020,2117,0.26397,0.25443,0.27372,eda_03_hour_dow_heatmap.png
+temporal,hour,21,2023-2024,6891,1914,0.27775,0.2673,0.28845,eda_03_hour_dow_heatmap.png
+temporal,hour,22,2023-2024,5946,1744,0.29331,0.28187,0.30501,eda_03_hour_dow_heatmap.png
+temporal,hour,23,2023-2024,4533,1321,0.29142,0.27837,0.30482,eda_03_hour_dow_heatmap.png
+temporal,day_of_week,Sunday,2023-2024,23087,6368,0.27583,0.2701,0.28163,eda_03_hour_dow_heatmap.png
+temporal,day_of_week,Monday,2023-2024,28339,6743,0.23794,0.23302,0.24293,eda_03_hour_dow_heatmap.png
+temporal,day_of_week,Tuesday,2023-2024,30328,6920,0.22817,0.22348,0.23293,eda_03_hour_dow_heatmap.png
+temporal,day_of_week,Wednesday,2023-2024,30664,7225,0.23562,0.2309,0.2404,eda_03_hour_dow_heatmap.png
+temporal,day_of_week,Thursday,2023-2024,31252,7244,0.23179,0.22715,0.2365,eda_03_hour_dow_heatmap.png
+temporal,day_of_week,Friday,2023-2024,33562,8065,0.2403,0.23576,0.2449,eda_03_hour_dow_heatmap.png
+temporal,day_of_week,Saturday,2023-2024,27953,7464,0.26702,0.26187,0.27224,eda_03_hour_dow_heatmap.png
+road,speed_limit,20 mph,2023-2024,36823,7251,0.19691,0.19288,0.20101,eda_04_road_factors.png
+road,speed_limit,30 mph,2023-2024,104434,23884,0.2287,0.22616,0.23126,eda_04_road_factors.png
+road,speed_limit,40 mph,2023-2024,18103,4769,0.26344,0.25707,0.2699,eda_04_road_factors.png
+road,speed_limit,50 mph,2023-2024,9271,2618,0.28239,0.27331,0.29164,eda_04_road_factors.png
+road,speed_limit,60 mph,2023-2024,25438,8737,0.34346,0.33765,0.34932,eda_04_road_factors.png
+road,speed_limit,70 mph,2023-2024,11113,2769,0.24917,0.24121,0.2573,eda_04_road_factors.png
+road,urban_or_rural_area,Rural,2023-2024,67554,19841,0.29371,0.29028,0.29715,eda_04_road_factors.png
+road,urban_or_rural_area,Urban,2023-2024,137616,30184,0.21933,0.21716,0.22153,eda_04_road_factors.png
+road,road_type,Single carriageway,2023-2024,149303,39081,0.26176,0.25953,0.26399,eda_04_road_factors.png
+road,road_type,Dual carriageway,2023-2024,30083,7004,0.23282,0.22808,0.23763,eda_04_road_factors.png
+road,road_type,Slip road,2023-2024,3443,622,0.18066,0.16816,0.19386,eda_04_road_factors.png
+road,road_type,One way street,2023-2024,4460,803,0.18004,0.16905,0.19159,eda_04_road_factors.png
+road,road_type,Roundabout,2023-2024,12151,2072,0.17052,0.16394,0.17731,eda_04_road_factors.png
+road,road_type,Missing / unknown,2023-2024,5745,447,0.07781,0.07116,0.08502,eda_04_road_factors.png
+road,junction_detail,Not at junction,2023-2024,99373,26046,0.2621,0.25938,0.26485,eda_04_road_factors.png
+road,junction_detail,Private drive / entrance,2023-2024,4519,1106,0.24474,0.23243,0.25749,eda_04_road_factors.png
+road,junction_detail,Other junction,2023-2024,12540,3006,0.23971,0.23232,0.24726,eda_04_road_factors.png
+road,junction_detail,T / staggered junction,2023-2024,57043,13477,0.23626,0.23279,0.23976,eda_04_road_factors.png
+road,junction_detail,Crossroads,2023-2024,19002,4423,0.23276,0.22681,0.23883,eda_04_road_factors.png
+road,junction_detail,Junction >4 arms,2023-2024,3303,748,0.22646,0.21251,0.24105,eda_04_road_factors.png
+road,junction_detail,Missing / unknown,2023-2024,9405,1223,0.13004,0.12339,0.13699,eda_04_road_factors.png
+env,light_conditions,"Dark, no lighting",2023-2024,11323,3909,0.34523,0.33652,0.35403,eda_05_environment_factors.png
+env,light_conditions,"Dark, lights unlit",2023-2024,1507,456,0.30259,0.27992,0.32626,eda_05_environment_factors.png
+env,light_conditions,"Dark, lights lit",2023-2024,43244,10971,0.2537,0.24962,0.25782,eda_05_environment_factors.png
+env,light_conditions,Daylight,2023-2024,145791,34026,0.23339,0.23122,0.23557,eda_05_environment_factors.png
+env,light_conditions,"Dark, lighting unknown",2023-2024,3314,664,0.20036,0.18708,0.21433,eda_05_environment_factors.png
+env,weather_conditions,Fine + high winds,2023-2024,1912,574,0.30021,0.28008,0.32114,eda_05_environment_factors.png
+env,weather_conditions,Raining + high winds,2023-2024,2350,643,0.27362,0.25597,0.292,eda_05_environment_factors.png
+env,weather_conditions,Fog or mist,2023-2024,807,219,0.27138,0.24183,0.30308,eda_05_environment_factors.png
+env,weather_conditions,Fine,2023-2024,161630,40279,0.2492,0.2471,0.25132,eda_05_environment_factors.png
+env,weather_conditions,Raining,2023-2024,25168,6130,0.24356,0.2383,0.24891,eda_05_environment_factors.png
+env,weather_conditions,Snowing,2023-2024,638,152,0.23824,0.20682,0.27281,eda_05_environment_factors.png
+env,weather_conditions,Other,2023-2024,6133,1296,0.21132,0.20128,0.22171,eda_05_environment_factors.png
+env,weather_conditions,Missing / unknown,2023-2024,6480,717,0.11065,0.10324,0.11852,eda_05_environment_factors.png
+env,road_surface_conditions,Flood >3 cm,2023-2024,371,104,0.28032,0.23705,0.3281,eda_05_environment_factors.png
+env,road_surface_conditions,Snow,2023-2024,400,102,0.255,0.21476,0.2999,eda_05_environment_factors.png
+env,road_surface_conditions,Wet or damp,2023-2024,52299,13298,0.25427,0.25055,0.25802,eda_05_environment_factors.png
+env,road_surface_conditions,Dry,2023-2024,144584,35566,0.24599,0.24378,0.24822,eda_05_environment_factors.png
+env,road_surface_conditions,Frost or ice,2023-2024,2476,590,0.23829,0.22192,0.25547,eda_05_environment_factors.png
+env,road_surface_conditions,Missing / unknown,2023-2024,5055,369,0.073,0.06615,0.0805,eda_05_environment_factors.png
+vehicle_mix,pedestrian,Involved,2023-2024,36984,11917,0.32222,0.31748,0.327,eda_06_vehicle_mix.png
+vehicle_mix,pedestrian,Not involved,2023-2024,168201,38112,0.22659,0.22459,0.22859,eda_06_vehicle_mix.png
+vehicle_mix,motorcycle,Involved,2023-2024,34501,11364,0.32938,0.32444,0.33436,eda_06_vehicle_mix.png
+vehicle_mix,motorcycle,Not involved,2023-2024,170684,38665,0.22653,0.22455,0.22852,eda_06_vehicle_mix.png
+vehicle_mix,pedal_cycle,Involved,2023-2024,30447,7782,0.25559,0.25072,0.26052,eda_06_vehicle_mix.png
+vehicle_mix,pedal_cycle,Not involved,2023-2024,174738,42247,0.24177,0.23977,0.24379,eda_06_vehicle_mix.png
+vehicle_mix,hgv,Involved,2023-2024,7759,2111,0.27207,0.26228,0.28208,eda_06_vehicle_mix.png
+vehicle_mix,hgv,Not involved,2023-2024,197426,47918,0.24271,0.24083,0.24461,eda_06_vehicle_mix.png
+vehicle_mix,vehicles,Single vehicle,2023-2024,60774,19531,0.32137,0.31767,0.3251,eda_06_vehicle_mix.png
+vehicle_mix,vehicles,Two vehicles,2023-2024,126636,25868,0.20427,0.20206,0.2065,eda_06_vehicle_mix.png
+vehicle_mix,vehicles,Three or more,2023-2024,17775,4630,0.26048,0.25408,0.26698,eda_06_vehicle_mix.png
+geography,latitude_band,England & Wales (lat < 55.8),2023-2024,198433,47096,0.23734,0.23547,0.23922,eda_07_geo_hexbin.png
+geography,latitude_band,Scotland (lat ≥ 55.8),2023-2024,6740,2929,0.43457,0.42278,0.44644,eda_07_geo_hexbin.png
+geography,police_force,Police Scotland,2023-2024,8399,3670,0.43696,0.42638,0.44759,eda_08_police_force_rank.png
+geography,police_force,Dyfed-Powys,2023-2024,2045,816,0.39902,0.37801,0.42042,eda_08_police_force_rank.png
+geography,police_force,Durham,2023-2024,1142,436,0.38179,0.35405,0.41032,eda_08_police_force_rank.png
+geography,police_force,North Wales,2023-2024,1298,458,0.35285,0.32732,0.37925,eda_08_police_force_rank.png
+geography,police_force,South Yorkshire,2023-2024,4294,1440,0.33535,0.32138,0.34961,eda_08_police_force_rank.png
+geography,police_force,Gwent,2023-2024,1071,358,0.33427,0.30665,0.36307,eda_08_police_force_rank.png
+geography,police_force,Lancashire,2023-2024,5493,1783,0.32459,0.31234,0.3371,eda_08_police_force_rank.png
+geography,police_force,Cumbria,2023-2024,1657,519,0.31322,0.29134,0.33596,eda_08_police_force_rank.png
+geography,police_force,West Mercia,2023-2024,2988,932,0.31191,0.29555,0.32876,eda_08_police_force_rank.png
+geography,police_force,Greater Manchester,2023-2024,5323,1658,0.31148,0.29918,0.32405,eda_08_police_force_rank.png
+geography,police_force,Norfolk,2023-2024,2982,914,0.30651,0.29022,0.32329,eda_08_police_force_rank.png
+geography,police_force,West Yorkshire,2023-2024,8307,2486,0.29927,0.28951,0.3092,eda_08_police_force_rank.png
+geography,police_force,Gloucestershire,2023-2024,2106,604,0.2868,0.26789,0.30649,eda_08_police_force_rank.png
+geography,police_force,Suffolk,2023-2024,2071,585,0.28247,0.2635,0.30225,eda_08_police_force_rank.png
+geography,police_force,Sussex,2023-2024,6842,1929,0.28194,0.2714,0.29272,eda_08_police_force_rank.png
+geography,police_force,Leicestershire,2023-2024,2430,677,0.2786,0.26114,0.29676,eda_08_police_force_rank.png
+geography,police_force,Derbyshire,2023-2024,3423,946,0.27637,0.26164,0.29159,eda_08_police_force_rank.png
+geography,police_force,Essex,2023-2024,5651,1510,0.26721,0.25583,0.2789,eda_08_police_force_rank.png
+geography,police_force,Cleveland,2023-2024,1107,295,0.26649,0.24128,0.29331,eda_08_police_force_rank.png
+geography,police_force,Staffordshire,2023-2024,2379,622,0.26145,0.24419,0.27949,eda_08_police_force_rank.png
+geography,police_force,Warwickshire,2023-2024,2086,541,0.25935,0.24099,0.27859,eda_08_police_force_rank.png
+geography,police_force,Surrey,2023-2024,5194,1347,0.25934,0.2476,0.27143,eda_08_police_force_rank.png
+geography,police_force,Hampshire,2023-2024,6780,1748,0.25782,0.24754,0.26836,eda_08_police_force_rank.png
+geography,police_force,Nottinghamshire,2023-2024,4091,1050,0.25666,0.24351,0.27027,eda_08_police_force_rank.png
+geography,police_force,Cambridgeshire,2023-2024,2891,716,0.24767,0.23227,0.26373,eda_08_police_force_rank.png
+geography,police_force,North Yorkshire,2023-2024,2790,685,0.24552,0.22991,0.26183,eda_08_police_force_rank.png
+geography,police_force,Humberside,2023-2024,3871,947,0.24464,0.23136,0.25843,eda_08_police_force_rank.png
+geography,police_force,Kent,2023-2024,7240,1765,0.24378,0.23403,0.25381,eda_08_police_force_rank.png
+geography,police_force,Northumbria,2023-2024,3734,895,0.23969,0.22627,0.25364,eda_08_police_force_rank.png
+geography,police_force,Devon and Cornwall,2023-2024,5626,1283,0.22805,0.21727,0.2392,eda_08_police_force_rank.png
+geography,police_force,Merseyside,2023-2024,4032,908,0.2252,0.21257,0.23835,eda_08_police_force_rank.png
+geography,police_force,Cheshire,2023-2024,3008,666,0.22141,0.20693,0.2366,eda_08_police_force_rank.png
+geography,police_force,West Midlands,2023-2024,9310,1964,0.21096,0.20279,0.21936,eda_08_police_force_rank.png
+geography,police_force,Lincolnshire,2023-2024,3449,719,0.20847,0.19524,0.22234,eda_08_police_force_rank.png
+geography,police_force,Bedfordshire,2023-2024,2470,510,0.20648,0.19098,0.22289,eda_08_police_force_rank.png
+geography,police_force,Thames Valley,2023-2024,5826,1184,0.20323,0.19309,0.21375,eda_08_police_force_rank.png
+geography,police_force,Hertfordshire,2023-2024,3461,701,0.20254,0.18949,0.21626,eda_08_police_force_rank.png
+geography,police_force,Northamptonshire,2023-2024,2473,483,0.19531,0.18016,0.2114,eda_08_police_force_rank.png
+geography,police_force,Dorset,2023-2024,2780,539,0.19388,0.17962,0.209,eda_08_police_force_rank.png
+geography,police_force,South Wales,2023-2024,1754,296,0.16876,0.15196,0.187,eda_08_police_force_rank.png
+geography,police_force,Avon and Somerset,2023-2024,4782,806,0.16855,0.15821,0.17942,eda_08_police_force_rank.png
+geography,police_force,Wiltshire,2023-2024,2615,436,0.16673,0.15294,0.1815,eda_08_police_force_rank.png
+geography,police_force,Metropolitan Police,2023-2024,43574,7104,0.16303,0.15959,0.16653,eda_08_police_force_rank.png
+geography,force_reporting_group,Injury-based both years,2023-2024,109948,30905,0.28109,0.27844,0.28375,eda_08_police_force_rank.png
+geography,force_reporting_group,Severity-based both years,2023-2024,80751,15241,0.18874,0.18606,0.19145,eda_08_police_force_rank.png
+geography,force_reporting_group,Switched / mixed 2023–24,2023-2024,14486,3883,0.26805,0.2609,0.27533,eda_08_police_force_rank.png
+reporting_system,year_x_injury_based,2023 · Injury-based (CRaSH / COPA),2023-2024,56017,15705,0.28036,0.27666,0.2841,eda_09_reporting_system.png
+reporting_system,year_x_injury_based,2023 · Severity-based (legacy),2023-2024,48241,9255,0.19185,0.18836,0.19539,eda_09_reporting_system.png
+reporting_system,year_x_injury_based,2024 · Injury-based (CRaSH / COPA),2023-2024,59297,16874,0.28457,0.28095,0.28821,eda_09_reporting_system.png
+reporting_system,year_x_injury_based,2024 · Severity-based (legacy),2023-2024,41630,8195,0.19685,0.19306,0.2007,eda_09_reporting_system.png
+reporting_system,collision_injury_based,Severity-based (legacy),2023-2024,89871,17450,0.19417,0.19159,0.19677,eda_09_reporting_system.png
+reporting_system,collision_injury_based,Injury-based (CRaSH / COPA),2023-2024,115314,32579,0.28252,0.27993,0.28513,eda_09_reporting_system.png
+leakage,police_attended,Officer attended,2023-2024,141544,42785,0.30227,0.29989,0.30467,eda_10_police_attendance.png
+leakage,police_attended,Not attended,2023-2024,20889,3091,0.14797,0.14322,0.15285,eda_10_police_attendance.png
+leakage,police_attended,"No, self-completion report",2023-2024,42752,4153,0.09714,0.09437,0.09999,eda_10_police_attendance.png

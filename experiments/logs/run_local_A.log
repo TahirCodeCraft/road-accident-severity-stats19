@@ -1,0 +1,226 @@
+2026-11-12 02:03:56 | INFO     | __main__ | Running 24 cells: ['F0__none__lr', 'F0__none__dt', 'F0__none__lgbm', 'F0__weight__lr', 'F0__weight__dt', 'F0__weight__lgbm', 'F0__rus__lr', 'F0__rus__dt', 'F0__rus__lgbm', 'F0__smotenc__lr', 'F0__smotenc__lgbm', 'F1__none__lr', 'F1__none__dt', 'F1__none__lgbm', 'F1__weight__lr', 'F1__weight__dt', 'F1__weight__lgbm', 'F1__rus__lr', 'F1__rus__dt', 'F1__rus__lgbm', 'F1__smotenc__lr', 'F1__smotenc__lgbm', 'F1full__none__lr', 'F1full__none__lgbm']
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_020357-8uhs1nwe
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 02:03:57 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F0__none__lr mode=offline
+[I 2026-11-12 02:03:58,002] A new study created in memory with name: no-name-98e16d9d-e306-4309-b545-a465f0394405
+[I 2026-11-12 02:04:03,919] Trial 0 finished with value: 0.45357987362169594 and parameters: {'C': 0.0074593432857265485}. Best is trial 0 with value: 0.45357987362169594.
+[I 2026-11-12 02:04:10,782] Trial 1 finished with value: 0.45094654909813897 and parameters: {'C': 5.669849511478847}. Best is trial 0 with value: 0.45357987362169594.
+[I 2026-11-12 02:04:19,169] Trial 2 finished with value: 0.4515902123741271 and parameters: {'C': 0.4570563099801455}. Best is trial 0 with value: 0.45357987362169594.
+[I 2026-11-12 02:04:27,015] Trial 3 finished with value: 0.4523682765989646 and parameters: {'C': 0.09846738873614563}. Best is trial 0 with value: 0.45357987362169594.
+[I 2026-11-12 02:04:33,643] Trial 4 finished with value: 0.4499981618012796 and parameters: {'C': 0.0006026889128682511}. Best is trial 0 with value: 0.45357987362169594.
+[I 2026-11-12 02:04:39,989] Trial 5 finished with value: 0.4499978041313236 and parameters: {'C': 0.000602521573620386}. Best is trial 0 with value: 0.45357987362169594.
+[I 2026-11-12 02:04:45,668] Trial 6 finished with value: 0.44629813752748837 and parameters: {'C': 0.00019517224641449495}. Best is trial 0 with value: 0.45357987362169594.
+[I 2026-11-12 02:04:55,244] Trial 7 finished with value: 0.4508826508878585 and parameters: {'C': 2.1423021757741068}. Best is trial 0 with value: 0.45357987362169594.
+[I 2026-11-12 02:05:05,139] Trial 8 finished with value: 0.4522586405193185 and parameters: {'C': 0.10129197956845731}. Best is trial 0 with value: 0.45357987362169594.
+[I 2026-11-12 02:05:15,806] Trial 9 finished with value: 0.4514542657368821 and parameters: {'C': 0.3470266988650412}. Best is trial 0 with value: 0.45357987362169594.
+[I 2026-11-12 02:05:26,222] Trial 10 finished with value: 0.45334400919757556 and parameters: {'C': 0.011523215282948073}. Best is trial 0 with value: 0.45357987362169594.
+[I 2026-11-12 02:05:36,491] Trial 11 finished with value: 0.45343069821102877 and parameters: {'C': 0.008914401041476788}. Best is trial 0 with value: 0.45357987362169594.
+[I 2026-11-12 02:05:47,025] Trial 12 finished with value: 0.4535881298474319 and parameters: {'C': 0.006579600769599544}. Best is trial 12 with value: 0.4535881298474319.
+[I 2026-11-12 02:05:56,260] Trial 13 finished with value: 0.45350109220579604 and parameters: {'C': 0.005423185466354645}. Best is trial 12 with value: 0.4535881298474319.
+[I 2026-11-12 02:06:03,491] Trial 14 finished with value: 0.45239469358980783 and parameters: {'C': 0.001879585443169349}. Best is trial 12 with value: 0.4535881298474319.
+2026-11-12 02:06:03 | INFO     | src.training.runner | [F0__none__lr] best TUNE PR-AUC 0.4536 params={'C': 0.006579600769599544}
+2026-11-12 02:06:15 | INFO     | src.training.runner | [F0__none__lr] seed 0 refit 11s CAL PR-AUC 0.4556
+2026-11-12 02:06:28 | INFO     | src.training.runner | [F0__none__lr] seed 1 refit 13s CAL PR-AUC 0.4556
+2026-11-12 02:06:40 | INFO     | src.training.runner | [F0__none__lr] seed 2 refit 12s CAL PR-AUC 0.4556
+wandb: 
+wandb: Run history:
+wandb: cal_pr_auc_mean ▁
+wandb: 
+wandb: Run summary:
+wandb: cal_pr_auc_mean 0.45565
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_020357-8uhs1nwe
+wandb: Find logs at: ./wandb/offline-run-20261112_020357-8uhs1nwe/logs
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_020640-gfnwqmyp
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 02:06:40 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F0__none__dt mode=offline
+[I 2026-11-12 02:06:40,542] A new study created in memory with name: no-name-a5bade8a-5218-496e-ae9c-d5e0eef93d24
+[I 2026-11-12 02:06:42,499] Trial 0 finished with value: 0.4021191481394073 and parameters: {'max_depth': 9, 'min_samples_leaf': 795, 'criterion': 'gini', 'ccp_alpha': 4.20798866960663e-07}. Best is trial 0 with value: 0.4021191481394073.
+[I 2026-11-12 02:06:43,594] Trial 1 finished with value: 0.3603971914005488 and parameters: {'max_depth': 5, 'min_samples_leaf': 12, 'criterion': 'gini', 'ccp_alpha': 6.796578090758147e-05}. Best is trial 0 with value: 0.4021191481394073.
+[I 2026-11-12 02:06:44,908] Trial 2 finished with value: 0.3298947432260983 and parameters: {'max_depth': 3, 'min_samples_leaf': 870, 'criterion': 'gini', 'ccp_alpha': 5.337032762603952e-07}. Best is trial 0 with value: 0.4021191481394073.
+[I 2026-11-12 02:06:46,984] Trial 3 finished with value: 0.37631073370396484 and parameters: {'max_depth': 6, 'min_samples_leaf': 39, 'criterion': 'gini', 'ccp_alpha': 1.4618962793704944e-06}. Best is trial 0 with value: 0.4021191481394073.
+[I 2026-11-12 02:06:50,968] Trial 4 finished with value: 0.3924981682326396 and parameters: {'max_depth': 14, 'min_samples_leaf': 18, 'criterion': 'entropy', 'ccp_alpha': 6.6723671704642e-06}. Best is trial 0 with value: 0.4021191481394073.
+[I 2026-11-12 02:06:55,360] Trial 5 finished with value: 0.3877271522886435 and parameters: {'max_depth': 17, 'min_samples_leaf': 24, 'criterion': 'entropy', 'ccp_alpha': 1.5339162591163606e-07}. Best is trial 0 with value: 0.4021191481394073.
+[I 2026-11-12 02:06:59,338] Trial 6 finished with value: 0.37785962921673777 and parameters: {'max_depth': 13, 'min_samples_leaf': 21, 'criterion': 'entropy', 'ccp_alpha': 0.0007286653737491038}. Best is trial 0 with value: 0.4021191481394073.
+[I 2026-11-12 02:07:03,630] Trial 7 finished with value: 0.3995689672319481 and parameters: {'max_depth': 17, 'min_samples_leaf': 39, 'criterion': 'entropy', 'ccp_alpha': 5.762487216478598e-06}. Best is trial 0 with value: 0.4021191481394073.
+[I 2026-11-12 02:07:05,406] Trial 8 finished with value: 0.36250236053206014 and parameters: {'max_depth': 5, 'min_samples_leaf': 95, 'criterion': 'entropy', 'ccp_alpha': 1.0842262717330158e-06}. Best is trial 0 with value: 0.4021191481394073.
+[I 2026-11-12 02:07:09,246] Trial 9 finished with value: 0.4051070146072262 and parameters: {'max_depth': 14, 'min_samples_leaf': 41, 'criterion': 'entropy', 'ccp_alpha': 5.48804700076604e-07}. Best is trial 9 with value: 0.4051070146072262.
+[I 2026-11-12 02:07:12,062] Trial 10 finished with value: 0.41095142500921134 and parameters: {'max_depth': 16, 'min_samples_leaf': 457, 'criterion': 'entropy', 'ccp_alpha': 0.0001003389186010319}. Best is trial 10 with value: 0.41095142500921134.
+[I 2026-11-12 02:07:15,343] Trial 11 finished with value: 0.41358719103584496 and parameters: {'max_depth': 12, 'min_samples_leaf': 131, 'criterion': 'entropy', 'ccp_alpha': 1.7486366786687955e-05}. Best is trial 11 with value: 0.41358719103584496.
+[I 2026-11-12 02:07:18,820] Trial 12 finished with value: 0.4124249123426613 and parameters: {'max_depth': 16, 'min_samples_leaf': 302, 'criterion': 'entropy', 'ccp_alpha': 7.747301847267457e-05}. Best is trial 11 with value: 0.41358719103584496.
+[I 2026-11-12 02:07:21,775] Trial 13 finished with value: 0.40674250166601866 and parameters: {'max_depth': 10, 'min_samples_leaf': 224, 'criterion': 'entropy', 'ccp_alpha': 3.0897176242027117e-06}. Best is trial 11 with value: 0.41358719103584496.
+[I 2026-11-12 02:07:25,340] Trial 14 finished with value: 0.39723450964002205 and parameters: {'max_depth': 13, 'min_samples_leaf': 77, 'criterion': 'entropy', 'ccp_alpha': 0.00037363117658908344}. Best is trial 11 with value: 0.41358719103584496.
+[I 2026-11-12 02:07:28,889] Trial 15 finished with value: 0.4142802464102668 and parameters: {'max_depth': 20, 'min_samples_leaf': 119, 'criterion': 'entropy', 'ccp_alpha': 1.9820005147937564e-05}. Best is trial 15 with value: 0.4142802464102668.
+[I 2026-11-12 02:07:32,544] Trial 16 finished with value: 0.41441857390059483 and parameters: {'max_depth': 20, 'min_samples_leaf': 115, 'criterion': 'entropy', 'ccp_alpha': 2.839754052509223e-05}. Best is trial 16 with value: 0.41441857390059483.
+[I 2026-11-12 02:07:36,294] Trial 17 finished with value: 0.4147786049176496 and parameters: {'max_depth': 20, 'min_samples_leaf': 131, 'criterion': 'entropy', 'ccp_alpha': 1.382076152457851e-05}. Best is trial 17 with value: 0.4147786049176496.
+[I 2026-11-12 02:07:40,303] Trial 18 finished with value: 0.41312022465215215 and parameters: {'max_depth': 18, 'min_samples_leaf': 51, 'criterion': 'entropy', 'ccp_alpha': 5.788550887867411e-05}. Best is trial 17 with value: 0.4147786049176496.
+[I 2026-11-12 02:07:43,848] Trial 19 finished with value: 0.4137534142511945 and parameters: {'max_depth': 19, 'min_samples_leaf': 228, 'criterion': 'entropy', 'ccp_alpha': 5.599815373373805e-06}. Best is trial 17 with value: 0.4147786049176496.
+[I 2026-11-12 02:07:48,856] Trial 20 finished with value: 0.41293087174241255 and parameters: {'max_depth': 18, 'min_samples_leaf': 232, 'criterion': 'entropy', 'ccp_alpha': 5.213203301202212e-07}. Best is trial 17 with value: 0.4147786049176496.
+[I 2026-11-12 02:07:52,659] Trial 21 finished with value: 0.42456071280445207 and parameters: {'max_depth': 16, 'min_samples_leaf': 116, 'criterion': 'gini', 'ccp_alpha': 2.585996595556231e-05}. Best is trial 21 with value: 0.42456071280445207.
+[I 2026-11-12 02:07:56,666] Trial 22 finished with value: 0.41671576123281484 and parameters: {'max_depth': 16, 'min_samples_leaf': 55, 'criterion': 'gini', 'ccp_alpha': 2.8573349500297727e-05}. Best is trial 21 with value: 0.42456071280445207.
+[I 2026-11-12 02:08:00,935] Trial 23 finished with value: 0.4153637703671882 and parameters: {'max_depth': 13, 'min_samples_leaf': 36, 'criterion': 'gini', 'ccp_alpha': 3.1624831760166196e-05}. Best is trial 21 with value: 0.42456071280445207.
+[I 2026-11-12 02:08:04,493] Trial 24 finished with value: 0.4146625268577091 and parameters: {'max_depth': 13, 'min_samples_leaf': 56, 'criterion': 'gini', 'ccp_alpha': 2.356968639806825e-05}. Best is trial 21 with value: 0.42456071280445207.
+[I 2026-11-12 02:08:08,255] Trial 25 finished with value: 0.4190194843718464 and parameters: {'max_depth': 15, 'min_samples_leaf': 97, 'criterion': 'gini', 'ccp_alpha': 4.619882391816954e-06}. Best is trial 21 with value: 0.42456071280445207.
+[I 2026-11-12 02:08:12,194] Trial 26 finished with value: 0.41340899269159714 and parameters: {'max_depth': 16, 'min_samples_leaf': 68, 'criterion': 'gini', 'ccp_alpha': 2.2312880086991192e-06}. Best is trial 21 with value: 0.42456071280445207.
+[I 2026-11-12 02:08:15,964] Trial 27 finished with value: 0.4167512235410381 and parameters: {'max_depth': 19, 'min_samples_leaf': 95, 'criterion': 'gini', 'ccp_alpha': 0.00011295648532600782}. Best is trial 21 with value: 0.42456071280445207.
+[I 2026-11-12 02:08:19,942] Trial 28 finished with value: 0.39411286195244294 and parameters: {'max_depth': 19, 'min_samples_leaf': 122, 'criterion': 'gini', 'ccp_alpha': 0.0003518976393134138}. Best is trial 21 with value: 0.42456071280445207.
+[I 2026-11-12 02:08:23,449] Trial 29 finished with value: 0.4227944443374658 and parameters: {'max_depth': 19, 'min_samples_leaf': 267, 'criterion': 'gini', 'ccp_alpha': 3.933276970420945e-05}. Best is trial 21 with value: 0.42456071280445207.
+2026-11-12 02:08:23 | INFO     | src.training.runner | [F0__none__dt] best TUNE PR-AUC 0.4246 params={'max_depth': 16, 'min_samples_leaf': 116, 'criterion': 'gini', 'ccp_alpha': 2.585996595556231e-05}
+2026-11-12 02:08:30 | INFO     | src.training.runner | [F0__none__dt] seed 0 refit 6s CAL PR-AUC 0.4269
+2026-11-12 02:08:35 | INFO     | src.training.runner | [F0__none__dt] seed 1 refit 6s CAL PR-AUC 0.4271
+2026-11-12 02:08:42 | INFO     | src.training.runner | [F0__none__dt] seed 2 refit 7s CAL PR-AUC 0.4270
+wandb: 
+wandb: Run history:
+wandb: cal_pr_auc_mean ▁
+wandb: 
+wandb: Run summary:
+wandb: cal_pr_auc_mean 0.42701
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_020640-gfnwqmyp
+wandb: Find logs at: ./wandb/offline-run-20261112_020640-gfnwqmyp/logs
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_020842-39200mp9
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 02:08:43 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F0__none__lgbm mode=offline
+[I 2026-11-12 02:08:43,433] A new study created in memory with name: no-name-c760ff4c-09a3-4da2-9757-4dfc260647fd
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:09:16,131] Trial 0 finished with value: 0.4809832364641735 and parameters: {'learning_rate': 0.030710573677773714, 'num_leaves': 222, 'min_child_samples': 173, 'subsample': 0.7993292420985183, 'colsample_bytree': 0.40921304830970556, 'reg_lambda': 0.004993515273965262, 'reg_alpha': 0.0017073967431528124, 'cat_smooth': 53.99484409787433}. Best is trial 0 with value: 0.4809832364641735.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:09:27,340] Trial 1 finished with value: 0.4786688387422709 and parameters: {'learning_rate': 0.06054365855469246, 'num_leaves': 111, 'min_child_samples': 10, 'subsample': 0.9849549260809971, 'colsample_bytree': 0.8827098485602951, 'reg_lambda': 0.00892622738184373, 'reg_alpha': 0.005337032762603957, 'cat_smooth': 2.32706770838378}. Best is trial 0 with value: 0.4809832364641735.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:09:47,238] Trial 2 finished with value: 0.4816321115424712 and parameters: {'learning_rate': 0.024878734419814436, 'num_leaves': 65, 'min_child_samples': 53, 'subsample': 0.645614570099021, 'colsample_bytree': 0.7282970263056656, 'reg_lambda': 0.004212412845262044, 'reg_alpha': 0.01474275315991467, 'cat_smooth': 5.404103854647328}. Best is trial 2 with value: 0.4816321115424712.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:10:06,177] Trial 3 finished with value: 0.48033812755927385 and parameters: {'learning_rate': 0.03920673972242137, 'num_leaves': 138, 'min_child_samples': 21, 'subsample': 0.7571172192068059, 'colsample_bytree': 0.7146901982034297, 'reg_lambda': 0.0016142252267366923, 'reg_alpha': 0.26926469100861794, 'cat_smooth': 2.1930485556643684}. Best is trial 2 with value: 0.4816321115424712.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+2026-11-12 02:11:18 | INFO     | __main__ | Running 24 cells: ['F0__none__lr', 'F0__none__dt', 'F0__none__lgbm', 'F0__weight__lr', 'F0__weight__dt', 'F0__weight__lgbm', 'F0__rus__lr', 'F0__rus__dt', 'F0__rus__lgbm', 'F0__smotenc__lr', 'F0__smotenc__lgbm', 'F1__none__lr', 'F1__none__dt', 'F1__none__lgbm', 'F1__weight__lr', 'F1__weight__dt', 'F1__weight__lgbm', 'F1__rus__lr', 'F1__rus__dt', 'F1__rus__lgbm', 'F1__smotenc__lr', 'F1__smotenc__lgbm', 'F1full__none__lr', 'F1full__none__lgbm']
+2026-11-12 02:11:18 | INFO     | src.training.runner | [F0__none__lr] already complete, skipping
+2026-11-12 02:11:18 | INFO     | src.training.runner | [F0__none__dt] already complete, skipping
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_021119-nlx3aa2r
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 02:11:19 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F0__none__lgbm mode=offline
+[I 2026-11-12 02:11:19,905] A new study created in memory with name: no-name-0490cddb-2d56-44e4-b050-cd3e6028ec8f
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:11:54,678] Trial 0 finished with value: 0.4809832364641735 and parameters: {'learning_rate': 0.030710573677773714, 'num_leaves': 222, 'min_child_samples': 173, 'subsample': 0.7993292420985183, 'colsample_bytree': 0.40921304830970556, 'reg_lambda': 0.004993515273965262, 'reg_alpha': 0.0017073967431528124, 'cat_smooth': 53.99484409787433}. Best is trial 0 with value: 0.4809832364641735.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:12:10,033] Trial 1 finished with value: 0.4786688387422709 and parameters: {'learning_rate': 0.06054365855469246, 'num_leaves': 111, 'min_child_samples': 10, 'subsample': 0.9849549260809971, 'colsample_bytree': 0.8827098485602951, 'reg_lambda': 0.00892622738184373, 'reg_alpha': 0.005337032762603957, 'cat_smooth': 2.32706770838378}. Best is trial 0 with value: 0.4809832364641735.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:12:37,190] Trial 2 finished with value: 0.4816321115424712 and parameters: {'learning_rate': 0.024878734419814436, 'num_leaves': 65, 'min_child_samples': 53, 'subsample': 0.645614570099021, 'colsample_bytree': 0.7282970263056656, 'reg_lambda': 0.004212412845262044, 'reg_alpha': 0.01474275315991467, 'cat_smooth': 5.404103854647328}. Best is trial 2 with value: 0.4816321115424712.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:12:59,602] Trial 3 finished with value: 0.48033812755927385 and parameters: {'learning_rate': 0.03920673972242137, 'num_leaves': 138, 'min_child_samples': 21, 'subsample': 0.7571172192068059, 'colsample_bytree': 0.7146901982034297, 'reg_lambda': 0.0016142252267366923, 'reg_alpha': 0.26926469100861794, 'cat_smooth': 2.1930485556643684}. Best is trial 2 with value: 0.4816321115424712.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:14:15,888] Trial 4 finished with value: 0.4801270523190385 and parameters: {'learning_rate': 0.012151617026673379, 'num_leaves': 221, 'min_child_samples': 437, 'subsample': 0.9041986740582306, 'colsample_bytree': 0.5132296384213595, 'reg_lambda': 0.002737095165771331, 'reg_alpha': 0.5456725485601477, 'cat_smooth': 7.591104805282694}. Best is trial 2 with value: 0.4816321115424712.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:15:12,932] Trial 5 finished with value: 0.4856499913217369 and parameters: {'learning_rate': 0.014413697528610409, 'num_leaves': 60, 'min_child_samples': 11, 'subsample': 0.954660201039391, 'colsample_bytree': 0.48114598712001183, 'reg_lambda': 0.925108350221417, 'reg_alpha': 0.017654048052495083, 'cat_smooth': 10.968217207529522}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:15:23,600] Trial 6 finished with value: 0.47925069973484175 and parameters: {'learning_rate': 0.05143828405076928, 'num_leaves': 25, 'min_child_samples': 444, 'subsample': 0.8875664116805573, 'colsample_bytree': 0.9576492590949324, 'reg_lambda': 10.144964926243938, 'reg_alpha': 0.24637685958997463, 'cat_smooth': 69.78281265126033}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:16:23,773] Trial 7 finished with value: 0.48470877639334753 and parameters: {'learning_rate': 0.01303561122512888, 'num_leaves': 25, 'min_child_samples': 11, 'subsample': 0.6626651653816322, 'colsample_bytree': 0.5720741027826374, 'reg_lambda': 0.016400705022266843, 'reg_alpha': 2.0651425578959257, 'cat_smooth': 5.170191786366991}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:17:07,042] Trial 8 finished with value: 0.4850598948941539 and parameters: {'learning_rate': 0.023200867504756827, 'num_leaves': 69, 'min_child_samples': 17, 'subsample': 0.9010984903770198, 'colsample_bytree': 0.35218545057583955, 'reg_lambda': 26.20670861087006, 'reg_alpha': 1.2273800987852967, 'cat_smooth': 2.4970737145052717}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:18:07,011] Trial 9 finished with value: 0.48006534066692963 and parameters: {'learning_rate': 0.010166803740022877, 'num_leaves': 150, 'min_child_samples': 157, 'subsample': 0.8645035840204937, 'colsample_bytree': 0.8398892426801621, 'reg_lambda': 0.002145393122543948, 'reg_alpha': 0.02715581955282941, 'cat_smooth': 1.7050539260269288}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:18:20,761] Trial 10 finished with value: 0.4832385594293369 and parameters: {'learning_rate': 0.03715171936826999, 'num_leaves': 37, 'min_child_samples': 64, 'subsample': 0.6466531055388975, 'colsample_bytree': 0.4270127283736934, 'reg_lambda': 10.63450897751906, 'reg_alpha': 0.005035358503599932, 'cat_smooth': 11.208796804899391}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:18:42,081] Trial 11 finished with value: 0.48494217262174144 and parameters: {'learning_rate': 0.020838838662956296, 'num_leaves': 65, 'min_child_samples': 13, 'subsample': 0.8856343766656294, 'colsample_bytree': 0.3803613353177172, 'reg_lambda': 12.965029279579598, 'reg_alpha': 0.12477580361413955, 'cat_smooth': 25.45648959523787}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:18:54,570] Trial 12 finished with value: 0.4841875577997723 and parameters: {'learning_rate': 0.03626253856845137, 'num_leaves': 74, 'min_child_samples': 11, 'subsample': 0.8966950366675585, 'colsample_bytree': 0.48216928016511584, 'reg_lambda': 0.2849814854384695, 'reg_alpha': 0.012875386040437338, 'cat_smooth': 1.0373969309077125}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:19:19,894] Trial 13 finished with value: 0.48445352157726085 and parameters: {'learning_rate': 0.017922095067035092, 'num_leaves': 69, 'min_child_samples': 13, 'subsample': 0.9106730616183604, 'colsample_bytree': 0.4574782430185192, 'reg_lambda': 0.5324173226942057, 'reg_alpha': 7.274369498243622, 'cat_smooth': 5.896910786722088}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:20:13,005] Trial 14 finished with value: 0.48534784311411694 and parameters: {'learning_rate': 0.010555921417744168, 'num_leaves': 102, 'min_child_samples': 11, 'subsample': 0.9336900264884949, 'colsample_bytree': 0.4803040959309831, 'reg_lambda': 0.512016505236388, 'reg_alpha': 0.038536178529908115, 'cat_smooth': 1.3579500774041968}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:20:34,951] Trial 15 finished with value: 0.48486047590193676 and parameters: {'learning_rate': 0.019686023093900305, 'num_leaves': 36, 'min_child_samples': 23, 'subsample': 0.8602537545075841, 'colsample_bytree': 0.5392892631002597, 'reg_lambda': 0.5394484792630239, 'reg_alpha': 0.004350646759017067, 'cat_smooth': 2.18924373914472}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:20:56,338] Trial 16 finished with value: 0.4843122566834554 and parameters: {'learning_rate': 0.013749868126420086, 'num_leaves': 34, 'min_child_samples': 21, 'subsample': 0.9614412011687242, 'colsample_bytree': 0.6033201326037055, 'reg_lambda': 0.3762931536745985, 'reg_alpha': 0.002567083253130092, 'cat_smooth': 47.61874170629768}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:21:29,115] Trial 17 finished with value: 0.48397393815571177 and parameters: {'learning_rate': 0.011181424649824134, 'num_leaves': 96, 'min_child_samples': 10, 'subsample': 0.9376793880410628, 'colsample_bytree': 0.688629029657281, 'reg_lambda': 0.05508777586257235, 'reg_alpha': 0.16544773451669978, 'cat_smooth': 17.405594203061458}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:22:17,546] Trial 18 finished with value: 0.4834967026938129 and parameters: {'learning_rate': 0.011893110310686012, 'num_leaves': 143, 'min_child_samples': 23, 'subsample': 0.9183223156665173, 'colsample_bytree': 0.5771239434316642, 'reg_lambda': 2.0546969237554986, 'reg_alpha': 0.1297572810062242, 'cat_smooth': 3.746070501483208}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:22:55,908] Trial 19 finished with value: 0.48443240509665175 and parameters: {'learning_rate': 0.01285851956300573, 'num_leaves': 121, 'min_child_samples': 18, 'subsample': 0.9417871424305455, 'colsample_bytree': 0.48015587577222385, 'reg_lambda': 6.661217072985393, 'reg_alpha': 0.007886495612072126, 'cat_smooth': 1.5671108484604936}. Best is trial 5 with value: 0.4856499913217369.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:23:43,604] Trial 20 finished with value: 0.48616929778562756 and parameters: {'learning_rate': 0.0105085382168456, 'num_leaves': 34, 'min_child_samples': 25, 'subsample': 0.8783810189203575, 'colsample_bytree': 0.4318485773142682, 'reg_lambda': 0.3171293743279395, 'reg_alpha': 0.07330850442050287, 'cat_smooth': 13.139943613061858}. Best is trial 20 with value: 0.48616929778562756.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:24:18,081] Trial 21 finished with value: 0.48580143619453625 and parameters: {'learning_rate': 0.01866163156709547, 'num_leaves': 58, 'min_child_samples': 15, 'subsample': 0.9501028805718933, 'colsample_bytree': 0.4348971221451271, 'reg_lambda': 0.28176334203073905, 'reg_alpha': 0.07313391279987023, 'cat_smooth': 1.1788659448636396}. Best is trial 20 with value: 0.48616929778562756.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:25:06,330] Trial 22 finished with value: 0.4852074142539058 and parameters: {'learning_rate': 0.012623045899632507, 'num_leaves': 34, 'min_child_samples': 48, 'subsample': 0.8851891204099249, 'colsample_bytree': 0.4241273365233794, 'reg_lambda': 0.09123914864196406, 'reg_alpha': 0.01128147850093701, 'cat_smooth': 20.12991193719265}. Best is trial 20 with value: 0.48616929778562756.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:25:53,665] Trial 23 finished with value: 0.48668555624049104 and parameters: {'learning_rate': 0.013104321447680886, 'num_leaves': 52, 'min_child_samples': 29, 'subsample': 0.9030471753532432, 'colsample_bytree': 0.38007426734002203, 'reg_lambda': 2.2304294578947097, 'reg_alpha': 0.20808412700919338, 'cat_smooth': 4.434945977872235}. Best is trial 23 with value: 0.48668555624049104.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:26:46,845] Trial 24 finished with value: 0.48702692424902494 and parameters: {'learning_rate': 0.012890624204817116, 'num_leaves': 39, 'min_child_samples': 39, 'subsample': 0.9047495225684962, 'colsample_bytree': 0.30451649578294687, 'reg_lambda': 5.548170426696494, 'reg_alpha': 0.05900387167201603, 'cat_smooth': 7.8548656300867625}. Best is trial 24 with value: 0.48702692424902494.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:27:34,084] Trial 25 finished with value: 0.4866176933126163 and parameters: {'learning_rate': 0.012516921619226956, 'num_leaves': 53, 'min_child_samples': 49, 'subsample': 0.9266943606966775, 'colsample_bytree': 0.3120583115110482, 'reg_lambda': 2.1929537835726367, 'reg_alpha': 0.01732155044357805, 'cat_smooth': 7.492062679298996}. Best is trial 24 with value: 0.48702692424902494.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:28:10,898] Trial 26 finished with value: 0.485218210203569 and parameters: {'learning_rate': 0.015467099808800157, 'num_leaves': 53, 'min_child_samples': 50, 'subsample': 0.9998886204612655, 'colsample_bytree': 0.4290692380391118, 'reg_lambda': 0.49908000942579195, 'reg_alpha': 0.027205007106323887, 'cat_smooth': 8.96712208455985}. Best is trial 24 with value: 0.48702692424902494.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:28:49,278] Trial 27 finished with value: 0.4870450176416069 and parameters: {'learning_rate': 0.01202324757785434, 'num_leaves': 37, 'min_child_samples': 41, 'subsample': 0.8136898831639284, 'colsample_bytree': 0.3872394422475798, 'reg_lambda': 2.8439982529759926, 'reg_alpha': 0.11719707008364891, 'cat_smooth': 4.515668176759809}. Best is trial 27 with value: 0.4870450176416069.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:29:29,207] Trial 28 finished with value: 0.48693290842181536 and parameters: {'learning_rate': 0.012661437086162934, 'num_leaves': 67, 'min_child_samples': 24, 'subsample': 0.8922700241633342, 'colsample_bytree': 0.31457167951175685, 'reg_lambda': 6.159284081563478, 'reg_alpha': 0.7925726587521746, 'cat_smooth': 3.0619963667712518}. Best is trial 27 with value: 0.4870450176416069.
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 02:30:04,794] Trial 29 finished with value: 0.4863740286704358 and parameters: {'learning_rate': 0.013708369146155636, 'num_leaves': 72, 'min_child_samples': 29, 'subsample': 0.8933027135261404, 'colsample_bytree': 0.4156609011898258, 'reg_lambda': 2.152625578487162, 'reg_alpha': 1.2698347949567297, 'cat_smooth': 1.0689606075967841}. Best is trial 27 with value: 0.4870450176416069.
+2026-11-12 02:30:04 | INFO     | src.training.runner | [F0__none__lgbm] best TUNE PR-AUC 0.4870 params={'learning_rate': 0.01202324757785434, 'num_leaves': 37, 'min_child_samples': 41, 'subsample': 0.8136898831639284, 'subsample_freq': 1, 'colsample_bytree': 0.3872394422475798, 'reg_lambda': 2.8439982529759926, 'reg_alpha': 0.11719707008364891, 'cat_smooth': 4.515668176759809}
+2026-11-12 02:30:41 | INFO     | src.training.runner | [F0__none__lgbm] seed 0 refit 36s CAL PR-AUC 0.4887
+2026-11-12 02:31:29 | INFO     | src.training.runner | [F0__none__lgbm] seed 1 refit 48s CAL PR-AUC 0.4884
+2026-11-12 02:32:10 | INFO     | src.training.runner | [F0__none__lgbm] seed 2 refit 41s CAL PR-AUC 0.4885
+wandb: 
+wandb: Run history:
+wandb: cal_pr_auc_mean ▁
+wandb: 
+wandb: Run summary:
+wandb: cal_pr_auc_mean 0.48852
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_021119-nlx3aa2r
+wandb: Find logs at: ./wandb/offline-run-20261112_021119-nlx3aa2r/logs
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_023210-wzrszmx1
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 02:32:10 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F0__weight__lr mode=offline
+[I 2026-11-12 02:32:10,494] A new study created in memory with name: no-name-f900fda8-fc3b-45d7-bec0-71bb15de078f
+[I 2026-11-12 02:32:17,524] Trial 0 finished with value: 0.4517973681071731 and parameters: {'C': 0.0074593432857265485}. Best is trial 0 with value: 0.4517973681071731.

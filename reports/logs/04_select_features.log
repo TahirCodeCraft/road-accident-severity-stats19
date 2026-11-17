@@ -1,0 +1,17 @@
+2026-11-12 01:27:28 | INFO     | __main__ | Selection data: F1full_tune.parquet FIT rows 104,258 x 244 features
+2026-11-12 01:27:28 | INFO     | src.features.selection | Stage 1 near-constant: 35 dropped
+2026-11-12 01:27:47 | INFO     | src.features.selection | Stage 2 redundancy: 26 numeric + 3 categorical pairs above 0.95; 25 dropped (19s)
+2026-11-12 01:29:50 | INFO     | __main__ | Selection data: F1full_tune.parquet FIT rows 104,258 x 244 features
+2026-11-12 01:29:51 | INFO     | src.features.selection | Stage 1 near-constant: 35 dropped
+2026-11-12 01:30:09 | INFO     | src.features.selection | Stage 2 redundancy: 26 numeric + 3 categorical pairs above 0.95; 25 dropped (19s)
+2026-11-12 01:36:44 | INFO     | src.features.selection | Q1 held out: base PR-AUC 0.4486, 131/184 features positive (395s)
+2026-11-12 01:43:57 | INFO     | src.features.selection | Q2 held out: base PR-AUC 0.4971, 131/184 features positive (433s)
+2026-11-12 01:50:16 | INFO     | src.features.selection | Q3 held out: base PR-AUC 0.5090, 129/184 features positive (379s)
+2026-11-12 01:55:59 | INFO     | src.features.selection | Q4 held out: base PR-AUC 0.4660, 124/184 features positive (343s)
+2026-11-12 01:55:59 | INFO     | src.features.selection | Stage 3 permutation importance: 67 dropped; 117/244 features selected
+2026-11-12 01:55:59 | INFO     | src.features.selection | Wrote /home/ubuntu/Dsst/road_accident_severity/configs/features/f1_selected.yaml and /home/ubuntu/Dsst/road_accident_severity/reports/tables/feature_selection.csv
+2026-11-12 01:55:59 | INFO     | __main__ | Selection outcome by stage: {'selected': 117, 'importance': 67, 'near_constant': 35, 'redundancy': 25}
+2026-11-12 01:56:00 | INFO     | src.features.frame | Wrote F1_tune.parquet: 205,185 rows x 117 features (16 categorical)
+2026-11-12 01:56:00 | INFO     | src.features.frame | Wrote F1_refit.parquet: 306,710 rows x 117 features (16 categorical)
+2026-11-12 01:56:00 | INFO     | __main__ | Feature counts: F1full=244, F1=117
+2026-11-12 01:56:00 | INFO     | __main__ | Selection script finished in 1570.2s

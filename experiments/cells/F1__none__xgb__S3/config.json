@@ -1,0 +1,21 @@
+{
+  "model": "xgb",
+  "feature_set": "F1",
+  "cs": "none",
+  "n_trials": 30,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "device": "cuda",
+  "n_jobs": 4,
+  "hpo_seed": 42,
+  "drop_features": [
+    "police_force",
+    "te_police_force",
+    "collision_injury_based"
+  ],
+  "tag": "S3",
+  "feature_columns": null
+}

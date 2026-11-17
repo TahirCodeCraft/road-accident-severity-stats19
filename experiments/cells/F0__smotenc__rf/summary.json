@@ -1,0 +1,17 @@
+{
+  "n_estimators": null,
+  "cal_pr_auc": {
+    "0": 0.41347562655299996,
+    "1": 0.4139758540758508,
+    "2": 0.41310270587697495
+  },
+  "cell_id": "F0__smotenc__rf",
+  "minutes": 52.04002237319946,
+  "params": {
+    "n_estimators": 300,
+    "max_depth": 22,
+    "min_samples_leaf": 23,
+    "max_features": 0.22076730026393182,
+    "max_samples": 0.5739941098317298
+  }
+}

@@ -1,0 +1,40 @@
+# Environments and caches
+.venv/
+__pycache__/
+*.py[oc]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+wandb/
+
+# Data: raw STATS19 CSVs are committed; derived parquets are rebuilt by scripts 01 and 03
+data/processed/
+
+# Experiments: trained models (1 GB) are not shared; Hydra run dirs are scratch
+experiments/cells/*/model_seed*.joblib
+experiments/hydra/
+
+# Earlier course deliverables and study material, superseded by the paper
+reports/report.md
+reports/Road_Accident_Severity_Report.*
+reports/slides/
+reports/drafts/
+reports/research/
+reports/*explorer*.html
+scripts/12_build_report.py
+scripts/gpu_sync.sh
+
+# Paper: build helpers and review notes kept local
+paper/build.sh
+paper/*.log
+paper/codex_review*.md
+paper/ai_detection/
+paper/*.zip
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.out
+
+# Operational helper scripts from the runs
+experiments/logs/*.sh

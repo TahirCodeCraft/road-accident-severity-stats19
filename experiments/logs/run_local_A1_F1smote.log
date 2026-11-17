@@ -1,0 +1,84 @@
+2026-11-12 04:53:47 | INFO     | __main__ | Running 1 cells: ['F1__smotenc__lgbm']
+wandb: Tracking run with wandb version 0.31.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_045348-4xbozojj
+wandb: View this run in the terminal with `wandb leet`
+2026-11-12 04:53:48 | INFO     | src.utils.wandb_utils | wandb run started: project=dstt-road-severity name=F1__smotenc__lgbm mode=offline
+[I 2026-11-12 04:53:48,858] A new study created in memory with name: no-name-f5698d8d-13ea-49cb-9244-ff83440cf530
+2026-11-12 04:55:25 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 04:55:43,037] Trial 0 finished with value: 0.4560062282211117 and parameters: {'learning_rate': 0.030710573677773714, 'num_leaves': 222, 'min_child_samples': 173, 'subsample': 0.7993292420985183, 'colsample_bytree': 0.40921304830970556, 'reg_lambda': 0.004993515273965262, 'reg_alpha': 0.0017073967431528124, 'cat_smooth': 53.99484409787433}. Best is trial 0 with value: 0.4560062282211117.
+2026-11-12 04:57:37 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 04:57:45,327] Trial 1 finished with value: 0.45392434482808547 and parameters: {'learning_rate': 0.06054365855469246, 'num_leaves': 111, 'min_child_samples': 10, 'subsample': 0.9849549260809971, 'colsample_bytree': 0.8827098485602951, 'reg_lambda': 0.00892622738184373, 'reg_alpha': 0.005337032762603957, 'cat_smooth': 2.32706770838378}. Best is trial 0 with value: 0.4560062282211117.
+2026-11-12 04:59:45 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 04:59:54,783] Trial 2 finished with value: 0.45819384865421897 and parameters: {'learning_rate': 0.024878734419814436, 'num_leaves': 65, 'min_child_samples': 53, 'subsample': 0.645614570099021, 'colsample_bytree': 0.7282970263056656, 'reg_lambda': 0.004212412845262044, 'reg_alpha': 0.01474275315991467, 'cat_smooth': 5.404103854647328}. Best is trial 2 with value: 0.45819384865421897.
+2026-11-12 05:01:56 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 05:02:07,361] Trial 3 finished with value: 0.4525763348405129 and parameters: {'learning_rate': 0.03920673972242137, 'num_leaves': 138, 'min_child_samples': 21, 'subsample': 0.7571172192068059, 'colsample_bytree': 0.7146901982034297, 'reg_lambda': 0.0016142252267366923, 'reg_alpha': 0.26926469100861794, 'cat_smooth': 2.1930485556643684}. Best is trial 2 with value: 0.45819384865421897.
+2026-11-12 05:04:07 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 05:04:39,109] Trial 4 finished with value: 0.46094662111037055 and parameters: {'learning_rate': 0.012151617026673379, 'num_leaves': 221, 'min_child_samples': 437, 'subsample': 0.9041986740582306, 'colsample_bytree': 0.5132296384213595, 'reg_lambda': 0.002737095165771331, 'reg_alpha': 0.5456725485601477, 'cat_smooth': 7.591104805282694}. Best is trial 4 with value: 0.46094662111037055.
+2026-11-12 05:06:38 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 05:06:55,642] Trial 5 finished with value: 0.4618523431420183 and parameters: {'learning_rate': 0.014413697528610409, 'num_leaves': 60, 'min_child_samples': 11, 'subsample': 0.954660201039391, 'colsample_bytree': 0.48114598712001183, 'reg_lambda': 0.925108350221417, 'reg_alpha': 0.017654048052495083, 'cat_smooth': 10.968217207529522}. Best is trial 5 with value: 0.4618523431420183.
+2026-11-12 05:08:57 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 05:09:02,684] Trial 6 finished with value: 0.457939209307202 and parameters: {'learning_rate': 0.05143828405076928, 'num_leaves': 25, 'min_child_samples': 444, 'subsample': 0.8875664116805573, 'colsample_bytree': 0.9576492590949324, 'reg_lambda': 10.144964926243938, 'reg_alpha': 0.24637685958997463, 'cat_smooth': 69.78281265126033}. Best is trial 5 with value: 0.4618523431420183.
+2026-11-12 05:11:04 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 05:11:15,148] Trial 7 finished with value: 0.4611813876038634 and parameters: {'learning_rate': 0.01303561122512888, 'num_leaves': 25, 'min_child_samples': 11, 'subsample': 0.6626651653816322, 'colsample_bytree': 0.5720741027826374, 'reg_lambda': 0.016400705022266843, 'reg_alpha': 2.0651425578959257, 'cat_smooth': 5.170191786366991}. Best is trial 5 with value: 0.4618523431420183.
+2026-11-12 05:13:15 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 05:13:28,022] Trial 8 finished with value: 0.45554679340452925 and parameters: {'learning_rate': 0.023200867504756827, 'num_leaves': 69, 'min_child_samples': 17, 'subsample': 0.9010984903770198, 'colsample_bytree': 0.35218545057583955, 'reg_lambda': 26.20670861087006, 'reg_alpha': 1.2273800987852967, 'cat_smooth': 2.4970737145052717}. Best is trial 5 with value: 0.4618523431420183.
+2026-11-12 05:15:29 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 05:16:03,641] Trial 9 finished with value: 0.45701687627882825 and parameters: {'learning_rate': 0.010166803740022877, 'num_leaves': 150, 'min_child_samples': 157, 'subsample': 0.8645035840204937, 'colsample_bytree': 0.8398892426801621, 'reg_lambda': 0.002145393122543948, 'reg_alpha': 0.02715581955282941, 'cat_smooth': 1.7050539260269288}. Best is trial 5 with value: 0.4618523431420183.
+2026-11-12 05:18:03 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 05:18:10,086] Trial 10 finished with value: 0.46201327068414766 and parameters: {'learning_rate': 0.03715171936826999, 'num_leaves': 37, 'min_child_samples': 64, 'subsample': 0.6466531055388975, 'colsample_bytree': 0.4270127283736934, 'reg_lambda': 10.63450897751906, 'reg_alpha': 0.005035358503599932, 'cat_smooth': 11.208796804899391}. Best is trial 10 with value: 0.46201327068414766.
+2026-11-12 05:20:10 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 05:20:19,692] Trial 11 finished with value: 0.45862786573629055 and parameters: {'learning_rate': 0.02920074570822111, 'num_leaves': 39, 'min_child_samples': 21, 'subsample': 0.7542676179602061, 'colsample_bytree': 0.4088746098498641, 'reg_lambda': 12.87460633324475, 'reg_alpha': 0.00613093350813319, 'cat_smooth': 49.9999887893168}. Best is trial 10 with value: 0.46201327068414766.
+2026-11-12 05:22:20 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 05:22:31,637] Trial 12 finished with value: 0.45977030042296185 and parameters: {'learning_rate': 0.018158301793973538, 'num_leaves': 46, 'min_child_samples': 22, 'subsample': 0.7243514508872737, 'colsample_bytree': 0.3437785075956319, 'reg_lambda': 0.16972072035429212, 'reg_alpha': 0.010714579316616575, 'cat_smooth': 39.840983437845175}. Best is trial 10 with value: 0.46201327068414766.
+2026-11-12 05:24:33 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 05:24:45,775] Trial 13 finished with value: 0.46030528908472473 and parameters: {'learning_rate': 0.02072342510364383, 'num_leaves': 56, 'min_child_samples': 10, 'subsample': 0.9150574523530731, 'colsample_bytree': 0.6661797692433742, 'reg_lambda': 11.295792952061664, 'reg_alpha': 0.0029203184842971452, 'cat_smooth': 11.06074362045639}. Best is trial 10 with value: 0.46201327068414766.
+2026-11-12 05:26:46 | INFO     | src.models.imbalance | smotenc: 104258 -> 158596 training rows (pos rate 0.500)
+/home/ubuntu/Dsst/road_accident_severity/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+[I 2026-11-12 05:27:03,671] Trial 14 finished with value: 0.4615579995071787 and parameters: {'learning_rate': 0.010982837151339304, 'num_leaves': 60, 'min_child_samples': 15, 'subsample': 0.8491874558541666, 'colsample_bytree': 0.5247569658599522, 'reg_lambda': 0.744441096504212, 'reg_alpha': 0.0033670146547826164, 'cat_smooth': 2.776194898468174}. Best is trial 10 with value: 0.46201327068414766.
+2026-11-12 05:27:03 | INFO     | src.training.runner | [F1__smotenc__lgbm] best TUNE PR-AUC 0.4620 params={'learning_rate': 0.03715171936826999, 'num_leaves': 37, 'min_child_samples': 64, 'subsample': 0.6466531055388975, 'subsample_freq': 1, 'colsample_bytree': 0.4270127283736934, 'reg_lambda': 10.63450897751906, 'reg_alpha': 0.005035358503599932, 'cat_smooth': 11.208796804899391}
+2026-11-12 05:31:27 | INFO     | src.models.imbalance | smotenc: 155499 -> 235714 training rows (pos rate 0.500)
+2026-11-12 05:31:33 | INFO     | src.training.runner | [F1__smotenc__lgbm] seed 0 refit 270s CAL PR-AUC 0.4468
+2026-11-12 05:35:51 | INFO     | src.models.imbalance | smotenc: 155499 -> 235714 training rows (pos rate 0.500)
+2026-11-12 05:35:57 | INFO     | src.training.runner | [F1__smotenc__lgbm] seed 1 refit 264s CAL PR-AUC 0.4537
+2026-11-12 05:40:18 | INFO     | src.models.imbalance | smotenc: 155499 -> 235714 training rows (pos rate 0.500)
+2026-11-12 05:40:24 | INFO     | src.training.runner | [F1__smotenc__lgbm] seed 2 refit 267s CAL PR-AUC 0.4510
+wandb: 
+wandb: Run history:
+wandb: cal_pr_auc_mean ▁
+wandb: 
+wandb: Run summary:
+wandb: cal_pr_auc_mean 0.45048
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/Dsst/road_accident_severity/wandb/offline-run-20261112_045348-4xbozojj
+wandb: Find logs at: ./wandb/offline-run-20261112_045348-4xbozojj/logs

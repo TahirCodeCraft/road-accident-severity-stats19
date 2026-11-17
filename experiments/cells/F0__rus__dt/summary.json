@@ -1,0 +1,16 @@
+{
+  "n_estimators": null,
+  "cal_pr_auc": {
+    "0": 0.41421504308559387,
+    "1": 0.4113509776378669,
+    "2": 0.41116999959471323
+  },
+  "cell_id": "F0__rus__dt",
+  "minutes": 0.6889961997667948,
+  "params": {
+    "max_depth": 20,
+    "min_samples_leaf": 165,
+    "criterion": "entropy",
+    "ccp_alpha": 6.0315016641204615e-06
+  }
+}

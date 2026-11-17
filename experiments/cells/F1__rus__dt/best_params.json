@@ -1,0 +1,9 @@
+{
+  "params": {
+    "max_depth": 15,
+    "min_samples_leaf": 206,
+    "criterion": "gini",
+    "ccp_alpha": 2.5523593884162692e-06
+  },
+  "best_iteration": null
+}

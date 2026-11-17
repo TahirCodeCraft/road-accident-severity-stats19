@@ -1,0 +1,10 @@
+{
+  "params": {
+    "n_estimators": 300,
+    "max_depth": 20,
+    "min_samples_leaf": 12,
+    "max_features": 0.20339357021226007,
+    "max_samples": 0.5533706176776195
+  },
+  "best_iteration": null
+}

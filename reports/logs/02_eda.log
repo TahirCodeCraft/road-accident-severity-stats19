@@ -1,0 +1,130 @@
+2026-11-12 01:21:24 | INFO     | src.data.codebook | Parsed data guide: 1774 codes across 73 fields
+2026-11-12 01:21:24 | INFO     | __main__ | Loaded 306,710 collisions from /home/ubuntu/Dsst/road_accident_severity/data/processed/collisions.parquet
+2026-11-12 01:21:25 | INFO     | __main__ | Label-based EDA on 205,185 rows ((2023, 2024)); test year excluded
+2026-11-12 01:21:25 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_01_class_balance.png
+2026-11-12 01:21:25 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_02_monthly_trend_reporting.png
+2026-11-12 01:21:25 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_03_hour_dow_heatmap.png
+2026-11-12 01:21:25 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_04_road_factors.png
+2026-11-12 01:21:25 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_05_environment_factors.png
+2026-11-12 01:21:26 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_06_vehicle_mix.png
+2026-11-12 01:21:26 | INFO     | src.evaluation.eda | Hexbin: 2522 hexes, 867 drawn in colour
+2026-11-12 01:21:26 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_07_geo_hexbin.png
+2026-11-12 01:21:26 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_08_police_force_rank.png
+2026-11-12 01:21:26 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_09_reporting_system.png
+2026-11-12 01:21:26 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_10_police_attendance.png
+2026-11-12 01:21:26 | INFO     | __main__ | Missingness collision 2023: 104,258 rows
+2026-11-12 01:21:26 | INFO     | __main__ | Missingness vehicle 2023: 189,815 rows
+2026-11-12 01:21:26 | INFO     | __main__ | Missingness casualty 2023: 132,977 rows
+2026-11-12 01:21:26 | INFO     | __main__ | Missingness collision 2024: 100,927 rows
+2026-11-12 01:21:26 | INFO     | __main__ | Missingness vehicle 2024: 183,514 rows
+2026-11-12 01:21:26 | INFO     | __main__ | Missingness casualty 2024: 128,272 rows
+2026-11-12 01:21:27 | INFO     | __main__ | Missingness collision 2025: 101,525 rows
+2026-11-12 01:21:27 | INFO     | __main__ | Missingness vehicle 2025: 183,948 rows
+2026-11-12 01:21:27 | INFO     | __main__ | Missingness casualty 2025: 127,883 rows
+2026-11-12 01:21:27 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_11_missingness_drift.png
+2026-11-12 01:21:27 | INFO     | __main__ | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/eda_missingness.csv
+2026-11-12 01:21:27 | INFO     | __main__ | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/eda_summary.csv (148 rows)
+2026-11-12 01:22:27 | INFO     | src.data.codebook | Parsed data guide: 1774 codes across 73 fields
+2026-11-12 01:22:28 | INFO     | __main__ | Loaded 306,710 collisions from /home/ubuntu/Dsst/road_accident_severity/data/processed/collisions.parquet
+2026-11-12 01:22:28 | INFO     | __main__ | Label-based EDA on 205,185 rows ((2023, 2024)); test year excluded
+2026-11-12 01:22:28 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_01_class_balance.png
+2026-11-12 01:22:28 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_02_monthly_trend_reporting.png
+2026-11-12 01:22:28 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_03_hour_dow_heatmap.png
+2026-11-12 01:22:28 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_04_road_factors.png
+2026-11-12 01:22:29 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_05_environment_factors.png
+2026-11-12 01:22:29 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_06_vehicle_mix.png
+2026-11-12 01:22:29 | INFO     | src.evaluation.eda | Hexbin: 1233 hexes, 624 drawn in colour
+2026-11-12 01:22:29 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_07_geo_hexbin.png
+2026-11-12 01:22:29 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_08_police_force_rank.png
+2026-11-12 01:22:29 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_09_reporting_system.png
+2026-11-12 01:22:29 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_10_police_attendance.png
+2026-11-12 01:22:29 | INFO     | __main__ | Missingness collision 2023: 104,258 rows
+2026-11-12 01:22:30 | INFO     | __main__ | Missingness vehicle 2023: 189,815 rows
+2026-11-12 01:22:30 | INFO     | __main__ | Missingness casualty 2023: 132,977 rows
+2026-11-12 01:22:30 | INFO     | __main__ | Missingness collision 2024: 100,927 rows
+2026-11-12 01:22:30 | INFO     | __main__ | Missingness vehicle 2024: 183,514 rows
+2026-11-12 01:22:30 | INFO     | __main__ | Missingness casualty 2024: 128,272 rows
+2026-11-12 01:22:30 | INFO     | __main__ | Missingness collision 2025: 101,525 rows
+2026-11-12 01:22:30 | INFO     | __main__ | Missingness vehicle 2025: 183,948 rows
+2026-11-12 01:22:30 | INFO     | __main__ | Missingness casualty 2025: 127,883 rows
+2026-11-12 01:22:30 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_11_missingness_drift.png
+2026-11-12 01:22:30 | INFO     | __main__ | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/eda_missingness.csv
+2026-11-12 01:22:30 | INFO     | __main__ | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/eda_summary.csv (148 rows)
+2026-11-12 01:22:40 | INFO     | src.data.codebook | Parsed data guide: 1774 codes across 73 fields
+2026-11-12 01:22:40 | INFO     | __main__ | Loaded 306,710 collisions from /home/ubuntu/Dsst/road_accident_severity/data/processed/collisions.parquet
+2026-11-12 01:22:40 | INFO     | __main__ | Label-based EDA on 205,185 rows ((2023, 2024)); test year excluded
+2026-11-12 01:22:40 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_01_class_balance.png
+2026-11-12 01:22:40 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_02_monthly_trend_reporting.png
+2026-11-12 01:22:40 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_03_hour_dow_heatmap.png
+2026-11-12 01:22:40 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_04_road_factors.png
+2026-11-12 01:22:41 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_05_environment_factors.png
+2026-11-12 01:22:41 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_06_vehicle_mix.png
+2026-11-12 01:22:41 | INFO     | src.evaluation.eda | Hexbin: 1233 hexes, 624 drawn in colour
+2026-11-12 01:22:41 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_07_geo_hexbin.png
+2026-11-12 01:22:41 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_08_police_force_rank.png
+2026-11-12 01:22:41 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_09_reporting_system.png
+2026-11-12 01:22:41 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_10_police_attendance.png
+2026-11-12 01:22:42 | INFO     | __main__ | Missingness collision 2023: 104,258 rows
+2026-11-12 01:22:42 | INFO     | __main__ | Missingness vehicle 2023: 189,815 rows
+2026-11-12 01:22:42 | INFO     | __main__ | Missingness casualty 2023: 132,977 rows
+2026-11-12 01:22:42 | INFO     | __main__ | Missingness collision 2024: 100,927 rows
+2026-11-12 01:22:42 | INFO     | __main__ | Missingness vehicle 2024: 183,514 rows
+2026-11-12 01:22:42 | INFO     | __main__ | Missingness casualty 2024: 128,272 rows
+2026-11-12 01:22:42 | INFO     | __main__ | Missingness collision 2025: 101,525 rows
+2026-11-12 01:22:42 | INFO     | __main__ | Missingness vehicle 2025: 183,948 rows
+2026-11-12 01:22:42 | INFO     | __main__ | Missingness casualty 2025: 127,883 rows
+2026-11-12 01:22:42 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_11_missingness_drift.png
+2026-11-12 01:22:42 | INFO     | __main__ | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/eda_missingness.csv
+2026-11-12 01:22:42 | INFO     | __main__ | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/eda_summary.csv (148 rows)
+2026-11-12 01:22:50 | INFO     | src.data.codebook | Parsed data guide: 1774 codes across 73 fields
+2026-11-12 01:22:50 | INFO     | __main__ | Loaded 306,710 collisions from /home/ubuntu/Dsst/road_accident_severity/data/processed/collisions.parquet
+2026-11-12 01:22:50 | INFO     | __main__ | Label-based EDA on 205,185 rows ((2023, 2024)); test year excluded
+2026-11-12 01:22:50 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_01_class_balance.png
+2026-11-12 01:22:50 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_02_monthly_trend_reporting.png
+2026-11-12 01:22:51 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_03_hour_dow_heatmap.png
+2026-11-12 01:22:51 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_04_road_factors.png
+2026-11-12 01:22:51 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_05_environment_factors.png
+2026-11-12 01:22:51 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_06_vehicle_mix.png
+2026-11-12 01:22:51 | INFO     | src.evaluation.eda | Hexbin: 1233 hexes, 624 drawn in colour
+2026-11-12 01:22:51 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_07_geo_hexbin.png
+2026-11-12 01:22:52 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_08_police_force_rank.png
+2026-11-12 01:22:52 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_09_reporting_system.png
+2026-11-12 01:22:52 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_10_police_attendance.png
+2026-11-12 01:22:52 | INFO     | __main__ | Missingness collision 2023: 104,258 rows
+2026-11-12 01:22:52 | INFO     | __main__ | Missingness vehicle 2023: 189,815 rows
+2026-11-12 01:22:52 | INFO     | __main__ | Missingness casualty 2023: 132,977 rows
+2026-11-12 01:22:52 | INFO     | __main__ | Missingness collision 2024: 100,927 rows
+2026-11-12 01:22:52 | INFO     | __main__ | Missingness vehicle 2024: 183,514 rows
+2026-11-12 01:22:52 | INFO     | __main__ | Missingness casualty 2024: 128,272 rows
+2026-11-12 01:22:52 | INFO     | __main__ | Missingness collision 2025: 101,525 rows
+2026-11-12 01:22:52 | INFO     | __main__ | Missingness vehicle 2025: 183,948 rows
+2026-11-12 01:22:52 | INFO     | __main__ | Missingness casualty 2025: 127,883 rows
+2026-11-12 01:22:52 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_11_missingness_drift.png
+2026-11-12 01:22:52 | INFO     | __main__ | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/eda_missingness.csv
+2026-11-12 01:22:52 | INFO     | __main__ | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/eda_summary.csv (148 rows)
+2026-11-12 01:23:26 | INFO     | src.data.codebook | Parsed data guide: 1774 codes across 73 fields
+2026-11-12 01:23:26 | INFO     | __main__ | Loaded 306,710 collisions from /home/ubuntu/Dsst/road_accident_severity/data/processed/collisions.parquet
+2026-11-12 01:23:26 | INFO     | __main__ | Label-based EDA on 205,185 rows ((2023, 2024)); test year excluded
+2026-11-12 01:23:26 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_01_class_balance.png
+2026-11-12 01:23:27 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_02_monthly_trend_reporting.png
+2026-11-12 01:23:27 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_03_hour_dow_heatmap.png
+2026-11-12 01:23:27 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_04_road_factors.png
+2026-11-12 01:23:27 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_05_environment_factors.png
+2026-11-12 01:23:27 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_06_vehicle_mix.png
+2026-11-12 01:23:27 | INFO     | src.evaluation.eda | Hexbin: 1233 hexes, 624 drawn in colour
+2026-11-12 01:23:27 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_07_geo_hexbin.png
+2026-11-12 01:23:28 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_08_police_force_rank.png
+2026-11-12 01:23:28 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_09_reporting_system.png
+2026-11-12 01:23:28 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_10_police_attendance.png
+2026-11-12 01:23:28 | INFO     | __main__ | Missingness collision 2023: 104,258 rows
+2026-11-12 01:23:28 | INFO     | __main__ | Missingness vehicle 2023: 189,815 rows
+2026-11-12 01:23:28 | INFO     | __main__ | Missingness casualty 2023: 132,977 rows
+2026-11-12 01:23:28 | INFO     | __main__ | Missingness collision 2024: 100,927 rows
+2026-11-12 01:23:28 | INFO     | __main__ | Missingness vehicle 2024: 183,514 rows
+2026-11-12 01:23:28 | INFO     | __main__ | Missingness casualty 2024: 128,272 rows
+2026-11-12 01:23:28 | INFO     | __main__ | Missingness collision 2025: 101,525 rows
+2026-11-12 01:23:28 | INFO     | __main__ | Missingness vehicle 2025: 183,948 rows
+2026-11-12 01:23:28 | INFO     | __main__ | Missingness casualty 2025: 127,883 rows
+2026-11-12 01:23:28 | INFO     | src.evaluation.eda | Wrote figure /home/ubuntu/Dsst/road_accident_severity/reports/figures/eda_11_missingness_drift.png
+2026-11-12 01:23:28 | INFO     | __main__ | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/eda_missingness.csv
+2026-11-12 01:23:28 | INFO     | __main__ | Wrote /home/ubuntu/Dsst/road_accident_severity/reports/tables/eda_summary.csv (148 rows)

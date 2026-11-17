@@ -1,0 +1,16 @@
+{
+  "n_estimators": null,
+  "cal_pr_auc": {
+    "0": 0.4269281757054171,
+    "1": 0.4270908180468159,
+    "2": 0.42702452799631474
+  },
+  "cell_id": "F0__none__dt",
+  "minutes": 2.0450384338696797,
+  "params": {
+    "max_depth": 16,
+    "min_samples_leaf": 116,
+    "criterion": "gini",
+    "ccp_alpha": 2.585996595556231e-05
+  }
+}

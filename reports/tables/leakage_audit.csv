@@ -1,0 +1,101 @@
+table,name,decision,reason,dtype,kind,feeds_default_features
+collision,collision_index,drop_id,Unique collision id; join key.,string,identifier,False
+collision,collision_year,drop_id,Split key (year).,Int32,identifier,False
+collision,collision_ref_no,drop_id,In-year police reference number.,string,identifier,False
+collision,location_easting_osgr,drop_other,Duplicate of longitude.,float64,numeric,False
+collision,location_northing_osgr,drop_other,Duplicate of latitude.,float64,numeric,False
+collision,longitude,keep,Location known at report time.,float64,numeric,True
+collision,latitude,keep,Location known at report time.,float64,numeric,True
+collision,police_force,keep,Reporting force; known at report time.,Int32,categorical,True
+collision,collision_severity,target,"Target: Fatal/Serious (1,2) vs Slight (3).",Int32,categorical,False
+collision,number_of_vehicles,keep,Vehicles involved; pre-impact fact.,Int32,numeric,True
+collision,number_of_casualties,drop_leakage,Injury-outcome count.,Int32,numeric,False
+collision,date,keep,Parsed to month / day_of_year (iso_week = split key).,string,temporal,True
+collision,day_of_week,keep,Temporal context.,Int32,categorical,True
+collision,time,keep,Parsed to hour.,string,temporal,True
+collision,local_authority_district,drop_other,100% missing (-1).,Int32,identifier,False
+collision,local_authority_ons_district,keep,Geography (frequency/target encoded downstream).,string,text,True
+collision,local_authority_highway,drop_other,Redundant with ONS district.,string,text,False
+collision,local_authority_highway_current,drop_other,Redundant with ONS district.,string,text,False
+collision,first_road_class,keep,Road context.,Int32,categorical,True
+collision,first_road_number,drop_other,Road identifier (high cardinality).,Int32,identifier,False
+collision,road_type,keep,Road context.,Int32,categorical,True
+collision,speed_limit,keep,Road context (valid 20-70 mph).,Int32,numeric,True
+collision,junction_detail_historic,drop_other,Historic coding; superseded by junction_detail.,Int32,categorical,False
+collision,junction_detail,keep,Road context.,Int32,categorical,True
+collision,junction_control,keep,Road context; structural missing when not at junction -> 'not at junction'.,Int32,categorical,True
+collision,second_road_class,keep,Road context.,Int32,categorical,True
+collision,second_road_number,drop_other,Road identifier (high cardinality).,Int32,identifier,False
+collision,pedestrian_crossing_human_control_historic,drop_other,Historic coding; superseded by pedestrian_crossing.,Int32,categorical,False
+collision,pedestrian_crossing_physical_facilities_historic,drop_other,Historic coding; superseded by pedestrian_crossing.,Int32,categorical,False
+collision,pedestrian_crossing,keep,Road context.,Int32,categorical,True
+collision,light_conditions,keep,Environment.,Int32,categorical,True
+collision,weather_conditions,keep,Environment.,Int32,categorical,True
+collision,road_surface_conditions,keep,Environment.,Int32,categorical,True
+collision,special_conditions_at_site,drop_other,Phased out (59% / 87% missing in 2024 / 2025).,Int32,categorical,False
+collision,carriageway_hazards_historic,drop_other,Historic coding; superseded by carriageway_hazards.,Int32,categorical,False
+collision,carriageway_hazards,keep,Environment.,Int32,categorical,True
+collision,urban_or_rural_area,keep,Road context.,Int32,categorical,True
+collision,did_police_officer_attend_scene_of_accident,eval_only,Attendance is decided by severity; kept outside X as evaluation stratifier.,Int32,categorical,False
+collision,trunk_road_flag,keep,Road context.,Int32,categorical,True
+collision,lsoa_of_accident_location,drop_other,Too high cardinality (>30k levels).,string,text,False
+collision,enhanced_severity_collision,drop_leakage,Target-derived severity.,Int32,categorical,False
+collision,collision_injury_based,keep,Borderline: force reporting system fixed before crash; measurement artefact (S3).,Int32,categorical,True
+collision,collision_adjusted_severity_serious,drop_leakage,Target-derived adjustment weight.,float64,numeric,False
+collision,collision_adjusted_severity_slight,drop_leakage,Target-derived adjustment weight.,float64,numeric,False
+vehicle,collision_index,drop_id,Join key.,string,identifier,False
+vehicle,collision_year,drop_id,Split key (year).,Int32,identifier,False
+vehicle,collision_ref_no,drop_id,In-year police reference number.,string,identifier,False
+vehicle,vehicle_reference,drop_id,Within-collision vehicle id (order).,Int32,identifier,False
+vehicle,vehicle_type,keep,Who/what was involved.,Int32,categorical,True
+vehicle,towing_and_articulation,keep,Vehicle configuration pre-impact.,Int32,categorical,True
+vehicle,vehicle_manoeuvre_historic,drop_other,Historic coding; superseded by vehicle_manoeuvre.,Int32,categorical,False
+vehicle,vehicle_manoeuvre,keep,Pre-impact manoeuvre.,Int32,categorical,True
+vehicle,vehicle_direction_from,keep,Pre-impact direction.,Int32,categorical,True
+vehicle,vehicle_direction_to,keep,Pre-impact direction.,Int32,categorical,True
+vehicle,vehicle_location_restricted_lane_historic,drop_other,Historic coding; superseded by vehicle_location_restricted_lane.,Int32,categorical,False
+vehicle,vehicle_location_restricted_lane,keep,Pre-impact location.,Int32,categorical,True
+vehicle,junction_location,keep,Pre-impact location at junction.,Int32,categorical,True
+vehicle,skidding_and_overturning,tier_b,Crash mechanics / impact consequence (sensitivity S1 only).,Int32,categorical,False
+vehicle,hit_object_in_carriageway,tier_b,Crash mechanics / impact consequence (sensitivity S1 only).,Int32,categorical,False
+vehicle,vehicle_leaving_carriageway,tier_b,Crash mechanics / impact consequence (sensitivity S1 only).,Int32,categorical,False
+vehicle,hit_object_off_carriageway,tier_b,Crash mechanics / impact consequence (sensitivity S1 only).,Int32,categorical,False
+vehicle,first_point_of_impact,tier_b,Crash mechanics / impact consequence (sensitivity S1 only).,Int32,categorical,False
+vehicle,vehicle_left_hand_drive,keep,Vehicle attribute.,Int32,categorical,True
+vehicle,journey_purpose_of_driver_historic,drop_other,Historic coding; superseded by journey_purpose_of_driver.,Int32,categorical,False
+vehicle,journey_purpose_of_driver,keep,Driver context.,Int32,categorical,True
+vehicle,sex_of_driver,keep,Driver attribute.,Int32,categorical,True
+vehicle,age_of_driver,keep,Driver attribute (min/mean/max).,Int32,numeric,True
+vehicle,age_band_of_driver,drop_other,Redundant with age_of_driver.,Int32,categorical,False
+vehicle,engine_capacity_cc,keep,Vehicle attribute (min/mean/max).,Int32,numeric,True
+vehicle,propulsion_code,keep,Vehicle attribute.,Int32,categorical,True
+vehicle,age_of_vehicle,drop_other,100% missing in 2025.,Int32,numeric,False
+vehicle,generic_make_model,drop_other,High cardinality; largely redacted.,string,text,False
+vehicle,driver_imd_decile,keep,Driver home-area deprivation.,Int32,categorical,True
+vehicle,lsoa_of_driver,drop_other,Too high cardinality.,string,text,False
+vehicle,escooter_flag,keep,Vehicle attribute (e-scooter).,Int32,categorical,True
+vehicle,driver_distance_banding,drop_other,100% missing in 2023.,Int32,categorical,False
+casualty,collision_index,drop_id,Join key.,string,identifier,False
+casualty,collision_year,drop_id,Split key (year).,Int32,identifier,False
+casualty,collision_ref_no,drop_id,In-year police reference number.,string,identifier,False
+casualty,vehicle_reference,drop_id,Link to vehicle row.,Int32,identifier,False
+casualty,casualty_reference,drop_id,Casualty id; used only to pick the first pedestrian.,Int32,identifier,False
+casualty,casualty_class,keep,Used only for ped_involved (class == 3).,Int32,categorical,True
+casualty,sex_of_casualty,drop_leakage,Injury composition (rows exist only for injured).,Int32,categorical,False
+casualty,age_of_casualty,keep,First pedestrian only -> ped_age.,Int32,numeric,True
+casualty,age_band_of_casualty,drop_other,Redundant with age_of_casualty.,Int32,categorical,False
+casualty,casualty_severity,drop_leakage,Target-derived.,Int32,categorical,False
+casualty,pedestrian_location,keep,First pedestrian only -> ped_location.,Int32,categorical,True
+casualty,pedestrian_movement,keep,First pedestrian only -> ped_movement.,Int32,categorical,True
+casualty,car_passenger,drop_leakage,Injury composition.,Int32,categorical,False
+casualty,bus_or_coach_passenger,drop_leakage,Injury composition.,Int32,categorical,False
+casualty,pedestrian_road_maintenance_worker,drop_leakage,Injury composition.,Int32,categorical,False
+casualty,casualty_type,drop_leakage,Injury composition.,Int32,categorical,False
+casualty,casualty_imd_decile,drop_leakage,Injury composition.,Int32,categorical,False
+casualty,lsoa_of_casualty,drop_other,Too high cardinality.,string,text,False
+casualty,enhanced_casualty_severity,drop_leakage,Target-derived.,Int32,categorical,False
+casualty,casualty_injury_based,drop_other,Duplicate of collision_injury_based.,Int32,categorical,False
+casualty,casualty_adjusted_severity_serious,drop_leakage,Target-derived adjustment weight.,float64,numeric,False
+casualty,casualty_adjusted_severity_slight,drop_leakage,Target-derived adjustment weight.,float64,numeric,False
+casualty,casualty_distance_banding,drop_other,100% missing in 2023.,Int32,categorical,False
+casualty,escooter_flag,drop_other,Casualty field introduced only in 2025.,Int32,categorical,False

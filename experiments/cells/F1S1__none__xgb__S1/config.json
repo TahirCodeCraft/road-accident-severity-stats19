@@ -1,0 +1,17 @@
+{
+  "model": "xgb",
+  "feature_set": "F1S1",
+  "cs": "none",
+  "n_trials": 30,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "device": "cuda",
+  "n_jobs": 4,
+  "hpo_seed": 42,
+  "drop_features": [],
+  "tag": "S1",
+  "feature_columns": null
+}

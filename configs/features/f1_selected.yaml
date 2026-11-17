@@ -1,0 +1,270 @@
+source: F1full_tune.parquet (split == 'fit', 2023)
+n_candidates: 244
+n_selected: 117
+settings:
+  near_constant_share: 0.995
+  redundancy_threshold: 0.95
+  mi_bins: 32
+  n_repeats: 5
+  min_positive_folds: 3
+  n_jobs: 12
+  seed: 42
+  lgbm_params:
+    n_estimators: 400
+    learning_rate: 0.05
+    num_leaves: 63
+    min_child_samples: 50
+    subsample: 0.8
+    subsample_freq: 1
+    colsample_bytree: 0.8
+    reg_lambda: 1.0
+    verbose: -1
+selected:
+- police_force
+- day_of_week
+- road_type
+- junction_detail
+- junction_control
+- pedestrian_crossing
+- light_conditions
+- weather_conditions
+- road_surface_conditions
+- carriageway_hazards
+- urban_or_rural_area
+- trunk_road_flag
+- ped_location
+- ped_movement
+- speed_limit
+- veh_vehicle_type__1
+- veh_vehicle_type__2
+- veh_vehicle_type__3
+- veh_vehicle_type__4
+- veh_vehicle_type__5
+- veh_vehicle_type__20
+- veh_vehicle_type__90
+- veh_vehicle_type__97
+- veh_vehicle_type__98
+- veh_towing_and_articulation__1
+- veh_vehicle_manoeuvre__2
+- veh_vehicle_manoeuvre__3
+- veh_vehicle_manoeuvre__4
+- veh_vehicle_manoeuvre__5
+- veh_vehicle_manoeuvre__8
+- veh_vehicle_manoeuvre__9
+- veh_vehicle_manoeuvre__10
+- veh_vehicle_manoeuvre__13
+- veh_vehicle_manoeuvre__14
+- veh_vehicle_manoeuvre__15
+- veh_vehicle_manoeuvre__19
+- veh_vehicle_manoeuvre__missing
+- veh_vehicle_direction_from__1
+- veh_vehicle_direction_from__missing
+- veh_vehicle_direction_to__0
+- veh_vehicle_direction_to__2
+- veh_vehicle_direction_to__5
+- veh_vehicle_direction_to__7
+- veh_vehicle_location_restricted_lane__4
+- veh_vehicle_location_restricted_lane__6
+- veh_vehicle_location_restricted_lane__9
+- veh_junction_location__0
+- veh_junction_location__4
+- veh_junction_location__6
+- veh_junction_location__8
+- veh_junction_location__missing
+- veh_vehicle_left_hand_drive__1
+- veh_vehicle_left_hand_drive__missing
+- veh_journey_purpose_of_driver__7
+- veh_journey_purpose_of_driver__missing
+- veh_sex_of_driver__missing
+- veh_propulsion_code__1
+- veh_propulsion_code__8
+- veh_driver_imd_decile__3
+- veh_driver_imd_decile__6
+- veh_driver_imd_decile__10
+- veh_driver_imd_decile__missing
+- veh_escooter_flag__0
+- veh_age_of_driver_min
+- veh_age_of_driver_mean
+- veh_age_of_driver_max
+- veh_engine_capacity_cc_min
+- veh_engine_capacity_cc_mean
+- veh_engine_capacity_cc_max
+- ped_involved
+- ped_age
+- ons_district_freq
+- is_dark
+- dark_unlit
+- poor_weather
+- high_wind
+- wet_or_icy
+- fine_but_wet
+- visibility_risk
+- rural_single_carriageway_60
+- uncontrolled_junction
+- is_roundabout
+- has_vru
+- vru_vs_heavy
+- ped_child
+- ped_elderly
+- dark_x_ped
+- rural_x_single_vehicle
+- rot30_y
+- rot60_x
+- rot60_y
+- n_car
+- n_van
+- n_motorcycle
+- n_other
+- max_mass_class
+- min_mass_class
+- mass_mismatch
+- relative_heading
+- n_age_unknown
+- share_male_driver
+- imd_min
+- any_overtaking
+- any_right_turn
+- any_stationary
+- any_reversing
+- any_work_journey
+- road_class_pair
+- heading_class
+- hour_cos
+- is_weekend
+- is_night
+- rush_hour
+- is_bank_holiday
+- te_ons_district
+- te_police_force
+- te_grid5km
+dropped:
+  collision_injury_based: redundant with police_force (cramers_v 0.995 > 0.95; lower MI)
+  first_road_class: redundant with road_class_pair (cramers_v 1.000 > 0.95; lower MI)
+  second_road_class: redundant with road_class_pair (cramers_v 1.000 > 0.95; lower MI)
+  hour: permutation importance positive in 2/4 folds (< 3)
+  month: redundant with day_of_year (|spearman| 0.996 > 0.95; lower MI)
+  day_of_year: permutation importance positive in 1/4 folds (< 3)
+  longitude: permutation importance positive in 2/4 folds (< 3)
+  latitude: permutation importance positive in 1/4 folds (< 3)
+  number_of_vehicles: redundant with veh_escooter_flag__0 (|spearman| 0.983 > 0.95; lower MI)
+  n_vehicle_rows: redundant with number_of_vehicles (|spearman| 1.000 > 0.95; lower MI)
+  veh_vehicle_type__8: permutation importance positive in 1/4 folds (< 3)
+  veh_vehicle_type__9: redundant with n_car (|spearman| 0.974 > 0.95; lower MI)
+  veh_vehicle_type__10: near-constant (top value share 0.9970 > 0.995)
+  veh_vehicle_type__11: redundant with n_bus (|spearman| 0.953 > 0.95; lower MI)
+  veh_vehicle_type__16: near-constant (top value share 0.9995 > 0.995)
+  veh_vehicle_type__17: near-constant (top value share 0.9967 > 0.995)
+  veh_vehicle_type__18: near-constant (top value share 0.9998 > 0.995)
+  veh_vehicle_type__19: redundant with n_van (|spearman| 0.965 > 0.95; lower MI)
+  veh_vehicle_type__21: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_type__22: near-constant (top value share 0.9969 > 0.995)
+  veh_vehicle_type__23: near-constant (top value share 0.9968 > 0.995)
+  veh_vehicle_type__33: permutation importance positive in 1/4 folds (< 3)
+  veh_vehicle_type__other: near-constant (top value share 1.0000 > 0.995)
+  veh_vehicle_type__missing: near-constant (top value share 0.9967 > 0.995)
+  veh_towing_and_articulation__0: permutation importance positive in 2/4 folds (< 3)
+  veh_towing_and_articulation__2: near-constant (top value share 0.9997 > 0.995)
+  veh_towing_and_articulation__3: near-constant (top value share 0.9986 > 0.995)
+  veh_towing_and_articulation__4: permutation importance positive in 1/4 folds (< 3)
+  veh_towing_and_articulation__5: near-constant (top value share 0.9979 > 0.995)
+  veh_towing_and_articulation__other: near-constant (top value share 1.0000 > 0.995)
+  veh_towing_and_articulation__missing: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_manoeuvre__1: redundant with any_reversing (|spearman| 1.000 > 0.95; lower MI)
+  veh_vehicle_manoeuvre__6: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_manoeuvre__7: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_manoeuvre__11: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_manoeuvre__12: permutation importance positive in 0/4 folds (< 3)
+  veh_vehicle_manoeuvre__other: near-constant (top value share 1.0000 > 0.995)
+  veh_vehicle_direction_from__0: redundant with veh_vehicle_direction_to__0 (|spearman| 0.969 > 0.95;
+    lower MI)
+  veh_vehicle_direction_from__2: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_direction_from__3: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_direction_from__4: permutation importance positive in 1/4 folds (< 3)
+  veh_vehicle_direction_from__5: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_direction_from__6: permutation importance positive in 0/4 folds (< 3)
+  veh_vehicle_direction_from__7: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_direction_from__8: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_direction_from__other: near-constant (top value share 1.0000 > 0.995)
+  veh_vehicle_direction_to__1: permutation importance positive in 1/4 folds (< 3)
+  veh_vehicle_direction_to__3: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_direction_to__4: permutation importance positive in 1/4 folds (< 3)
+  veh_vehicle_direction_to__6: permutation importance positive in 1/4 folds (< 3)
+  veh_vehicle_direction_to__8: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_direction_to__other: near-constant (top value share 1.0000 > 0.995)
+  veh_vehicle_direction_to__missing: redundant with veh_vehicle_direction_from__missing (|spearman| 0.998
+    > 0.95; lower MI)
+  veh_vehicle_location_restricted_lane__0: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_location_restricted_lane__1: near-constant (top value share 0.9981 > 0.995)
+  veh_vehicle_location_restricted_lane__2: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_location_restricted_lane__5: near-constant (top value share 0.9969 > 0.995)
+  veh_vehicle_location_restricted_lane__other: near-constant (top value share 1.0000 > 0.995)
+  veh_vehicle_location_restricted_lane__missing: redundant with veh_vehicle_manoeuvre__missing (|spearman|
+    0.963 > 0.95; lower MI)
+  veh_junction_location__1: permutation importance positive in 2/4 folds (< 3)
+  veh_junction_location__2: permutation importance positive in 1/4 folds (< 3)
+  veh_junction_location__3: permutation importance positive in 1/4 folds (< 3)
+  veh_junction_location__5: permutation importance positive in 1/4 folds (< 3)
+  veh_junction_location__7: near-constant (top value share 0.9962 > 0.995)
+  veh_junction_location__other: near-constant (top value share 1.0000 > 0.995)
+  veh_vehicle_left_hand_drive__2: permutation importance positive in 2/4 folds (< 3)
+  veh_vehicle_left_hand_drive__other: near-constant (top value share 1.0000 > 0.995)
+  veh_journey_purpose_of_driver__1: redundant with any_work_journey (|spearman| 0.994 > 0.95; lower MI)
+  veh_journey_purpose_of_driver__2: permutation importance positive in 2/4 folds (< 3)
+  veh_journey_purpose_of_driver__other: near-constant (top value share 1.0000 > 0.995)
+  veh_sex_of_driver__1: permutation importance positive in 1/4 folds (< 3)
+  veh_sex_of_driver__2: redundant with share_male_driver (|spearman| 0.964 > 0.95; lower MI)
+  veh_sex_of_driver__other: near-constant (top value share 1.0000 > 0.995)
+  veh_propulsion_code__2: permutation importance positive in 2/4 folds (< 3)
+  veh_propulsion_code__3: redundant with any_electric (|spearman| 1.000 > 0.95; lower MI)
+  veh_propulsion_code__4: near-constant (top value share 1.0000 > 0.995)
+  veh_propulsion_code__5: near-constant (top value share 0.9996 > 0.995)
+  veh_propulsion_code__6: near-constant (top value share 0.9999 > 0.995)
+  veh_propulsion_code__7: near-constant (top value share 0.9991 > 0.995)
+  veh_propulsion_code__9: near-constant (top value share 1.0000 > 0.995)
+  veh_propulsion_code__10: near-constant (top value share 1.0000 > 0.995)
+  veh_propulsion_code__11: near-constant (top value share 1.0000 > 0.995)
+  veh_propulsion_code__12: near-constant (top value share 0.9955 > 0.995)
+  veh_propulsion_code__other: near-constant (top value share 1.0000 > 0.995)
+  veh_propulsion_code__missing: permutation importance positive in 2/4 folds (< 3)
+  veh_driver_imd_decile__1: permutation importance positive in 2/4 folds (< 3)
+  veh_driver_imd_decile__2: permutation importance positive in 2/4 folds (< 3)
+  veh_driver_imd_decile__4: permutation importance positive in 1/4 folds (< 3)
+  veh_driver_imd_decile__5: permutation importance positive in 2/4 folds (< 3)
+  veh_driver_imd_decile__7: permutation importance positive in 2/4 folds (< 3)
+  veh_driver_imd_decile__8: permutation importance positive in 2/4 folds (< 3)
+  veh_driver_imd_decile__9: permutation importance positive in 2/4 folds (< 3)
+  veh_driver_imd_decile__other: near-constant (top value share 1.0000 > 0.995)
+  veh_escooter_flag__1: redundant with veh_vehicle_type__33 (|spearman| 1.000 > 0.95; lower MI)
+  veh_escooter_flag__other: near-constant (top value share 1.0000 > 0.995)
+  veh_escooter_flag__missing: near-constant (top value share 1.0000 > 0.995)
+  dark_and_wet: permutation importance positive in 0/4 folds (< 3)
+  high_speed: redundant with rural_high_speed (|spearman| 0.963 > 0.95; lower MI)
+  rural_high_speed: permutation importance positive in 2/4 folds (< 3)
+  is_junction: redundant with junction_complexity (|spearman| 0.958 > 0.95; lower MI)
+  junction_complexity: permutation importance positive in 0/4 folds (< 3)
+  is_motorway: permutation importance positive in 1/4 folds (< 3)
+  crossing_present: permutation importance positive in 2/4 folds (< 3)
+  hazard_present: permutation importance positive in 0/4 folds (< 3)
+  single_vehicle: redundant with speed_x_single_vehicle (|spearman| 0.983 > 0.95; lower MI)
+  high_speed_x_vru: permutation importance positive in 1/4 folds (< 3)
+  speed_x_single_vehicle: permutation importance positive in 2/4 folds (< 3)
+  rot15_x: permutation importance positive in 1/4 folds (< 3)
+  rot15_y: redundant with latitude (|spearman| 0.978 > 0.95; lower MI)
+  rot30_x: permutation importance positive in 1/4 folds (< 3)
+  rot45_x: redundant with rot60_x (|spearman| 0.952 > 0.95; lower MI)
+  rot45_y: redundant with rot60_y (|spearman| 0.978 > 0.95; lower MI)
+  n_hgv: permutation importance positive in 2/4 folds (< 3)
+  n_bus: permutation importance positive in 1/4 folds (< 3)
+  n_pedal_cycle: redundant with veh_vehicle_type__1 (|spearman| 1.000 > 0.95; lower MI)
+  n_escooter: redundant with veh_vehicle_type__33 (|spearman| 1.000 > 0.95; lower MI)
+  driver_age_range: permutation importance positive in 0/4 folds (< 3)
+  imd_mean: permutation importance positive in 2/4 folds (< 3)
+  any_young_driver: permutation importance positive in 2/4 folds (< 3)
+  any_older_driver: permutation importance positive in 2/4 folds (< 3)
+  any_electric: permutation importance positive in 2/4 folds (< 3)
+  ped_crossing_group: permutation importance positive in 2/4 folds (< 3)
+  hour_sin: permutation importance positive in 2/4 folds (< 3)
+  month_sin: permutation importance positive in 1/4 folds (< 3)
+  month_cos: permutation importance positive in 2/4 folds (< 3)
+  weekend_night: permutation importance positive in 1/4 folds (< 3)
+  season: permutation importance positive in 1/4 folds (< 3)

@@ -1,0 +1,21 @@
+{
+  "n_estimators": 1489,
+  "cal_pr_auc": {
+    "0": 0.4886606207295867,
+    "1": 0.48838306577484325,
+    "2": 0.4885209602045216
+  },
+  "cell_id": "F0__none__lgbm",
+  "minutes": 20.839466655254363,
+  "params": {
+    "learning_rate": 0.01202324757785434,
+    "num_leaves": 37,
+    "min_child_samples": 41,
+    "subsample": 0.8136898831639284,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.3872394422475798,
+    "reg_lambda": 2.8439982529759926,
+    "reg_alpha": 0.11719707008364891,
+    "cat_smooth": 4.515668176759809
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "n_estimators": 4800,
+  "cal_pr_auc": {
+    "0": 0.4836572527849415,
+    "1": 0.48355047277555674,
+    "2": 0.48417242755026246
+  },
+  "cell_id": "F0__weight__cat",
+  "minutes": 56.323575190703075,
+  "params": {
+    "learning_rate": 0.030830572611544083,
+    "depth": 5,
+    "l2_leaf_reg": 5.7871405672327745,
+    "random_strength": 0.2550106640452009,
+    "bootstrap_type": "Bernoulli",
+    "subsample": 0.6271364837766847
+  }
+}

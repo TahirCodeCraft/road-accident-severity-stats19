@@ -1,0 +1,21 @@
+{
+  "n_estimators": 232,
+  "cal_pr_auc": {
+    "0": 0.4467616241642534,
+    "1": 0.453650952287645,
+    "2": 0.4510360021380133
+  },
+  "cell_id": "F1__smotenc__lgbm",
+  "minutes": 46.6033722003301,
+  "params": {
+    "learning_rate": 0.03715171936826999,
+    "num_leaves": 37,
+    "min_child_samples": 64,
+    "subsample": 0.6466531055388975,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.4270127283736934,
+    "reg_lambda": 10.63450897751906,
+    "reg_alpha": 0.005035358503599932,
+    "cat_smooth": 11.208796804899391
+  }
+}

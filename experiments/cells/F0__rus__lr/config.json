@@ -1,0 +1,17 @@
+{
+  "model": "lr",
+  "feature_set": "F0",
+  "cs": "rus",
+  "n_trials": 15,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "device": "cpu",
+  "n_jobs": 4,
+  "hpo_seed": 42,
+  "drop_features": [],
+  "tag": "",
+  "feature_columns": null
+}
