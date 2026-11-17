@@ -7,6 +7,7 @@ Tahir Ahmed Khan (25I-8025), Ahmed Qamar (25I-8049), Ali Raza (25I-8043)
 MS Data Science, Data Science Tools and Techniques
 
 - Paper (PDF): [`paper/main.pdf`](paper/main.pdf)
+- Paper (Word): [`paper/main.docx`](paper/main.docx)
 - LaTeX source: [`paper/`](paper/), see [`paper/README.md`](paper/README.md) for build steps
 - Code notebook (executed): [`notebooks/Road_Accident_Severity_Walkthrough.ipynb`](notebooks/Road_Accident_Severity_Walkthrough.ipynb)
 

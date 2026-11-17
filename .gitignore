@@ -38,3 +38,8 @@ paper/*.out
 
 # Operational helper scripts from the runs
 experiments/logs/*.sh
+
+# Word build intermediates
+paper/main_pd.*
+paper/main_raw.docx
+paper/png/
