@@ -1,7 +1,7 @@
 # Road-Collision Severity Prediction on STATS19
 
-Code, data and results for the paper **"What Improves Road-Collision Severity Prediction? A
-Temporal Ablation of Feature Engineering, Cost-Sensitive Learning and Calibration on STATS19"**.
+Code, data and results for the paper **"Feature Engineering, Imbalance Handling and
+Calibration for Crash-Severity Prediction: An Out-of-Time Ablation on STATS19"**.
 
 Tahir Ahmed Khan (25I-8025), Ahmed Qamar (25I-8049), Ali Raza (25I-8043)
 MS Data Science, Data Science Tools and Techniques
