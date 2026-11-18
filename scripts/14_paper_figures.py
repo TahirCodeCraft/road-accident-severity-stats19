@@ -75,7 +75,7 @@ def set_style() -> None:
     plt.rcParams.update({
         "font.family": "serif", "font.serif": ["Times New Roman", "Nimbus Roman", "DejaVu Serif"],
         "mathtext.fontset": "stix", "font.size": 8, "axes.labelsize": 8, "axes.titlesize": 8,
-        "legend.fontsize": 7, "xtick.labelsize": 7, "ytick.labelsize": 7, "axes.linewidth": 0.6,
+        "legend.fontsize": 8, "xtick.labelsize": 8, "ytick.labelsize": 8, "axes.linewidth": 0.6,
         "axes.spines.top": False, "axes.spines.right": False, "lines.linewidth": 1.4,
         "savefig.bbox": "tight", "savefig.pad_inches": 0.02, "pdf.fonttype": 42,
     })
@@ -168,7 +168,7 @@ def fig_prauc(out: Path) -> dict:
             ("F1", "weight", "F1, class weight", "^", C_AMBER, C_AMBER),
             ("F1", "rus", "F1, undersampling", "s", C_GREEN, C_GREEN),
             ("F1", "smotenc", "F1, SMOTE-NC", "X", C_RED, C_RED)]
-    fig, ax = plt.subplots(figsize=(COL_W, 2.05))
+    fig, ax = plt.subplots(figsize=(COL_W, 1.95))
     offs = np.linspace(-0.24, 0.24, len(arms))
     for k, (fs, cs, lab, mk, fc, ec) in enumerate(arms):
         xs, ys = [], []
@@ -203,10 +203,10 @@ def fig_cs_cal(out: Path) -> dict:
     a.plot(cw.t, cw.recall, color=C_AMBER, label=f"class weight $w$={w:.2f}")
     a.plot([t_eq, 0.5], [eq_none["recall"], eq_w["recall"]], ls=":", color=C_GREY, lw=1)
     a.scatter([t_eq, 0.5], [eq_none["recall"], eq_w["recall"]], color=[C_BLUE, C_AMBER], s=16, zorder=3)
-    a.annotate(f"$t$={t_eq:.2f}", (t_eq, eq_none["recall"]), xytext=(-30, -14), textcoords="offset points", fontsize=7)
-    a.annotate("$t$=0.50", (0.5, eq_w["recall"]), xytext=(4, 4), textcoords="offset points", fontsize=7)
+    a.annotate(f"$t$={t_eq:.2f}", (t_eq, eq_none["recall"]), xytext=(-26, -20), textcoords="offset points", fontsize=8)
+    a.annotate("$t$=0.50", (0.5, eq_w["recall"]), xytext=(4, 4), textcoords="offset points", fontsize=8)
     a.set_xlabel("decision threshold"); a.set_ylabel("recall on 2025"); a.set_xlim(0, 1); a.set_ylim(0, 1.02)
-    a.legend(frameon=False, loc="upper right"); a.set_title("(a) Weighting moves the operating point", loc="left")
+    a.legend(frameon=False, loc="lower left", handlelength=1.2); a.set_title("(a) Weighting moves the operating point", loc="left")
 
     b = axs[1]
     b.plot([0, 1], [0, 1], ls="--", color=C_GREY, lw=0.8)
@@ -217,7 +217,7 @@ def fig_cs_cal(out: Path) -> dict:
         out_ece[lab] = round(e, 4)
         b.plot(mp, ob, marker=mk, ms=3, color=col, label=f"{lab} (ECE {e:.3f})")
     b.set_xlabel("mean predicted risk (15 quantile bins)"); b.set_ylabel("observed severe share")
-    b.set_xlim(0, 0.9); b.set_ylim(0, 0.9); b.legend(frameon=False, loc="upper left", handlelength=1.0, fontsize=6, borderaxespad=0.2)
+    b.set_xlim(0, 0.9); b.set_ylim(0, 0.9); b.legend(frameon=False, loc="upper left", handlelength=1.0, fontsize=8, borderaxespad=0.2)
     b.set_title("(b) Reliability on 2025", loc="left")
 
     c = axs[2]
@@ -230,7 +230,9 @@ def fig_cs_cal(out: Path) -> dict:
     mp, ob, _ = reliability(wgt.y, wgt.raw)
     c.scatter(mp, ob, s=9, color=C_AMBER, zorder=3, label="observed (raw bins)")
     c.set_xlabel("raw score of weighted model"); c.set_ylabel("calibrated probability")
-    c.set_xlim(0, 1); c.set_ylim(0, 1); c.legend(frameon=False, loc="upper left")
+    c.set_xlim(0, 1); c.set_ylim(0, 1.3)  # headroom keeps the legend clear of the curve
+    c.set_yticks([0, 0.2, 0.4, 0.6, 0.8, 1.0])
+    c.legend(frameon=False, loc="upper left", borderaxespad=0.2)
     c.set_title("(c) Platt undoes the class weight", loc="left")
     fig.tight_layout(w_pad=1.2)
     fig.savefig(out / "fig_cs_cal.pdf"); plt.close(fig)
@@ -249,7 +251,7 @@ def fig_threshold(out: Path) -> dict:
     ops = json.loads((CELLS / cell / "frozen_seed0.json").read_text())["thresholds"]["platt"]
     ts = np.round(np.arange(0.02, 0.801, 0.005), 3)
     cv = curve(sel.y, sel.platt, ts)
-    fig, ax = plt.subplots(figsize=(COL_W, 2.1))
+    fig, ax = plt.subplots(figsize=(COL_W - 0.06, 2.0))
     ax.plot(cv.t, cv.recall, color=C_GREEN, label="recall")
     ax.plot(cv.t, cv.precision, color=C_BLUE, label="precision")
     ax.plot(cv.t, cv.flagged, color=C_GREY, ls="--", lw=1, label="share flagged")
@@ -261,7 +263,7 @@ def fig_threshold(out: Path) -> dict:
     for key, lab, yy, ha, dx in [("tf2", "$t^{*}$", 0.04, "right", -0.006), ("tcost", "1/6", 0.04, "left", 0.006),
                                  ("t050", "0.5", 0.04, "left", 0.006)]:
         ax.axvline(ops[key], color="black", lw=0.6, ls=":")
-        ax.text(ops[key] + dx, yy, lab, fontsize=7, ha=ha)
+        ax.text(ops[key] + dx, yy, lab, fontsize=8, ha=ha)
     h1, l1 = ax.get_legend_handles_labels(); h2, l2 = ax2.get_legend_handles_labels()
     ax.legend(h1 + h2, l1 + l2, frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=4,
               handlelength=1.4, columnspacing=0.8)
@@ -280,7 +282,7 @@ def fig_shap(out: Path, top: int = 12) -> dict:
     s = pd.read_csv(TABLES / "shap_importance.csv", index_col=0).sort_values("mean_abs_shap_test", ascending=False).head(top)
     labels = [SHAP_LABEL.get(i, i) for i in s.index][::-1]
     y = np.arange(len(s))
-    fig, ax = plt.subplots(figsize=(COL_W, 2.35))
+    fig, ax = plt.subplots(figsize=(COL_W - 0.83, 2.15))
     ax.barh(y + 0.19, s.mean_abs_shap_cal.to_numpy()[::-1], height=0.36, color=C_GREY, label="CAL (2024)")
     ax.barh(y - 0.19, s.mean_abs_shap_test.to_numpy()[::-1], height=0.36, color=C_BLUE, label="TEST (2025)")
     ax.set_yticks(y, labels); ax.set_xlabel("mean |SHAP| (log-odds)")

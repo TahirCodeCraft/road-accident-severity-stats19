@@ -176,8 +176,10 @@ def title_block(doc, title: str, authors: list[list[str]]) -> None:
         cell.paragraphs[0].text = lines[0]
         fmt(cell.paragraphs[0], 11, WD_ALIGN_PARAGRAPH.CENTER, 0)
         for line in lines[1:]:
-            p = cell.add_paragraph(line)
-            fmt(p, 10, WD_ALIGN_PARAGRAPH.CENTER, 0)
+            # IEEE template: department and organization lines are italic
+            ital = re.fullmatch(r"\\textit\{(.*)\}", line)
+            p = cell.add_paragraph(ital.group(1) if ital else line)
+            fmt(p, 10, WD_ALIGN_PARAGRAPH.CENTER, 0, italic=True if ital else None)
     for cell in table.rows[0].cells:  # ordinal suffix (1st, 2nd, 3rd) as superscript
         p = cell.paragraphs[0]
         m = re.match(r"(\d)(st|nd|rd) (.*)", p.text)
@@ -547,7 +549,8 @@ def main() -> None:
     cp.author = "; ".join(re.sub(r"^\d(st|nd|rd) ", "", a[0]) for a in authors)
     cp.last_modified_by = cp.author
     cp.comments = ""
-    cp.keywords = "Road safety; crash severity; class imbalance; calibration; STATS19"
+    kw = re.search(r"\\begin\{IEEEkeywords\}\s*(.*?)\s*\\end\{IEEEkeywords\}", tex, re.S)
+    cp.keywords = "; ".join(k.strip() for k in kw.group(1).split(","))
     doc.save(str(args.out))
     log.info(f"saved {args.out}: {len(numbers)} sections, {n_eq} equations, "
              f"{len(doc.inline_shapes)} images, {len(doc.tables) - 1} tables")

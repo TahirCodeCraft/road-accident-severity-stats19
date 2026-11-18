@@ -27,39 +27,42 @@
 \title{Feature Engineering, Imbalance Handling and Calibration for Crash-Severity Prediction: An Out-of-Time Ablation on STATS19}
 
 \author{\IEEEauthorblockN{1\textsuperscript{st} Tahir Ahmed Khan}
-\IEEEauthorblockA{25I-8025\\
-MS Data Science\\
+\IEEEauthorblockA{\textit{Department of Data Science}\\
+\textit{National University of Computer}\\
+\textit{and Emerging Sciences}\\
 Islamabad, Pakistan\\
-Email: i258025@isb.nu.edu.pk}
+i258025@isb.nu.edu.pk}
 \and
 \IEEEauthorblockN{2\textsuperscript{nd} Ahmed Qamar}
-\IEEEauthorblockA{25I-8049\\
-MS Data Science\\
+\IEEEauthorblockA{\textit{Department of Data Science}\\
+\textit{National University of Computer}\\
+\textit{and Emerging Sciences}\\
 Islamabad, Pakistan\\
-Email: i258049@isb.nu.edu.pk}
+i258049@isb.nu.edu.pk}
 \and
 \IEEEauthorblockN{3\textsuperscript{rd} Ali Raza}
-\IEEEauthorblockA{25I-8043\\
-MS Data Science\\
+\IEEEauthorblockA{\textit{Department of Data Science}\\
+\textit{National University of Computer}\\
+\textit{and Emerging Sciences}\\
 Islamabad, Pakistan\\
-Email: i258043@isb.nu.edu.pk}}
+i258043@isb.nu.edu.pk}}
 
 \maketitle
 
 \begin{abstract}
-Recent crash-severity studies combine several techniques in one pipeline, so the contribution of each technique, and its performance on later data, is hard to assess. We ran a controlled ablation on 306,710 police-reported collisions from the UK STATS19 database (2023--2025). Feature engineering with selection, cost-sensitive learning (class weighting, random undersampling and SMOTE-NC) and post-hoc calibration were varied independently across six model families. Models were trained on 2023 and half of 2024, calibrated and thresholded on the other half of 2024, and scored on 2025 under a frozen, hash-checked protocol. The selected LightGBM model reached an average precision (PR-AUC) of 0.496 against a no-skill value of 0.262, and an ROC-AUC of 0.730. Engineered features raised PR-AUC significantly for logistic regression, a decision tree, random forest and XGBoost (+0.004 to +0.017), but not for LightGBM or CatBoost. Class weighting raised recall at the default 0.5 threshold by 0.47 to 0.52, yet no significant $F_2$ difference was detected once each arm had its own tuned threshold, and SMOTE-NC lowered PR-AUC in all six configurations where it was tested. Calibration reduced the expected calibration error of weighted or undersampled models from about 0.2 to about 0.01. Under an assumed 5:1 cost of missed severe collisions to false alarms, the Bayes threshold of 1/6 on calibrated scores raised the recall of the final model from 0.21 to 0.86 and lowered expected cost by 43\%; for this unweighted model almost all of that gain came from the threshold.
+Recent crash-severity studies combine several techniques in one pipeline, so the contribution of each technique, and its performance on later data, is hard to assess. We ran a controlled ablation on 306,710 police-reported collisions from the UK STATS19 database (2023--2025). Feature engineering with selection, cost-sensitive learning (class weighting, random undersampling and SMOTE-NC) and post-hoc calibration were varied independently across six model families. Models were trained on 2023 and half of 2024, calibrated and thresholded on the other half of 2024, and scored on 2025 under a frozen, hash-checked protocol. The selected LightGBM model reached an average precision (PR-AUC) of 0.496 against a no-skill value of 0.262, and an ROC-AUC of 0.730. Engineered features raised PR-AUC significantly for logistic regression, a decision tree, random forest and XGBoost (by 0.004 to 0.017), but not for LightGBM or CatBoost. Class weighting raised recall at the default 0.5 threshold by 0.47 to 0.52, yet no significant F2-score difference was detected once each arm had its own tuned threshold, and SMOTE-NC lowered PR-AUC in all six configurations where it was tested. Calibration reduced the expected calibration error of weighted or undersampled models from about 0.2 to about 0.01. Under an assumed cost ratio of five to one between missed severe collisions and false alarms, the Bayes threshold of one sixth on calibrated scores raised the recall of the final model from 0.21 to 0.86 and lowered expected cost by 43 percent; for this unweighted model almost all of that gain came from the threshold.
 \end{abstract}
 
 \begin{IEEEkeywords}
-Road safety, crash severity, class imbalance, cost-sensitive learning, probability calibration, decision threshold, temporal validation, STATS19
+Crash severity, class imbalance, probability calibration, decision threshold, temporal validation
 \end{IEEEkeywords}
 
 %% ======================================================================
 \section{Introduction}
 
-About one in four injury collisions reported to the police in Great Britain is severe, meaning that at least one person was killed or seriously injured. A model that estimates this outcome from the circumstances of a collision, such as place, time, road, weather and the road users involved, could help to rank incidents and to show which conditions are associated with serious harm. The task is a binary classification problem with an imbalanced target, non-linear effects and, for flexible models, probabilities that may not be calibrated.
+About one in four injury collisions reported to the police in Great Britain is severe, meaning that at least one person was killed or seriously injured. A model that estimates this outcome from the circumstances of a collision, such as place, time, road, weather and the road users involved, could help to rank incidents and to show which conditions are associated with serious harm. The task is a binary classification problem with an imbalanced target, nonlinear effects and, for flexible models, probabilities that may not be calibrated.
 
-Recent studies on this problem combine different subsets of feature engineering, resampling or class weighting, gradient boosting, calibration, threshold tuning and SHAP explanations~\cite{le2026ksi,alhawarat2026calibrated,gao2026ensemble}. When several of these steps change together, their separate contributions cannot be read off the results. The evaluation design also differs: of the two closest STATS19 studies, one used a random split of the same years~\cite{le2026ksi} and the other trained on earlier years and tested on a later one~\cite{alhawarat2026calibrated}. Testing on a later year is closer to how such a model would be used.
+Recent studies on this problem combine different subsets of feature engineering, resampling or class weighting, gradient boosting, calibration, threshold tuning and SHapley Additive exPlanations (SHAP)~\cite{le2026ksi,alhawarat2026calibrated,gao2026ensemble}. When several of these steps change together, their separate contributions cannot be read off the results. The evaluation design also differs: of the two closest STATS19 studies, one used a random split of the same years~\cite{le2026ksi} and the other trained on earlier years and tested on a later one~\cite{alhawarat2026calibrated}. Testing on a later year is closer to how such a model would be used.
 
 We do not propose a new classifier. Instead, we measure how much three common techniques add to severe-collision detection on STATS19 data for 2023--2025~\cite{dft2026stats19}, using a later year as the test set. The research questions are:
 \begin{itemize}
@@ -72,7 +75,7 @@ The study combines a column-level audit of usable fields, an ablation with 144 f
 %% ======================================================================
 \section{Literature Review}
 
-Le~\cite{le2026ksi} modelled killed-or-seriously-injured (KSI) collisions in STATS19 for 2020--2024 with LightGBM. The study compared SMOTE with class weighting, tuned the threshold, calibrated the output and used SHAP, and it evaluated on a stratified random 80/20 split. LightGBM reached an ROC-AUC of 0.664 with SMOTE and 0.692 with class weighting, and the weighted model had the highest recall but the worst Brier score. Alhawarat \textit{et al.}~\cite{alhawarat2026calibrated} trained gradient-boosting models on STATS19 for 2016--2020, calibrated on 2021 and tested on 2022. Their LightGBM model retrained on UK data reached an ROC-AUC of 0.651 and a PR-AUC of 0.369. Neither study varies each technique separately across several model families, which is the focus of our work.
+Le~\cite{le2026ksi} modelled killed-or-seriously-injured (KSI) collisions in STATS19 for 2020--2024 with LightGBM. The study compared the synthetic minority oversampling technique (SMOTE) with class weighting, tuned the threshold, calibrated the output and used SHAP, and it evaluated on a stratified random 80/20 split. LightGBM reached an area under the receiver operating characteristic curve (ROC-AUC) of 0.664 with SMOTE and 0.692 with class weighting, and the weighted model had the highest recall but the worst Brier score. Alhawarat \textit{et al.}~\cite{alhawarat2026calibrated} trained gradient-boosting models on STATS19 for 2016--2020, calibrated on 2021 and tested on 2022. Their LightGBM model retrained on UK data reached an ROC-AUC of 0.651 and an area under the precision--recall curve (PR-AUC) of 0.369. Neither study varies each technique separately across several model families, which is the focus of our work.
 
 Other studies use ensembles and post-hoc explanation. Gao \textit{et al.}~\cite{gao2026ensemble} combined XGBoost, random forest, CatBoost and LightGBM by soft voting and explained them with SHAP and accumulated local effects, using road-geometry variables that STATS19 does not contain. Xiao and Duan~\cite{xiao2025multitask} proposed an explainable multi-task deep network on multi-source data from China. Interpretable models have also been applied to US national data~\cite{abdulrashid2025interpretable}, to expressway crashes in Sri Lanka~\cite{madushani2023expressway} and to motorcycle crashes in Pakistan~\cite{mansoor2023motorcycle}.
 
@@ -85,7 +88,7 @@ For class imbalance, Chen \textit{et al.}~\cite{chen2025imbalanced} compared com
 
 We used the final STATS19 releases for 2023, 2024 and 2025~\cite{dft2026stats19}. Each year has a collision table (44 columns), a vehicle table (32) and a casualty table (24), linked by a collision identifier, giving 306,710 collisions, 557,277 vehicle records and 389,132 casualty records. Codes were decoded with the 2025 data guide, and codes introduced in 2024 without a 2023 equivalent (journey purpose 8 and 9, manoeuvre 20) were set to missing. The target is $y=1$ (severe) for fatal or serious collisions and $y=0$ for slight ones. Fatal collisions are about 1.5\% of the total, so the severe class is mostly serious collisions.
 
-The data are retrospective police records, so we applied an assumed availability rule: a field may be used only if it describes the circumstances before impact (place, time, road, environment, vehicles, drivers and manoeuvres) rather than the outcome, the impact sequence or police processing. Each of the 100 raw columns was given one decision in a registry checked by unit tests: 41 kept, 14 dropped as leakage, 26 dropped as redundant or superseded, 12 dropped as identifiers, five crash-mechanics fields held out for a sensitivity analysis, one target and one field used only for evaluation. The leakage group includes the number of casualties, casualty severity and DfT's severity-adjustment columns. Police attendance was used only for evaluation, because it is strongly associated with severity (in 2023--2024, 30.2\% of attended collisions were severe, against 9.7\% of self-reported ones). Four pedestrian fields come from the casualty table, so they describe an injured pedestrian (the one with the lowest casualty reference); their effect is tested in Section~\ref{sec:sens}. Vehicle records were summarised per collision without depending on vehicle order: counts per code, and the minimum, mean and maximum of driver age and engine size.
+The data are retrospective police records, so we applied an assumed availability rule: a field may be used only if it describes the circumstances before impact (place, time, road, environment, vehicles, drivers and manoeuvres) rather than the outcome, the impact sequence or police processing. Each of the 100 raw columns was given one decision in a registry checked by unit tests: 41 kept, 14 dropped as leakage, 26 dropped as redundant or superseded, 12 dropped as identifiers, five crash-mechanics fields held out for a sensitivity analysis, one target and one field used only for evaluation. The leakage group includes the number of casualties, casualty severity and the Department for Transport's severity-adjustment columns. Police attendance was used only for evaluation, because it is strongly associated with severity (in 2023--2024, 30.2\% of attended collisions were severe, against 9.7\% of self-reported ones). Four pedestrian fields come from the casualty table, so they describe an injured pedestrian (the one with the lowest casualty reference); their effect is tested in Section~\ref{sec:sens}. Vehicle records were summarised per collision without depending on vehicle order: counts per code, and the minimum, mean and maximum of driver age and engine size.
 
 \subsection{Temporal Design and Frozen Protocol}
 
@@ -127,13 +130,13 @@ TEST & 2025 & 101,525 & 26.2\% \\
 \label{fig:design}
 \end{figure}
 
-\subsection{Feature Sets (Factor FE)}
+\subsection{Feature Sets}
 
-\textbf{F0} (168 features) is the raw set: 24 collision-level fields, 134 vehicle code counts, six minimum, mean and maximum summaries, and four pedestrian fields. \textbf{F1full} (244) adds 76 engineered features: temporal (cyclic hour and month, night, weekend, bank holiday), environmental (dark and unlit, poor weather, wet or icy surface), road (high speed, rural single carriageway at 60~mph or more, junction complexity), vehicle mix (vulnerable road user (VRU) involved, lightest and heaviest vehicle mass class, mass mismatch, and the relative heading of two vehicles computed from their compass directions), driver (young or older driver, age range), interaction terms, and out-of-fold $m$-estimate target encodings ($m=50$) of district, police force and a 5~km grid cell. \textbf{F1} (117) is the subset left after three selection steps on FIT rows: dropping near-constant features (one value in more than 99.5\% of rows; 35 dropped), dropping one feature of each pair with absolute Spearman correlation or Cram\'er's $V$ above 0.95 (25 dropped), and keeping features whose LightGBM permutation importance, measured as the drop in PR-AUC, was positive in at least three of four leave-one-quarter-out folds of 2023 (67 dropped).
+\textbf{F0} (168 features) is the raw set: 24 collision-level fields, 134 vehicle code counts, six minimum, mean and maximum summaries, and four pedestrian fields. \textbf{F1full} (244) adds 76 engineered features: temporal (cyclic hour and month, night, weekend, bank holiday), environmental (dark and unlit, poor weather, wet or icy surface), road (high speed, rural single carriageway at 60~mph (97~km/h) or more, junction complexity), vehicle mix (vulnerable road user (VRU) involved, lightest and heaviest vehicle mass class, mass mismatch, and the relative heading of two vehicles computed from their compass directions), driver (young or older driver, age range), interaction terms, and out-of-fold $m$-estimate target encodings ($m=50$) of district, police force and a 5~km grid cell. \textbf{F1} (117) is the subset left after three selection steps on FIT rows: dropping near-constant features (one value in more than 99.5\% of rows; 35 dropped), dropping one feature of each pair with absolute Spearman correlation or Cram\'er's $V$ above 0.95 (25 dropped), and keeping features whose LightGBM permutation importance, measured as the drop in PR-AUC, was positive in at least three of four leave-one-quarter-out folds of 2023 (67 dropped).
 
-\subsection{Cost-Sensitive Learning (Factor CS)}
+\subsection{Cost-Sensitive Learning}
 
-Four strategies were applied to training rows only: \textit{none} (the natural ratio of about 3:1); \textit{weight}, in which each severe row receives weight $w=n_{-}/n_{+}$ computed on the training partition and not tuned ($w=3.18$ on FIT during tuning and $117{,}857/37{,}642=3.13$ on FIT+TUNE for the refit); \textit{rus}, random undersampling of slight collisions to 1:1; and \textit{smotenc}, SMOTE-NC~\cite{chawla2002smote} oversampling to 1:1 for logistic regression, random forest and LightGBM. Before SMOTE-NC, numeric features were median-imputed and standardised for the neighbour search, and integer-valued features were rounded after interpolation.
+Four cost-sensitive learning (CS) strategies were applied to training rows only: \textit{none} (the natural ratio of about 3:1); \textit{weight}, in which each severe row receives weight $w=n_{-}/n_{+}$ computed on the training partition and not tuned ($w=3.18$ on FIT during tuning and $117{,}857/37{,}642=3.13$ on FIT+TUNE for the refit); \textit{rus}, random undersampling of slight collisions to 1:1; and \textit{smotenc}, SMOTE-NC~\cite{chawla2002smote}, the SMOTE variant for mixed nominal and continuous features, oversampling to 1:1 for logistic regression, random forest and LightGBM. Before SMOTE-NC, numeric features were median-imputed and standardised for the neighbour search, and integer-valued features were rounded after interpolation.
 
 Let $p(x)=P(y=1\mid x)$. At the population optimum of the weighted log-loss, the score $p_w(x)$ satisfies
 \begin{equation}
@@ -142,32 +145,34 @@ Let $p(x)=P(y=1\mid x)$. At the population optimum of the weighted log-loss, the
 \end{equation}
 which follows from setting the derivative of $-wp\log q-(1-p)\log(1-q)$ with respect to $q$ to zero. Under this idealisation, a threshold of 0.5 on $p_w$ corresponds to $p\ge 1/(1+w)\approx 0.242$, the logit is shifted by $\ln w\approx 1.14$, and the ranking is unchanged. Separately tuned, regularised models need not follow (\ref{eq:odds}) exactly, so Section~\ref{sec:rq2} checks it against the fitted models.
 
-\subsection{Calibration and Decision Thresholds (Factor CAL)}
+\subsection{Calibration and Decision Thresholds}
 
 Calibrators were fitted on the CAL predictions of each model. The Platt-style calibrator fits an unpenalised logistic regression on the logit of the model score, clipped to $[10^{-6},\,1-10^{-6}]$,
 \begin{equation}
 \hat p = \sigma\big(a\,\mathrm{logit}(p) + b\big),
 \label{eq:platt}
 \end{equation}
-following Platt~\cite{platt1999probabilistic}. Isotonic regression~\cite{zadrozny2002transforming} fits a monotone non-decreasing map from $p$ to the observed rate. The method with the lower five-fold cross-fitted Brier score on CAL was chosen and refitted on all of CAL. Thresholds, by contrast, were optimised directly on the CAL labels, so only their 2025 performance is reported. We report the Brier score and an ECE computed over up to $B=15$ quantile bins (duplicate bin edges merged),
+where $\sigma$ is the logistic function and $a$ and $b$ are fitted on CAL, following Platt~\cite{platt1999probabilistic}. Isotonic regression~\cite{zadrozny2002transforming} fits a monotone nondecreasing map from $p$ to the observed rate. The method with the lower five-fold cross-fitted Brier score on CAL was chosen and refitted on all of CAL. Thresholds, by contrast, were optimised directly on the CAL labels, so only their 2025 performance is reported. We report the Brier score and an ECE computed over up to $B=15$ quantile bins (duplicate bin edges merged),
 \begin{equation}
 \mathrm{ECE} = \sum_{b=1}^{B} \frac{n_b}{n}\,\big|\bar y_b - \bar p_b\big|.
 \label{eq:ece}
 \end{equation}
-A collision is flagged when $\hat p \ge t$. Five thresholds were fixed on CAL: the default $t=0.5$; $t^{*}$, which maximises $F_2 = 5PR/(4P+R)$; the most precise threshold with recall of at least 0.80; the threshold that minimises the empirical cost on CAL; and the Bayes threshold for an assumed cost of 5 for a missed severe collision and 1 for a false alarm,
+where bin $b$ holds $n_b$ of the $n$ collisions, $\bar y_b$ is its observed severe rate and $\bar p_b$ is its mean predicted risk.
+
+A collision is flagged when $\hat p \ge t$. Five thresholds were fixed on CAL: the default $t=0.5$; $t^{*}$, which maximises $F_2 = 5PR/(4P+R)$ for precision $P$ and recall $R$; the most precise threshold with recall of at least 0.80; the threshold that minimises the empirical cost on CAL; and the Bayes threshold for an assumed cost $c_{\mathrm{FN}}=5$ for a missed severe collision and $c_{\mathrm{FP}}=1$ for a false alarm,
 \begin{equation}
 t_{\mathrm{cost}} = \frac{c_{\mathrm{FP}}}{c_{\mathrm{FP}}+c_{\mathrm{FN}}} = \frac{1}{6}, \qquad
 C = \frac{c_{\mathrm{FN}}\,\mathrm{FN} + c_{\mathrm{FP}}\,\mathrm{FP}}{n}.
 \label{eq:cost}
 \end{equation}
-$C$ is the expected cost per collision. The Bayes threshold needs no search but is valid only for calibrated scores. The 5:1 ratio is our assumption, not an official figure.
+FN and FP count false negatives and false positives among $n$ collisions, and $C$ is the expected cost per collision. The Bayes threshold needs no search but is valid only for calibrated scores. The 5:1 ratio is our assumption, not an official figure.
 
 %% ======================================================================
 \section{Experimental Setup}
 
 \subsection{Models and Tuning}
 
-We used logistic regression (L2, one-hot encoding with rare levels pooled, median imputation with missing indicators), a decision tree and a random forest from scikit-learn (ordinal-coded categories), and XGBoost~\cite{chen2016xgboost}, LightGBM~\cite{ke2017lightgbm} and CatBoost~\cite{prokhorenkova2018catboost} with their native categorical handling. Each cell of the ablation had its own Optuna TPE study~\cite{akiba2019optuna} (seed 42) that maximised PR-AUC on TUNE at the natural prevalence, an objective that does not depend on a threshold. Budgets were 30 trials for the decision tree, XGBoost and LightGBM, 20 for CatBoost, and 15 for logistic regression, random forest and all SMOTE-NC cells, so LightGBM with SMOTE-NC received half the budget of the other LightGBM cells. Boosters stopped early on TUNE log-loss. Each refit was repeated with seeds 0, 1 and 2. XGBoost and CatBoost ran on an NVIDIA RTX A5000 GPU and the other models on CPU, using Python 3.12, scikit-learn 1.9, XGBoost 3.0.5, LightGBM 4.7, CatBoost 1.2 and SHAP 0.54.
+We used logistic regression (L2, one-hot encoding with rare levels pooled, median imputation with missing indicators), a decision tree and a random forest from scikit-learn (ordinal-coded categories), and XGBoost~\cite{chen2016xgboost}, LightGBM~\cite{ke2017lightgbm} and CatBoost~\cite{prokhorenkova2018catboost} with their native categorical handling. Each cell of the ablation had its own Optuna study with the tree-structured Parzen estimator~\cite{akiba2019optuna} (seed 42) that maximised PR-AUC on TUNE at the natural prevalence, an objective that does not depend on a threshold. Budgets were 30 trials for the decision tree, XGBoost and LightGBM, 20 for CatBoost, and 15 for logistic regression, random forest and all SMOTE-NC cells, so LightGBM with SMOTE-NC received half the budget of the other LightGBM cells. Boosters stopped early on TUNE log-loss. Each refit was repeated with seeds 0, 1 and 2. XGBoost and CatBoost ran on an NVIDIA RTX A5000 GPU and the other models on CPU, using Python 3.12, scikit-learn 1.9, XGBoost 3.0.5, LightGBM 4.7, CatBoost 1.2 and SHAP 0.54.
 
 \subsection{Ablation Matrix}
 
@@ -175,7 +180,7 @@ The factorial core \{F0, F1\} $\times$ \{none, weight, rus\} $\times$ six models
 
 \subsection{Statistical Analysis}
 
-PR-AUC is computed as average precision. All 2025 comparisons are paired, because both arms score the same collisions, and use the seed-0 models. For each contrast we report the difference with a 95\% stratified percentile bootstrap interval (2,000 resamples) and a two-sided bootstrap $p$-value, together with DeLong's test for ROC-AUC~\cite{delong1988comparing} and McNemar's test on the paired decisions~\cite{mcnemar1947note}. One primary contrast per research question and model family (18 in total) was written into the manifest before 2025 was scored and Holm-corrected~\cite{holm1979simple}: $\Delta$PR-AUC of F1 versus F0 with no CS (RQ1); $\Delta F_2$ of weight versus none on F0, each at its own CAL-chosen $t^{*}$ (RQ2); and $\Delta$Brier of the CAL-chosen calibrator versus raw scores on F1 with the CAL-best strategy (RQ3). All other contrasts are exploratory. Within each model family, the strategy carried forward was the one with the highest calibrated $F_2$ on CAL. The final model was the cell with the highest mean raw PR-AUC on CAL; ties within 0.002 went to the lower calibrated Brier score and then to the simpler model. Because PR-AUC depends on prevalence~\cite{saito2015precision}, we also give its no-skill value (0.262 on 2025).
+PR-AUC is computed as average precision. All 2025 comparisons are paired, because both arms score the same collisions, and use the seed-0 models. For each contrast we report the difference with a 95\% stratified percentile bootstrap confidence interval (CI; 2,000 resamples) and a two-sided bootstrap $p$-value, together with DeLong's test for ROC-AUC~\cite{delong1988comparing} and McNemar's test on the paired decisions~\cite{mcnemar1947note}. One primary contrast per research question and model family (18 in total) was written into the manifest before 2025 was scored and Holm-corrected~\cite{holm1979simple}: $\Delta$PR-AUC of F1 versus F0 with no CS (RQ1); $\Delta F_2$ of weight versus none on F0, each at its own CAL-chosen $t^{*}$ (RQ2); and $\Delta$Brier of the CAL-chosen calibrator versus raw scores on F1 with the CAL-best strategy (RQ3). All other contrasts are exploratory. Within each model family, the strategy carried forward was the one with the highest calibrated $F_2$ on CAL. The final model was the cell with the highest mean raw PR-AUC on CAL; ties within 0.002 went to the lower calibrated Brier score and then to the simpler model. Because PR-AUC depends on prevalence~\cite{saito2015precision}, we also give its no-skill value (0.262 on 2025).
 
 %% ======================================================================
 \section{Results and Discussion}
@@ -188,7 +193,7 @@ Table~\ref{tab:main} lists, for each model family, the F1 configuration with the
 
 \begin{table}[t]
 \centering
-\caption{F1 configuration with the CAL-chosen imbalance strategy (CS) per model family on 2025: Platt calibration, $F_2$-optimal threshold frozen on CAL, mean of three seeds. Bold marks the best unrounded PR-AUC, ROC-AUC, Brier score and $F_2$.}
+\caption{F1 configuration with the CAL-chosen imbalance strategy (CS) per model family on 2025 (LR: logistic regression, DT: decision tree, RF: random forest): Platt calibration, $F_2$-optimal threshold frozen on CAL, mean of three seeds. Bold marks the best unrounded PR-AUC, ROC-AUC, Brier score and $F_2$.}
 \label{tab:main}
 \setlength{\tabcolsep}{2.4pt}
 \begin{tabular}{@{}llcccccc@{}}
@@ -212,7 +217,7 @@ CatBoost & weight & 0.493 & 0.728 & 0.168 & 0.009 & 0.917 & 0.667 \\
 \label{fig:prauc}
 \end{figure}
 
-\subsection{RQ1: Feature Engineering}
+\subsection{Effect of Feature Engineering}
 
 The estimated gain from F1 over F0 varied by model family (Table~\ref{tab:primary}). It was largest for the decision tree (+0.0165), logistic regression (+0.0157) and random forest (+0.0089), and smaller but still significant after Holm correction for XGBoost (+0.0037). For LightGBM (+0.0014) and CatBoost (+0.0019) no significant gain was detected; CatBoost's unadjusted interval excludes zero, but its adjusted $p$ is 0.22. The small gains for the boosters suggest that they already extract much of the information in the engineered features from the raw codes. The F1full cells separate engineering from selection for two families: relative to F0, the engineered set without selection gained +0.018 for logistic regression and +0.0013 for LightGBM, while selection then removed 52\% of the columns with no detectable PR-AUC change for LightGBM and a loss of 0.0024 for logistic regression.
 
@@ -235,10 +240,10 @@ CatBoost & +0.0019 [+0.0003, +0.0036], $p=0.22$ & +0.0006 [$-$0.0006, +0.0019], 
 \end{tabular}
 \end{table*}
 
-\subsection{RQ2: Cost-Sensitive Learning}
+\subsection{Effect of Cost-Sensitive Learning}
 \label{sec:rq2}
 
-The answer to RQ2 depends on the threshold. At 0.5, class weighting raised recall on F0 by +0.47 to +0.52 for every model; for LightGBM recall rose from 0.21 to 0.68 [+0.466, +0.478]. With each arm at its own $t^{*}$ chosen on CAL, none of the six primary contrasts was significant: the differences lay between $-0.0003$ and $+0.0009$, and every adjusted $p$ was at least 0.87. This is an absence of evidence for a gain, not a test of equivalence. On the threshold-free PR-AUC, weighting and undersampling changed results by between +0.001 and $-$0.021. SMOTE-NC lowered PR-AUC by 0.016 to 0.079 and $F_2$ by 0.005 to 0.009 in all six cells where it was used. A possible reason, which we did not test, is that interpolation creates records that police never report, for example a speed limit between the legal 30 and 60~mph values. The SMOTE-NC pipeline also differs in imputation and, for LightGBM, in tuning budget, so the result applies to the pipeline as a whole.
+The answer to RQ2 depends on the threshold. At 0.5, class weighting raised recall on F0 by +0.47 to +0.52 for every model; for LightGBM recall rose from 0.21 to 0.68 [+0.466, +0.478]. With each arm at its own $t^{*}$ chosen on CAL, none of the six primary contrasts was significant: the differences lay between $-0.0003$ and $+0.0009$, and every adjusted $p$ was at least 0.87. This is an absence of evidence for a gain, not a test of equivalence. On the threshold-free PR-AUC, weighting and undersampling changed results by between +0.001 and $-$0.021. SMOTE-NC lowered PR-AUC by 0.016 to 0.079 and $F_2$ by 0.005 to 0.009 in all six cells where it was used. A possible reason, which we did not test, is that interpolation creates records that police never report, for example a speed limit between the legal 30 and 60~mph (48 and 97~km/h) values. The SMOTE-NC pipeline also differs in imputation and, for LightGBM, in tuning budget, so the result applies to the pipeline as a whole.
 
 Equation (\ref{eq:odds}) suggests comparing the weighted model at $t=0.5$ with the unweighted model at $1/(1+w)=0.242$. Fig.~\ref{fig:cscal}(a) does this for LightGBM on F1. The weighted model at 0.5 had recall 0.663, precision 0.416 and flagged 41.8\% of collisions; the unweighted model at 0.242 had recall 0.684, precision 0.409 and flagged 43.9\%. The two operating points differ by about two points of recall and one point of precision. Weighting also raised the mean predicted risk from 0.249 to 0.449, against an observed rate of 0.262. On this data, then, most of the effect of class weighting at 0.5 can be reproduced by lowering the threshold of an unweighted model.
 
@@ -249,7 +254,7 @@ Equation (\ref{eq:odds}) suggests comparing the weighted model at $t=0.5$ with t
 \label{fig:cscal}
 \end{figure*}
 
-\subsection{RQ3: Calibration}
+\subsection{Effect of Calibration}
 
 Calibration gave its largest improvements after weighting or undersampling. In those cells the raw scores overestimated risk, with ECE between 0.19 and 0.23 and Brier scores between 0.21 and 0.24. Calibrators fitted on CAL reduced the Brier score on 2025 by 0.038 to 0.044 in the primary tests for logistic regression, random forest and CatBoost, and ECE by 0.18 to 0.19. For the weighted LightGBM (Fig.~\ref{fig:cscal}(b)), ECE fell from 0.187 to 0.008 with Platt scaling and to 0.012 with isotonic regression. Boosters trained on the natural class balance were already close to calibrated (ECE about 0.01), and calibration improved their Brier score by only about 0.0001, which was nevertheless significant.
 
@@ -257,7 +262,7 @@ The Platt fit for the weighted LightGBM was $a=0.96$ and $b=-1.04$ (Fig.~\ref{fi
 
 \subsection{Threshold Selection and Expected Cost}
 
-Threshold selection changed detection and cost far more than any other factor (Table~\ref{tab:ops}, Fig.~\ref{fig:threshold}). At 0.5 the final model found 20.9\% of severe collisions. At the Bayes threshold of 1/6 on Platt-calibrated scores it found 85.6\% at a precision of 34.7\% and flagged 64.8\% of collisions. Expected cost fell from 1.072 to 0.612 per collision ($-43\%$), which is also 17\% below the cost of flagging every collision (0.738). At 1/6, calibration lowered the mean cost of this model only from 0.613 (raw scores) to 0.612. Calibration matters for the models trained with weights or undersampling. For the weighted LightGBM, the three-seed mean cost at 1/6 was 0.664 with raw scores and 0.614 after Platt scaling, and the gap was 0.05 to 0.07 for the other weighted or undersampled cells in Table~\ref{tab:main}. On the seed-0 calibrated scores, the threshold that minimised cost on 2025 was 0.167, essentially equal to 1/6. The recall-constrained threshold chosen on CAL gave a recall of 0.797 on 2025, just below its 0.80 target.
+Threshold selection changed detection and cost far more than any other factor (Table~\ref{tab:ops}, Fig.~\ref{fig:threshold}). At 0.5 the final model found 20.9\% of severe collisions. At the Bayes threshold of 1/6 on Platt-calibrated scores it found 85.6\% at a precision of 34.7\% and flagged 64.8\% of collisions. Expected cost fell from 1.072 to 0.612 per collision ($-43\%$), which is also 17\% below the cost of flagging every collision (0.738). At 1/6, calibration lowered the mean cost of this model only from 0.613 (raw scores) to 0.612. Calibration matters for the models trained with weights or undersampling. For the weighted LightGBM, the three-seed mean cost at 1/6 was 0.664 with raw scores and 0.614 after Platt scaling, and the gap was 0.05 to 0.07 for the other weighted or undersampled cells in Table~\ref{tab:main}. On the seed-0 calibrated scores, the threshold that minimised cost on 2025 was 0.167, approximately equal to 1/6. The recall-constrained threshold chosen on CAL gave a recall of 0.797 on 2025, just below its 0.80 target.
 
 \begin{table}[t]
 \centering
@@ -288,7 +293,7 @@ Flag every collision & -- & 1.000 & 0.262 & 100\% & 0.738 \\
 
 \subsection{Temporal Stability and Subgroups}
 
-The 2025 year contains a known shift. Injury-based recording systems, which classify more injuries as serious, covered 53.7\% of collisions in 2023, 58.8\% in 2024 and 86.5\% in 2025~\cite{dft2026stats19}. Averaged over all 48 cells, ROC-AUC fell by 0.013 from CAL to 2025, and the ranking of the cells by PR-AUC was stable (Spearman correlation 0.986). The calibrated mean prediction of the final model was 25.6\% against an observed 26.2\%. The overall figures hide larger differences between subgroups. The final model ranked collisions better within officer-judged forces (ROC-AUC 0.773) than within injury-based forces (0.723). At $t^{*}$ its recall was 0.93 for collisions attended by the police and 0.64 for self-reported ones, and its ECE was 0.022 for attended, 0.059 for non-attended and 0.025 for self-reported collisions.
+The 2025 year contains a known shift. Injury-based recording systems, which classify more injuries as serious, covered 53.7\% of collisions in 2023, 58.8\% in 2024 and 86.5\% in 2025~\cite{dft2026stats19}. Averaged over all 48 cells, ROC-AUC fell by 0.013 from CAL to 2025, and the ranking of the cells by PR-AUC was stable (Spearman correlation 0.986). The calibrated mean prediction of the final model was 25.6\% against an observed 26.2\%. The overall figures hide larger differences between subgroups. The final model ranked collisions better within officer-judged forces (ROC-AUC 0.773) than within injury-based forces (0.723). At $t^{*}$ its recall was 0.93 for collisions attended by the police and 0.64 for self-reported ones, and its ECE was 0.022 for attended, 0.059 for nonattended and 0.025 for self-reported collisions.
 
 \subsection{Explanations}
 
@@ -309,7 +314,7 @@ The availability rule is an assumption about retrospective records; we did not v
 \section{Ablation and Sensitivity Studies}
 \label{sec:sens}
 
-Table~\ref{tab:sens} gives four sensitivity analyses with XGBoost on F1 without CS, each compared with the primary XGBoost model, and one three-class LightGBM model. Adding the five held-out crash-mechanics fields (skidding, objects hit, leaving the carriageway, first point of impact) increased PR-AUC by 0.012. These fields describe the impact itself, which is why the main model excludes them. Replacing all remaining missing values by the training median or mode (S2) cost 0.003, although explicit missing-value count features were kept. S2 and S5 reuse the F1 selection rather than repeating it. Dropping police force and recording-system variables (S3) cost 0.002; district encodings and other correlated features may still carry information about recording practice. Removing the pedestrian fields together with the VRU features that use them (S5) cost 0.019, giving a PR-AUC of 0.477 for that model. Separating fatal from serious collisions was much harder: a class-balanced three-class LightGBM, trained once (seed 0) with the binary model's hyper-parameters, reached a macro-F1 of 0.450 and a fatal recall of 0.45 at a precision of 0.10.
+Table~\ref{tab:sens} gives four sensitivity analyses with XGBoost on F1 without CS, each compared with the primary XGBoost model, and one three-class LightGBM model. Adding the five held-out crash-mechanics fields (skidding, objects hit, leaving the carriageway, first point of impact; S1) increased PR-AUC by 0.012. These fields describe the impact itself, which is why the main model excludes them. Replacing all remaining missing values by the training median or mode (S2) cost 0.003, although explicit missing-value count features were kept. S2 and S5 reuse the F1 selection rather than repeating it. Dropping police force and recording-system variables (S3) cost 0.002; district encodings and other correlated features may still carry information about recording practice. Removing the pedestrian fields together with the VRU features that use them (S5) cost 0.019, giving a PR-AUC of 0.477 for that model. Separating fatal from serious collisions was much harder: a class-balanced three-class LightGBM (S4), trained once (seed 0) with the binary model's hyper-parameters, reached a macro-F1 of 0.450 and a fatal recall of 0.45 at a precision of 0.10.
 
 \begin{table}[t]
 \centering
